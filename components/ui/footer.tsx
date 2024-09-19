@@ -141,6 +141,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 </Link>
               </li>
             </ul>
+            {/* 加入一个横向的LOGO */}
+            <div className="flex justify-left items-center text-sm">
+              <Link
+                href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
+                target="_blank"
+                style={{ display: 'inline-flex', alignItems: 'center' }}
+              >
+                由
+                <img
+                  className="w-13 h-8 fill-current"
+                  src="./images/upyun.png"
+                  alt="XinEra"
+                />
+                提供CDN
+              </Link>
+            </div>
           </div>
         </div>
       </div>
