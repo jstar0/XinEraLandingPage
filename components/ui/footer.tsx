@@ -17,8 +17,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div className="text-sm text-gray-600">
               <b>&copy; 心纪元 | Xin Era 2024 - 版权所有</b><br />
               心纪元MC是个人维护的分享性质的平台。<br />
-              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024106945号-1</a><br />
-              <a href="https://icp.gov.moe/?keyword=20210888" target="_blank">萌ICP备20210888号</a>
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024106945号-1</a>
+              &nbsp;|&nbsp;<a href="https://icp.gov.moe/?keyword=20210888" target="_blank">萌ICP备20210888号</a>
             </div>
           </div>
 
