@@ -1,3 +1,150 @@
+ :root {
+  --font-display: "Newsreader", "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-label: "Space Grotesk", "Roboto Mono", monospace;
+}
+
+html {
+  background-color: #131313;
+}
+
+body {
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  background-color: #131313;
+  color: #e5e2e1;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.28);
+  color: #fff8eb;
+}
+
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 15px rgba(233, 193, 118, 0.4);
+}
+
+.grid-overlay {
+  background-image: radial-gradient(#4e4639 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+  opacity: 0.15;
+}
+
+.brass-gradient {
+  background: linear-gradient(135deg, #e9c176 0%, #c5a059 100%);
+}
+
+.vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(19, 19, 19, 0.8) 100%);
+}
+
+.paper-texture {
+  background-image:
+    linear-gradient(180deg, rgba(233, 193, 118, 0.06), rgba(0, 0, 0, 0)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+}
+
+.ambient-orb {
+  background:
+    radial-gradient(circle at center, rgba(233, 193, 118, 0.18) 0%, rgba(233, 193, 118, 0.08) 32%, transparent 72%);
+  filter: blur(20px);
+  opacity: 0.55;
+}
+
+.hero-rings {
+  background:
+    radial-gradient(circle at center, transparent 0 36%, rgba(233, 193, 118, 0.08) 36.5%, transparent 37.5%),
+    radial-gradient(circle at center, transparent 0 52%, rgba(233, 193, 118, 0.06) 52.5%, transparent 53.5%),
+    radial-gradient(circle at center, transparent 0 67%, rgba(197, 160, 89, 0.05) 67.5%, transparent 68.5%);
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 25%, transparent 78%);
+}
+
+.scan-beam {
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 26%,
+    rgba(233, 193, 118, 0.08) 48%,
+    rgba(255, 243, 214, 0.14) 50%,
+    rgba(233, 193, 118, 0.08) 52%,
+    transparent 74%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+}
+
+.hero-panel {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, rgba(233, 193, 118, 0.08), transparent 40%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0 1px,
+      transparent 1px 14px
+    );
+}
+
+.corner-bracket-tl,
+.corner-bracket-tr,
+.corner-bracket-bl,
+.corner-bracket-br {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+.corner-bracket-tl {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #c5a059;
+  border-left: 2px solid #c5a059;
+}
+
+.corner-bracket-tr {
+  top: 0;
+  right: 0;
+  border-top: 2px solid #c5a059;
+  border-right: 2px solid #c5a059;
+}
+
+.corner-bracket-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #c5a059;
+  border-left: 2px solid #c5a059;
+}
+
+.corner-bracket-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #c5a059;
+  border-right: 2px solid #c5a059;
+}
+
+.hover-amber-glow {
+  transition: box-shadow 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.hover-amber-glow:hover {
+  box-shadow: 0 0 30px rgba(233, 193, 118, 0.15);
+}
+
+.status-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(233, 193, 118, 0.5), transparent);
+}
+
 .form-input:focus,
 .form-textarea:focus,
 .form-multiselect:focus,

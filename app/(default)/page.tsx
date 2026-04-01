@@ -1,22 +1,15 @@
 export const metadata = {
-  title: "您好 | 心纪元MC",
-  description: "心纪元 | Xin Era | Minecraft",
+  title: "心纪元 MC | Xin Era",
+  description: "心纪元 MC 的个人游戏分享站与玩家入口。",
 };
 
-import Hero from "@/components/hero-home";
-import BusinessCategories from "@/components/business-categories";
-import FeaturesPlanet from "@/components/features-planet";
-import LargeTestimonial from "@/components/large-testimonial";
-import Cta from "@/components/cta";
+import { headers } from "next/headers";
+import LandingPage from "@/components/home/landing-page";
+import { resolveLocaleFromAcceptLanguage } from "@/components/home/i18n";
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <BusinessCategories />
-      <FeaturesPlanet />
-      <LargeTestimonial />
-      <Cta />
-    </>
-  );
+  const acceptLanguage = headers().get("accept-language");
+  const initialLocale = resolveLocaleFromAcceptLanguage(acceptLanguage);
+
+  return <LandingPage initialLocale={initialLocale} />;
 }
