@@ -5,11 +5,18 @@ import { LazyMotion, domAnimation, m, type Variants } from "motion/react";
 
 import EntryStationHero from "./entry-station-hero";
 import {
+  createSignalBandItems,
+  resolveActiveNavHref,
+  resolveScrollActiveNavHref,
+} from "./landing-page-effects";
+import {
   isChineseLocale,
   landingCopy,
   localeLabels,
   type SupportedLocale,
 } from "./i18n";
+import MagneticAnchor from "./magnetic-anchor";
+import SignalBand from "./signal-band";
 
 type LandingPageShellProps = {
   locale: SupportedLocale;
@@ -87,6 +94,92 @@ export default function LandingPageShell({
   const copy = landingCopy[locale];
   const chinese = isChineseLocale(locale);
   const heroMark = copy.brand.replace(/\s+ARCHIVE$/, "");
+  const signalBandItems = createSignalBandItems(copy);
+  const [activeNavHref, setActiveNavHref] = React.useState<string | null>(() =>
+    resolveActiveNavHref(copy.nav),
+  );
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") {
+      setActiveNavHref(resolveActiveNavHref(copy.nav));
+      return;
+    }
+
+    const syncFromHash = () => {
+      setActiveNavHref(resolveActiveNavHref(copy.nav, window.location.hash));
+    };
+
+    syncFromHash();
+    window.addEventListener("hashchange", syncFromHash);
+
+    return () => {
+      window.removeEventListener("hashchange", syncFromHash);
+    };
+  }, [copy]);
+
+  React.useEffect(() => {
+    const sectionNavHrefs = copy.nav
+      .map((item) => item.href)
+      .filter((href) => href.startsWith("#"));
+
+    if (typeof window === "undefined" || !sectionNavHrefs.length) {
+      return;
+    }
+
+    let frameId: number | null = null;
+
+    const syncFromScroll = () => {
+      frameId = null;
+
+      const sections = sectionNavHrefs
+        .map((href) => {
+          const element = document.getElementById(href.slice(1));
+
+          if (!element) {
+            return null;
+          }
+
+          const rect = element.getBoundingClientRect();
+          return {
+            href,
+            height: rect.height,
+            top: rect.top,
+          };
+        })
+        .filter((section): section is { height: number; href: string; top: number } => Boolean(section));
+
+      const nextActiveHref = resolveScrollActiveNavHref(sections, window.innerHeight);
+
+      if (!nextActiveHref) {
+        return;
+      }
+
+      setActiveNavHref((currentHref) =>
+        currentHref === nextActiveHref ? currentHref : nextActiveHref,
+      );
+    };
+
+    const queueSyncFromScroll = () => {
+      if (frameId !== null) {
+        return;
+      }
+
+      frameId = window.requestAnimationFrame(syncFromScroll);
+    };
+
+    queueSyncFromScroll();
+    window.addEventListener("scroll", queueSyncFromScroll, { passive: true });
+    window.addEventListener("resize", queueSyncFromScroll);
+
+    return () => {
+      window.removeEventListener("scroll", queueSyncFromScroll);
+      window.removeEventListener("resize", queueSyncFromScroll);
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [copy]);
 
   return (
     <LazyMotion features={domAnimation}>
@@ -107,18 +200,28 @@ export default function LandingPageShell({
             </div>
 
             <div className="hidden items-center gap-8 md:flex">
-              {copy.nav.map((item, index) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="relative pb-2 text-white/58 transition-colors duration-300 hover:text-white"
-                >
-                  <span className={labelClass(locale, "text-[11px]")}>{item.label}</span>
-                  {index === 0 ? (
-                    <span className="absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(90deg,rgba(83,214,216,0),rgba(83,214,216,0.82),rgba(83,214,216,0))]" />
-                  ) : null}
-                </a>
-              ))}
+              {copy.nav.map((item) => {
+                const active = item.href === activeNavHref;
+
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => {
+                      setActiveNavHref(resolveActiveNavHref(copy.nav, item.href));
+                    }}
+                    className={`relative pb-2 transition-colors duration-300 ${
+                      active ? "text-white" : "text-white/58 hover:text-white"
+                    }`}
+                  >
+                    <span className={labelClass(locale, "text-[11px]")}>{item.label}</span>
+                    {active ? (
+                      <span className="absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(90deg,rgba(83,214,216,0),rgba(83,214,216,0.82),rgba(83,214,216,0))]" />
+                    ) : null}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="flex items-center gap-2">
@@ -207,18 +310,21 @@ export default function LandingPageShell({
                 </m.p>
 
                 <m.div variants={riseIn} className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <a
+                  <MagneticAnchor
                     href={copy.hero.primaryHref}
                     target="_blank"
                     rel="noreferrer"
+                    targetName="hero-primary"
+                    maxOffsetX={8}
+                    maxOffsetY={6}
                     className={labelClass(
                       locale,
                       "inline-flex items-center justify-center gap-3 bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-7 py-4 text-[#081113] transition-transform duration-300 hover:-translate-y-0.5",
                     )}
                   >
-                    <span>{copy.hero.primaryLabel}</span>
-                    <span>↗</span>
-                  </a>
+                    <span className="magnetic-layer">{copy.hero.primaryLabel}</span>
+                    <span className="magnetic-layer-strong">↗</span>
+                  </MagneticAnchor>
                   <a
                     href={copy.hero.secondaryHref}
                     target="_blank"
@@ -255,6 +361,12 @@ export default function LandingPageShell({
               </m.div>
             </div>
           </header>
+
+          <SignalBand
+            bandId="world-entry"
+            items={signalBandItems}
+            itemClassName={labelClass(locale, "text-[10px] text-white/34 md:text-xs")}
+          />
 
           <m.section
             className="bg-[#11151a] px-5 py-[4.5rem] md:px-10 md:py-20"
@@ -477,18 +589,21 @@ export default function LandingPageShell({
 
               <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
                 {copy.access.cards.map((card) => (
-                  <a
+                  <MagneticAnchor
                     key={card.title}
                     href={card.href}
                     target="_blank"
                     rel="noreferrer"
+                    targetName="access-card"
+                    maxOffsetX={6}
+                    maxOffsetY={5}
                     className="group flex min-h-[260px] flex-col justify-between bg-[#14191d] p-7 transition-transform duration-300 hover:-translate-y-1"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <span className={labelClass(locale, "text-[10px] text-white/42 md:text-xs")}>
                         {card.tag}
                       </span>
-                      <span className="text-[#53d6d8] opacity-60 transition-opacity group-hover:opacity-100">
+                      <span className="magnetic-layer-strong text-[#53d6d8] opacity-60 transition-opacity group-hover:opacity-100">
                         {card.symbol}
                       </span>
                     </div>
@@ -500,8 +615,8 @@ export default function LandingPageShell({
                       <p className={bodyClass(locale, "mt-4 text-sm text-white/58")}>{card.description}</p>
                     </div>
 
-                    <div className="mt-8 h-px bg-[linear-gradient(90deg,rgba(83,214,216,0.42),rgba(83,214,216,0))]" />
-                  </a>
+                    <div className="magnetic-line mt-8 h-px bg-[linear-gradient(90deg,rgba(83,214,216,0.42),rgba(83,214,216,0))]" />
+                  </MagneticAnchor>
                 ))}
               </div>
             </div>

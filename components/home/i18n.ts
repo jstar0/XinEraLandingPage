@@ -490,7 +490,7 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       plaque: "Personally maintained • Steampunk fantasy Minecraft world",
       title: "Xin Era",
       description:
-        "A personal steampunk-fantasy Minecraft world maintained over the long term. Cities, class paths, trials, and long-term updates keep unfolding here.",
+        "A personal steampunk-fantasy Minecraft world maintained long term. Cities, class paths, trials, and updates keep unfolding here.",
       primaryLabel: "Enter Player Portal",
       primaryHref: commonAccessHrefs.account,
       secondaryLabel: "Read the Chronicles",

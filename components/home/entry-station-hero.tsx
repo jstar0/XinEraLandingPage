@@ -172,7 +172,7 @@ export default function EntryStationHero({
       <div className="pointer-events-none absolute inset-x-[10%] bottom-[-6%] h-[16%] bg-[radial-gradient(circle,rgba(47,211,213,0.2),rgba(47,211,213,0.04)_42%,transparent_72%)] blur-xl" />
 
       <div className="relative h-full w-full [perspective:1800px]">
-        <div className="absolute inset-[4%_3%] [transform-style:preserve-3d] [transform:rotateX(11deg)_rotateY(-16deg)_rotateZ(-1.7deg)] md:inset-[3.5%_2.5%]">
+        <div className="absolute inset-[4%_3%] [transform-style:preserve-3d] [transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)] md:inset-[3.5%_2.5%]">
           <div className="absolute inset-[-1px] bg-[linear-gradient(135deg,rgba(47,211,213,0.32),rgba(255,255,255,0.06)_42%,rgba(47,211,213,0.22))] opacity-65" />
           <div className="absolute inset-[1px] overflow-hidden bg-[#05080b] shadow-[0_20px_50px_rgba(0,0,0,0.42)]">
             <img

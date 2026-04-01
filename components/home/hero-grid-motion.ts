@@ -39,10 +39,10 @@ const IDLE_CYCLE_MS = 9_000;
 const IDLE_SWEEP_START = -0.22;
 const IDLE_SWEEP_TRAVEL = 1.44;
 const IDLE_SWEEP_RADIUS = 0.28;
-const IDLE_SWEEP_AMPLITUDE = 18;
+const IDLE_SWEEP_AMPLITUDE = 21;
 const HOVER_RADIUS = 0.19;
 const HOVER_AMPLITUDE = 46;
-const MAX_IDLE_LIFT = 22;
+const MAX_IDLE_LIFT = 24;
 const MAX_ACTIVE_LIFT = 62;
 
 function clamp(value: number, min: number, max: number) {
@@ -149,7 +149,7 @@ export function resolveTileVisualState(input: {
   return {
     edgeOpacity: clamp(lift / 56, 0, 0.76),
     glowOpacity: clamp(lift / 46, 0, 0.9),
-    highlightOpacity: clamp((hoverLift + rippleLift) / 36, 0, 0.96),
+    highlightOpacity: clamp((idleLift * 0.16 + hoverLift + rippleLift) / 36, 0, 0.96),
     lift,
     translateX: -lift * 0.017,
     translateY: -lift * 0.058,

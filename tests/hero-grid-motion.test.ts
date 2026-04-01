@@ -16,6 +16,7 @@ type MotionModule = {
   }) => {
     edgeOpacity: number;
     glowOpacity: number;
+    highlightOpacity: number;
     lift: number;
     translateX: number;
     translateY: number;
@@ -33,6 +34,7 @@ async function loadMotionModule(): Promise<MotionModule> {
       resolveTileVisualState: () => ({
         edgeOpacity: 0,
         glowOpacity: 0,
+        highlightOpacity: 0,
         lift: 0,
         translateX: 0,
         translateY: 0,
@@ -52,6 +54,30 @@ test("idle sweep favors the broad band currently crossing the grid", async () =>
   assert.ok(centerBand > 8, "expected the middle of the sweep to visibly lift");
   assert.ok(centerBand > farLeft * 4, "expected tiles far from the sweep to stay much flatter");
   assert.ok(centerBand > farRight * 4, "expected the sweep to remain localized instead of lifting the whole plane");
+});
+
+test("idle sweep now adds a faint highlight but still stays quieter than hover emphasis", async () => {
+  const motion = await loadMotionModule();
+  const time = 4_500;
+  const idleState = motion.resolveTileVisualState({
+    point: { x: 0.5, y: 0.45 },
+    pointer: { active: false, x: 0.5, y: 0.45 },
+    pulses: [],
+    time,
+  });
+  const hoverState = motion.resolveTileVisualState({
+    point: { x: 0.5, y: 0.45 },
+    pointer: { active: true, x: 0.5, y: 0.45 },
+    pulses: [],
+    time,
+  });
+
+  assert.ok(idleState.highlightOpacity > 0.05, "expected idle motion to create a visible but subtle highlight");
+  assert.ok(idleState.highlightOpacity < 0.2, "expected idle highlight to remain restrained");
+  assert.ok(
+    hoverState.highlightOpacity > idleState.highlightOpacity * 3,
+    "expected hover highlight to stay clearly stronger than idle motion",
+  );
 });
 
 test("hover lift peaks at the pointer tile and falls off across nearby tiles", async () => {

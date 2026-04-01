@@ -97,4 +97,14 @@ test("landing hero renders the dedicated entry-station banner scaffold", () => {
   assert.match(html, /data-hero-grid="entry-station"/);
   assert.match(html, /data-grid-columns="24"/);
   assert.match(html, /data-grid-rows="14"/);
+  assert.match(html, /rotateX\(12deg\)_rotateY\(-18deg\)_rotateZ\(-1\.9deg\)/);
+});
+
+test("landing page mounts the system signal band and only the limited magnetic targets", () => {
+  const html = render("zh-CN");
+
+  assert.match(html, /data-signal-band="world-entry"/);
+  assert.match(html, /data-magnetic-target="hero-primary"/);
+  assert.match(html, /data-magnetic-target="access-card"/);
+  assert.doesNotMatch(html, /data-magnetic-target="route-card"/);
 });
