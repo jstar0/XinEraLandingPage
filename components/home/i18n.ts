@@ -183,9 +183,9 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       primaryHref: commonAccessHrefs.account,
       secondaryLabel: "查看项目记录",
       secondaryHref: commonAccessHrefs.blog,
-      note: "本站为个人维护的非盈利分享站，用于展示与分享服务器项目、设定与玩家入口。",
+      note: "",
       panelTitle: "从这里开始",
-      panelSubtitle: "陌生玩家、现有玩家与回来看看的老玩家，都应该找到不同的第一步。",
+      panelSubtitle: "万象伊始，从心纪元。",
       routes: [
         {
           audience: "第一次来到这里",
@@ -309,7 +309,7 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryHref: commonAccessHrefs.map,
     },
     footer: {
-      note: "本站为个人维护的非盈利分享站，用于展示与分享服务器项目、设定与玩家入口。",
+      note: "",
       filingLabel: "备案信息",
       filingNumber: "鲁ICP备2025206170号-1",
       filingHref: officialFilingHref,
@@ -339,9 +339,9 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       primaryHref: commonAccessHrefs.account,
       secondaryLabel: "查看專案記錄",
       secondaryHref: commonAccessHrefs.blog,
-      note: "本站為個人維護的非營利分享站，用於展示與分享伺服器專案、設定與玩家入口。",
+      note: "",
       panelTitle: "從這裡開始",
-      panelSubtitle: "陌生玩家、現有玩家與回來看看的老玩家，都應該找到不同的第一步。",
+      panelSubtitle: "萬象伊始，從心紀元。",
       routes: [
         {
           audience: "第一次來到這裡",
@@ -465,7 +465,7 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryHref: commonAccessHrefs.map,
     },
     footer: {
-      note: "本站為個人維護的非營利分享站，用於展示與分享伺服器專案、設定與玩家入口。",
+      note: "",
       filingLabel: "備案資訊",
       filingNumber: "魯ICP備2025206170號-1",
       filingHref: officialFilingHref,
@@ -495,9 +495,9 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       primaryHref: commonAccessHrefs.account,
       secondaryLabel: "Read the Chronicles",
       secondaryHref: commonAccessHrefs.blog,
-      note: "A personally maintained non-commercial share site for the server project, setting notes, and player access points.",
+      note: "",
       panelTitle: "Start Here",
-      panelSubtitle: "New visitors, active players, and returning players should each get a clearer first step.",
+      panelSubtitle: "All beginnings lead through Xin Era.",
       routes: [
         {
           audience: "New here",
@@ -621,7 +621,7 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryHref: commonAccessHrefs.map,
     },
     footer: {
-      note: "A personally maintained non-commercial share site for the server project, setting notes, and player access points.",
+      note: "",
       filingLabel: "Filing",
       filingNumber: "Lu ICP Bei 2025206170-1",
       filingHref: officialFilingHref,
@@ -651,9 +651,9 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       primaryHref: commonAccessHrefs.account,
       secondaryLabel: "記録を読む",
       secondaryHref: commonAccessHrefs.blog,
-      note: "サーバープロジェクト、設定、プレイヤー入口を紹介する、個人運営の非営利共有サイトです。",
+      note: "",
       panelTitle: "ここから始める",
-      panelSubtitle: "初めて来た人、遊んでいる人、戻ってきた人で、最初の一歩は少しずつ違います。",
+      panelSubtitle: "万象の始まりは、心紀元から。",
       routes: [
         {
           audience: "初めて来た人へ",
