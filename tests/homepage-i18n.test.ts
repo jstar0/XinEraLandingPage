@@ -131,8 +131,9 @@ test("mobile adaptation mounts a dedicated hero overlay and bottom dock", () => 
   assert.match(en, /translate3d\(6px,40px,40px\)/);
   assert.match(zhCn, /header class="[^"]*pb-5[^"]*md:pb-24/);
   assert.match(zhCn, /data-signal-band="world-entry"/);
-  assert.match(zhCn, /2xl:hidden/);
-  assert.match(zhCn, /2xl:grid/);
+  assert.match(zhCn, /lg:hidden/);
+  assert.match(zhCn, /lg:block xl:hidden/);
+  assert.match(zhCn, /xl:grid/);
   assert.match(zhCn, /data-mobile-dock="entry-station"/);
   assert.match(zhCn, /data-mobile-dock-item="explore"/);
   assert.match(zhCn, /data-mobile-dock-item="status"/);

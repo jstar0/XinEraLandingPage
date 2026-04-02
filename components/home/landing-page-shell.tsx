@@ -294,7 +294,7 @@ export default function LandingPageShell({
 
             <div
               data-mobile-hero="entry-station"
-              className="relative mx-auto block max-w-[30rem] overflow-visible 2xl:hidden"
+              className="relative mx-auto block max-w-[30rem] overflow-visible lg:hidden"
             >
               <div className="relative">
                 <div className="mx-auto w-full max-w-[34rem]">
@@ -377,7 +377,7 @@ export default function LandingPageShell({
 
             <div
               data-medium-hero="entry-station"
-              className="relative mx-auto hidden max-w-[72rem] overflow-visible lg:block 2xl:hidden"
+              className="relative mx-auto hidden max-w-[72rem] overflow-visible lg:block xl:hidden"
             >
               <div className="relative">
                 <div className="mx-auto w-full max-w-[62rem]">
@@ -460,7 +460,7 @@ export default function LandingPageShell({
               </div>
             </div>
 
-            <div className="relative mx-auto hidden max-w-7xl items-center gap-12 2xl:grid 2xl:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]">
+            <div className="relative mx-auto hidden max-w-7xl items-center gap-12 xl:grid xl:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]">
               <m.div
                 className="order-2 lg:order-1"
                 variants={sectionReveal}
