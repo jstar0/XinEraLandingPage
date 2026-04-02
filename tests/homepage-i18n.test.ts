@@ -108,3 +108,13 @@ test("landing page mounts the system signal band and only the limited magnetic t
   assert.match(html, /data-magnetic-target="access-card"/);
   assert.doesNotMatch(html, /data-magnetic-target="route-card"/);
 });
+
+test("top navigation renders subtle hover and active animation hooks", () => {
+  const html = render("zh-CN");
+
+  assert.match(html, /data-nav-link="active"/);
+  assert.match(html, /data-nav-link="idle"/);
+  assert.match(html, /data-nav-ink="active"/);
+  assert.match(html, /group-hover:scale-x-100/);
+  assert.match(html, /group-hover:-translate-y-px/);
+});

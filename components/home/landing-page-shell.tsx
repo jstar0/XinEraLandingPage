@@ -207,18 +207,35 @@ export default function LandingPageShell({
                   <a
                     key={item.label}
                     href={item.href}
+                    data-nav-link={active ? "active" : "idle"}
                     aria-current={active ? "page" : undefined}
                     onClick={() => {
                       setActiveNavHref(resolveActiveNavHref(copy.nav, item.href));
                     }}
-                    className={`relative pb-2 transition-colors duration-300 ${
+                    className={`group relative pb-2 transition-colors duration-300 ease-out ${
                       active ? "text-white" : "text-white/58 hover:text-white"
                     }`}
                   >
-                    <span className={labelClass(locale, "text-[11px]")}>{item.label}</span>
-                    {active ? (
-                      <span className="absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(90deg,rgba(83,214,216,0),rgba(83,214,216,0.82),rgba(83,214,216,0))]" />
-                    ) : null}
+                    <span
+                      className={labelClass(
+                        locale,
+                        `block text-[11px] transition-[transform,color,text-shadow] duration-300 ease-out ${
+                          active
+                            ? "-translate-y-px text-white [text-shadow:0_0_12px_rgba(83,214,216,0.18)]"
+                            : "text-white/78 group-hover:-translate-y-px group-hover:text-white group-hover:[text-shadow:0_0_10px_rgba(83,214,216,0.14)]"
+                        }`,
+                      )}
+                    >
+                      {item.label}
+                    </span>
+                    <span
+                      data-nav-ink={active ? "active" : "idle"}
+                      className={`pointer-events-none absolute inset-x-0 bottom-0 h-px origin-center bg-[linear-gradient(90deg,rgba(83,214,216,0),rgba(83,214,216,0.82),rgba(83,214,216,0))] transition-[transform,opacity] duration-300 ease-out ${
+                        active
+                          ? "scale-x-100 opacity-100"
+                          : "scale-x-50 opacity-0 group-hover:scale-x-100 group-hover:opacity-100"
+                      }`}
+                    />
                   </a>
                 );
               })}
