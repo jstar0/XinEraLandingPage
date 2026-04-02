@@ -45,6 +45,13 @@ type HeroRoute = {
   href: string;
 };
 
+type MobileDockItem = {
+  href: string;
+  key: "explore" | "access" | "return" | "status";
+  label: string;
+  symbol: string;
+};
+
 export type LandingPageCopy = {
   htmlLang: string;
   localeLabel: string;
@@ -79,6 +86,7 @@ export type LandingPageCopy = {
     cards: AccessCard[];
   };
   dispatch: Dispatch;
+  mobileDock: MobileDockItem[];
   footer: {
     note: string;
     filingLabel: string;
@@ -308,6 +316,12 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryLabel: "打开世界地图",
       secondaryHref: commonAccessHrefs.map,
     },
+    mobileDock: [
+      { key: "explore", label: "探索", href: "#core", symbol: "◫" },
+      { key: "access", label: "入口", href: "#access", symbol: "◎" },
+      { key: "return", label: "回看", href: commonAccessHrefs.blog, symbol: "⌲" },
+      { key: "status", label: "状态", href: commonAccessHrefs.status, symbol: "◴" },
+    ],
     footer: {
       note: "",
       filingLabel: "备案信息",
@@ -464,6 +478,12 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryLabel: "打開世界地圖",
       secondaryHref: commonAccessHrefs.map,
     },
+    mobileDock: [
+      { key: "explore", label: "探索", href: "#core", symbol: "◫" },
+      { key: "access", label: "入口", href: "#access", symbol: "◎" },
+      { key: "return", label: "回看", href: commonAccessHrefs.blog, symbol: "⌲" },
+      { key: "status", label: "狀態", href: commonAccessHrefs.status, symbol: "◴" },
+    ],
     footer: {
       note: "",
       filingLabel: "備案資訊",
@@ -620,6 +640,12 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryLabel: "Open the World Map",
       secondaryHref: commonAccessHrefs.map,
     },
+    mobileDock: [
+      { key: "explore", label: "Explore", href: "#core", symbol: "◫" },
+      { key: "access", label: "Access", href: "#access", symbol: "◎" },
+      { key: "return", label: "Return", href: commonAccessHrefs.blog, symbol: "⌲" },
+      { key: "status", label: "Status", href: commonAccessHrefs.status, symbol: "◴" },
+    ],
     footer: {
       note: "",
       filingLabel: "Filing",
@@ -776,6 +802,12 @@ export const landingCopy: Record<SupportedLocale, LandingPageCopy> = {
       secondaryLabel: "ワールドマップを開く",
       secondaryHref: commonAccessHrefs.map,
     },
+    mobileDock: [
+      { key: "explore", label: "探索", href: "#core", symbol: "◫" },
+      { key: "access", label: "入口", href: "#access", symbol: "◎" },
+      { key: "return", label: "再訪", href: commonAccessHrefs.blog, symbol: "⌲" },
+      { key: "status", label: "状態", href: commonAccessHrefs.status, symbol: "◴" },
+    ],
     footer: {
       note: "サーバープロジェクト、設定、プレイヤー入口を紹介する、個人運営の非営利共有サイトです。",
       filingLabel: "备案",

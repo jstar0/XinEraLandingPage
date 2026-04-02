@@ -16,6 +16,7 @@ import {
   type SupportedLocale,
 } from "./i18n";
 import MagneticAnchor from "./magnetic-anchor";
+import MobileEntryDock from "./mobile-entry-dock";
 import SignalBand from "./signal-band";
 
 type LandingPageShellProps = {
@@ -87,13 +88,24 @@ function labelClass(locale: SupportedLocale, extra = "") {
   return `${isChineseLocale(locale) ? "font-pixel tracking-[0.22em]" : "font-[family-name:var(--font-label)] tracking-[0.22em] uppercase"} ${extra}`;
 }
 
+function heroAccentClass(locale: SupportedLocale, chinese: boolean) {
+  return chinese
+    ? "font-[family-name:var(--font-label)] text-[#53d6d8] uppercase"
+    : "font-pixel text-[#53d6d8]";
+}
+
 export default function LandingPageShell({
   locale,
   onLocaleChange,
 }: LandingPageShellProps) {
   const copy = landingCopy[locale];
   const chinese = isChineseLocale(locale);
+  const mobileHeroCopyTransform =
+    locale === "en"
+      ? "[transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)_translate3d(6px,40px,40px)]"
+      : "[transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)_translate3d(6px,32px,40px)]";
   const heroMark = copy.brand.replace(/\s+ARCHIVE$/, "");
+  const mobilePortalLabel = copy.access.cards[0]?.title ?? copy.hero.primaryLabel;
   const signalBandItems = createSignalBandItems(copy);
   const [activeNavHref, setActiveNavHref] = React.useState<string | null>(() =>
     resolveActiveNavHref(copy.nav),
@@ -189,7 +201,7 @@ export default function LandingPageShell({
         className="bg-[#0b0e11] text-[#e5edef]"
       >
         <nav className="sticky top-0 z-50 w-full bg-[rgba(11,14,17,0.78)] px-5 py-4 backdrop-blur-xl md:px-10">
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-3">
             <div className="min-w-0">
               <div className="font-[family-name:var(--font-label)] text-sm tracking-[0.26em] text-[#53d6d8] uppercase md:text-base">
                 {copy.brand}
@@ -198,6 +210,18 @@ export default function LandingPageShell({
                 {copy.metaLine}
               </p>
             </div>
+
+            <a
+              href={copy.hero.primaryHref}
+              target="_blank"
+              rel="noreferrer"
+              className={labelClass(
+                locale,
+                "inline-flex items-center justify-center bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-4 py-2 text-[10px] text-[#081113] md:hidden",
+              )}
+            >
+              {mobilePortalLabel}
+            </a>
 
             <div className="hidden items-center gap-8 md:flex">
               {copy.nav.map((item) => {
@@ -241,7 +265,7 @@ export default function LandingPageShell({
               })}
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="order-3 flex w-full items-center justify-end gap-2 md:order-none md:w-auto">
               {(["zh-CN", "zh-TW", "en", "ja"] as const).map((item) => (
                 <button
                   key={item}
@@ -249,7 +273,7 @@ export default function LandingPageShell({
                   onClick={() => onLocaleChange?.(item)}
                   className={labelClass(
                     locale,
-                    `min-w-10 px-2 py-1.5 text-[11px] transition-colors ${
+                    `min-w-8 px-2 py-1.5 text-[10px] transition-colors md:min-w-10 md:text-[11px] ${
                       locale === item
                         ? "bg-[#2fd3d5] text-[#071113]"
                         : "bg-[#13191d] text-white/48 hover:bg-[#182125] hover:text-white"
@@ -264,11 +288,179 @@ export default function LandingPageShell({
         </nav>
 
         <main>
-          <header className="relative overflow-hidden px-5 pb-[4.5rem] pt-10 md:px-10 md:pb-24 md:pt-16">
+          <header className="relative overflow-hidden px-5 pb-5 pt-10 md:px-10 md:pb-24 md:pt-16">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_0%,rgba(47,211,213,0.12),transparent_32%),radial-gradient(circle_at_86%_18%,rgba(76,110,123,0.16),transparent_34%),linear-gradient(180deg,#0b0e11_0%,#0e1216_100%)]" />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:44px_44px] opacity-[0.08]" />
 
-            <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]">
+            <div
+              data-mobile-hero="entry-station"
+              className="relative mx-auto block max-w-[30rem] overflow-visible 2xl:hidden"
+            >
+              <div className="relative">
+                <div className="mx-auto w-full max-w-[34rem]">
+                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                </div>
+
+                <div
+                  data-mobile-hero-copy="tilted-overlay"
+                  className="pointer-events-none absolute inset-[16%_7%_18%_11%] z-10 flex items-end justify-center"
+                >
+                  <div
+                    className={`w-[70%] max-w-[17rem] ${mobileHeroCopyTransform} [transform-style:preserve-3d] text-center`}
+                  >
+                    <div className="mb-3 flex items-center justify-center gap-2">
+                      <span className="h-px w-7 bg-[#2fd3d5]" />
+                      <span className={labelClass(locale, "text-[9px] text-[#7bdfe1]")}>
+                        {copy.hero.plaque}
+                      </span>
+                      <span className="h-px w-7 bg-[#2fd3d5]" />
+                    </div>
+
+                    <p className={labelClass(locale, "mb-2 text-[9px] text-white/34")}>
+                      {copy.metaLine}
+                    </p>
+                    <h1 className={headlineClass(locale, chinese ? "text-4xl" : "text-4xl")}>
+                      {copy.hero.title}
+                    </h1>
+                    <p
+                      className={`${heroAccentClass(locale, chinese)} ${
+                        chinese ? "mt-2 text-[1.15rem] tracking-[0.28em]" : "mt-2 text-xl tracking-[0.1em]"
+                      }`}
+                    >
+                      {chinese ? heroMark : "心纪元"}
+                    </p>
+                    <p className={bodyClass(locale, "mx-auto mt-4 max-w-[14rem] text-xs text-white/70")}>
+                      {copy.hero.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative z-10 mx-auto mt-6 flex max-w-[24rem] flex-col gap-3 px-1">
+                <a
+                  href={copy.hero.primaryHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={labelClass(
+                    locale,
+                    "inline-flex items-center justify-center bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-6 py-4 text-[#081113]",
+                  )}
+                >
+                  {copy.hero.primaryLabel}
+                </a>
+                <a
+                  href={copy.hero.secondaryHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={labelClass(
+                    locale,
+                    "inline-flex items-center justify-center bg-[#141a1f] px-6 py-4 text-white/82",
+                  )}
+                >
+                  {copy.hero.secondaryLabel}
+                </a>
+              </div>
+
+              <div className="relative z-10 mx-auto mt-5 flex max-w-[24rem] flex-col gap-2 px-1 text-left">
+                {copy.hero.routes.map((route, index) => (
+                  <div key={route.title} className="flex items-center gap-3 text-white/26">
+                    <span className="font-[family-name:var(--font-label)] text-3xl tracking-[-0.05em]">
+                      0{index + 1}.
+                    </span>
+                    <span className={labelClass(locale, "text-[10px] text-[#53d6d8]/82")}>
+                      {route.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div
+              data-medium-hero="entry-station"
+              className="relative mx-auto hidden max-w-[72rem] overflow-visible lg:block 2xl:hidden"
+            >
+              <div className="relative">
+                <div className="mx-auto w-full max-w-[62rem]">
+                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                </div>
+
+                <div
+                  data-medium-hero-copy="tilted-overlay"
+                  className="pointer-events-none absolute inset-[10%_7%_21%_50%] z-10 flex items-end justify-end"
+                >
+                  <div className="w-[min(26rem,78%)] [transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)_translate3d(0,0,48px)] [transform-style:preserve-3d] text-left">
+                    <div className="mb-4 flex items-center gap-4">
+                      <span className="h-px w-10 bg-[#2fd3d5]" />
+                      <span className={labelClass(locale, "text-[10px] text-[#7bdfe1] md:text-xs")}>
+                        {copy.hero.plaque}
+                      </span>
+                    </div>
+
+                    <p className={labelClass(locale, "mb-4 text-[10px] text-white/28 md:text-xs")}>
+                      {copy.metaLine}
+                    </p>
+                    <h1
+                      className={headlineClass(
+                        locale,
+                        chinese ? "text-5xl xl:text-6xl" : "text-5xl xl:text-6xl",
+                      )}
+                    >
+                      {copy.hero.title}
+                    </h1>
+                    <p
+                      className={`${heroAccentClass(locale, chinese)} ${
+                        chinese
+                          ? "mt-3 text-sm tracking-[0.38em] xl:text-base"
+                          : "mt-3 text-2xl tracking-[0.14em] xl:text-[2rem]"
+                      }`}
+                    >
+                      {chinese ? heroMark : "心纪元"}
+                    </p>
+                    <p
+                      className={bodyClass(
+                        locale,
+                        chinese
+                          ? "mt-6 max-w-xl text-sm text-white/68 md:text-base"
+                          : "mt-6 max-w-xl text-base text-white/72 md:text-lg",
+                      )}
+                    >
+                      {copy.hero.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative z-10 mx-auto mt-6 flex max-w-[62rem] flex-col gap-3 px-4 sm:flex-row sm:justify-center lg:justify-end">
+                <MagneticAnchor
+                  href={copy.hero.primaryHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  targetName="hero-primary"
+                  maxOffsetX={8}
+                  maxOffsetY={6}
+                  className={labelClass(
+                    locale,
+                    "inline-flex items-center justify-center gap-3 bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-7 py-4 text-[#081113] transition-transform duration-300 hover:-translate-y-0.5",
+                  )}
+                >
+                  <span className="magnetic-layer">{copy.hero.primaryLabel}</span>
+                  <span className="magnetic-layer-strong">↗</span>
+                </MagneticAnchor>
+                <a
+                  href={copy.hero.secondaryHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={labelClass(
+                    locale,
+                    "inline-flex items-center justify-center bg-[#141a1f] px-7 py-4 text-white/84 transition-colors duration-300 hover:bg-[#1b2429] hover:text-white",
+                  )}
+                >
+                  {copy.hero.secondaryLabel}
+                </a>
+              </div>
+            </div>
+
+            <div className="relative mx-auto hidden max-w-7xl items-center gap-12 2xl:grid 2xl:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]">
               <m.div
                 className="order-2 lg:order-1"
                 variants={sectionReveal}
@@ -379,14 +571,22 @@ export default function LandingPageShell({
             </div>
           </header>
 
-          <SignalBand
-            bandId="world-entry"
-            items={signalBandItems}
-            itemClassName={labelClass(locale, "text-[10px] text-white/34 md:text-xs")}
-          />
+          <div>
+            <SignalBand
+              bandId="world-entry"
+              items={signalBandItems}
+              className="border-y border-white/6"
+              trackClassName="gap-4 px-4 py-3 md:gap-6 md:px-4 md:py-[0.85rem]"
+              itemClassName={labelClass(
+                locale,
+                "text-[9px] tracking-[0.18em] text-white/32 md:text-xs md:tracking-[0.22em] md:text-white/34",
+              )}
+            />
+          </div>
 
           <m.section
-            className="bg-[#11151a] px-5 py-[4.5rem] md:px-10 md:py-20"
+            data-mobile-route-summary="desktop-only"
+            className="hidden bg-[#11151a] px-5 py-9 md:block md:px-10 md:py-20"
             variants={sectionReveal}
             initial={false}
             whileInView="visible"
@@ -449,7 +649,7 @@ export default function LandingPageShell({
                     href={route.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden bg-[#141a1f] p-7 transition-transform duration-300 hover:-translate-y-1"
+                    className="group relative flex min-h-[13rem] flex-col justify-between overflow-hidden bg-[#141a1f] p-7 transition-transform duration-300 hover:-translate-y-1 md:aspect-[4/5] md:min-h-0"
                   >
                     <img
                       src={ROUTE_IMAGES[index % ROUTE_IMAGES.length]}
@@ -707,7 +907,7 @@ export default function LandingPageShell({
           </m.section>
         </main>
 
-        <footer className="bg-[#090c0f] px-5 py-10 md:px-10">
+        <footer className="bg-[#090c0f] px-5 py-10 pb-28 md:px-10 md:pb-10">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
               <div className="max-w-xl">
@@ -749,6 +949,12 @@ export default function LandingPageShell({
             </div>
           </div>
         </footer>
+
+        <MobileEntryDock
+          activeHref={activeNavHref}
+          items={copy.mobileDock}
+          labelClassName={labelClass(locale, "")}
+        />
       </div>
     </LazyMotion>
   );

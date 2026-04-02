@@ -118,3 +118,26 @@ test("top navigation renders subtle hover and active animation hooks", () => {
   assert.match(html, /group-hover:scale-x-100/);
   assert.match(html, /group-hover:-translate-y-px/);
 });
+
+test("mobile adaptation mounts a dedicated hero overlay and bottom dock", () => {
+  const zhCn = render("zh-CN");
+  const en = render("en");
+
+  assert.match(zhCn, /data-mobile-hero="entry-station"/);
+  assert.match(zhCn, /data-medium-hero="entry-station"/);
+  assert.match(zhCn, /data-mobile-hero-copy="tilted-overlay"/);
+  assert.match(zhCn, /data-medium-hero-copy="tilted-overlay"/);
+  assert.match(zhCn, /translate3d\(6px,32px,40px\)/);
+  assert.match(en, /translate3d\(6px,40px,40px\)/);
+  assert.match(zhCn, /header class="[^"]*pb-5[^"]*md:pb-24/);
+  assert.match(zhCn, /data-signal-band="world-entry"/);
+  assert.match(zhCn, /2xl:hidden/);
+  assert.match(zhCn, /2xl:grid/);
+  assert.match(zhCn, /data-mobile-dock="entry-station"/);
+  assert.match(zhCn, /data-mobile-dock-item="explore"/);
+  assert.match(zhCn, /data-mobile-dock-item="status"/);
+  assert.match(zhCn, /data-mobile-route-summary="desktop-only"/);
+  assert.match(zhCn, /class="[^"]*hidden[^"]*md:block/);
+  assert.match(en, /Explore/);
+  assert.match(en, /Status/);
+});
