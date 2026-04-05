@@ -7,6 +7,7 @@ import EntryStationHero from "./entry-station-hero";
 import {
   createSignalBandItems,
   resolveActiveNavHref,
+  resolveHeroLayout,
   resolveScrollActiveNavHref,
 } from "./landing-page-effects";
 import {
@@ -94,6 +95,40 @@ function heroAccentClass(locale: SupportedLocale, chinese: boolean) {
     : "font-pixel text-[#53d6d8]";
 }
 
+function HeroPoster({
+  imageAlt,
+  imageSrc,
+}: {
+  imageAlt: string;
+  imageSrc: string;
+}) {
+  return (
+    <div
+      data-hero-poster="entry-station"
+      className="group relative mx-auto aspect-[11/8] w-full max-w-[720px] touch-none select-none"
+    >
+      <div className="pointer-events-none absolute inset-[-8%_-6%_10%_-6%] bg-[radial-gradient(circle_at_50%_55%,rgba(47,211,213,0.18),transparent_36%),radial-gradient(circle_at_50%_110%,rgba(12,71,76,0.52),transparent_30%)] blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-[10%] bottom-[-6%] h-[16%] bg-[radial-gradient(circle,rgba(47,211,213,0.2),rgba(47,211,213,0.04)_42%,transparent_72%)] blur-xl" />
+      <div className="relative h-full w-full [perspective:1800px]">
+        <div className="absolute inset-[4%_3%] [transform-style:preserve-3d] [transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)] md:inset-[3.5%_2.5%]">
+          <div className="absolute inset-[-1px] bg-[linear-gradient(135deg,rgba(47,211,213,0.32),rgba(255,255,255,0.06)_42%,rgba(47,211,213,0.22))] opacity-65" />
+          <div className="absolute inset-[1px] overflow-hidden bg-[#05080b] shadow-[0_20px_50px_rgba(0,0,0,0.42)]">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.42] grayscale"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,11,0.06),rgba(5,8,11,0.18)),linear-gradient(135deg,rgba(47,211,213,0.1),transparent_36%,rgba(212,169,94,0.06)_82%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.045)_0,rgba(255,255,255,0.045)_1px,transparent_1px,transparent_4px)] opacity-30 mix-blend-screen" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(196,214,218,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(196,214,218,0.08)_1px,transparent_1px)] bg-[size:calc(100%/24)_calc(100%/14)] opacity-55" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_12%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(180deg,transparent_0%,rgba(5,8,11,0.24)_72%,rgba(5,8,11,0.65)_100%)]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function LandingPageShell({
   locale,
   onLocaleChange,
@@ -107,6 +142,9 @@ export default function LandingPageShell({
   const heroMark = copy.brand.replace(/\s+ARCHIVE$/, "");
   const mobilePortalLabel = copy.access.cards[0]?.title ?? copy.hero.primaryLabel;
   const signalBandItems = createSignalBandItems(copy);
+  const [heroLayout, setHeroLayout] = React.useState<"desktop" | "medium" | "mobile">(() =>
+    typeof window === "undefined" ? "desktop" : resolveHeroLayout(window.innerWidth),
+  );
   const [activeNavHref, setActiveNavHref] = React.useState<string | null>(() =>
     resolveActiveNavHref(copy.nav),
   );
@@ -192,6 +230,23 @@ export default function LandingPageShell({
       }
     };
   }, [copy]);
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const syncHeroLayout = () => {
+      setHeroLayout(resolveHeroLayout(window.innerWidth));
+    };
+
+    syncHeroLayout();
+    window.addEventListener("resize", syncHeroLayout);
+
+    return () => {
+      window.removeEventListener("resize", syncHeroLayout);
+    };
+  }, []);
 
   return (
     <LazyMotion features={domAnimation}>
@@ -298,7 +353,11 @@ export default function LandingPageShell({
             >
               <div className="relative">
                 <div className="mx-auto w-full max-w-[34rem]">
-                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  {heroLayout === "mobile" ? (
+                    <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  ) : (
+                    <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  )}
                 </div>
 
                 <div
@@ -381,7 +440,11 @@ export default function LandingPageShell({
             >
               <div className="relative">
                 <div className="mx-auto w-full max-w-[62rem]">
-                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  {heroLayout === "medium" ? (
+                    <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  ) : (
+                    <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  )}
                 </div>
 
                 <div
@@ -467,7 +530,11 @@ export default function LandingPageShell({
                 initial="hidden"
                 animate="visible"
               >
-                <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                {heroLayout === "desktop" ? (
+                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                ) : (
+                  <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                )}
               </m.div>
 
               <m.div

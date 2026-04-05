@@ -13,6 +13,18 @@ type SectionViewportSample = {
   top: number;
 };
 
+export function resolveHeroLayout(viewportWidth: number): "desktop" | "medium" | "mobile" {
+  if (viewportWidth >= 1280) {
+    return "desktop";
+  }
+
+  if (viewportWidth >= 1024) {
+    return "medium";
+  }
+
+  return "mobile";
+}
+
 export function resolveMagneticTranslation(input: {
   clientX: number;
   clientY: number;

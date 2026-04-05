@@ -3,6 +3,13 @@
 import React, { useEffect, useRef, type CSSProperties } from "react";
 
 import {
+  formatTileRenderSnapshot,
+  resolveHeroRenderProfile,
+  shouldRunHeroAnimationLoop,
+  tileRenderSnapshotChanged,
+  type TileRenderSnapshot,
+} from "./entry-station-hero-runtime";
+import {
   buildHeroGridTiles,
   createHoverPulse,
   HERO_GRID_COLUMNS,
@@ -28,6 +35,13 @@ type TileRefs = {
   tile: HTMLDivElement | null;
 };
 
+type FrameRect = {
+  height: number;
+  left: number;
+  top: number;
+  width: number;
+};
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
@@ -36,14 +50,18 @@ export default function EntryStationHero({
   imageAlt,
   imageSrc,
 }: EntryStationHeroProps) {
+  const [renderProfile, setRenderProfile] = React.useState<"full" | "light">("full");
   const frameRef = useRef<HTMLDivElement>(null);
   const pointerRef = useRef<GridPointer>({ active: false, x: 0.5, y: 0.5 });
   const pulsesRef = useRef<GridPulse[]>([]);
   const previousPointRef = useRef<GridPoint>({ x: 0.5, y: 0.5 });
+  const frameRectRef = useRef<FrameRect | null>(null);
+  const inViewportRef = useRef(true);
   const lastRippleRef = useRef(0);
   const lastPaintRef = useRef(0);
   const rafRef = useRef<number>();
   const tileRefs = useRef<TileRefs[]>([]);
+  const tileSnapshotRef = useRef<Array<TileRenderSnapshot | null>>([]);
 
   useEffect(() => {
     const node = frameRef.current;
@@ -53,13 +71,42 @@ export default function EntryStationHero({
     }
 
     const frame = node;
+    const resolvedRenderProfile = resolveHeroRenderProfile(window.navigator.userAgent);
+    setRenderProfile(resolvedRenderProfile);
 
-    function pointFromPointer(event: PointerEvent): GridPoint {
+    function updateFrameRect() {
       const rect = frame.getBoundingClientRect();
 
+      frameRectRef.current = {
+        height: rect.height,
+        left: rect.left,
+        top: rect.top,
+        width: rect.width,
+      };
+    }
+
+    function hasRenderableBox() {
+      const rect = frameRectRef.current;
+
+      return Boolean(rect && rect.width > 0 && rect.height > 0);
+    }
+
+    function pointFromPointer(event: PointerEvent): GridPoint {
+      const rect = frameRectRef.current;
+
+      if (!rect) {
+        updateFrameRect();
+      }
+
+      const nextRect = frameRectRef.current;
+
+      if (!nextRect) {
+        return { x: 0.5, y: 0.5 };
+      }
+
       return {
-        x: clamp((event.clientX - rect.left) / rect.width, 0, 1),
-        y: clamp((event.clientY - rect.top) / rect.height, 0, 1),
+        x: clamp((event.clientX - nextRect.left) / nextRect.width, 0, 1),
+        y: clamp((event.clientY - nextRect.top) / nextRect.height, 0, 1),
       };
     }
 
@@ -89,10 +136,12 @@ export default function EntryStationHero({
 
     function onPointerEnter(event: PointerEvent) {
       handlePointer(event, true);
+      queueNextFrame();
     }
 
     function onPointerMove(event: PointerEvent) {
       handlePointer(event);
+      queueNextFrame();
     }
 
     function onPointerLeave() {
@@ -103,25 +152,94 @@ export default function EntryStationHero({
       };
     }
 
+    updateFrameRect();
+
     frame.addEventListener("pointerenter", onPointerEnter);
     frame.addEventListener("pointermove", onPointerMove);
     frame.addEventListener("pointerleave", onPointerLeave);
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inViewportRef.current = entry?.isIntersecting ?? false;
 
-    function paint(now: number) {
-      if (document.visibilityState !== "visible") {
-        rafRef.current = window.requestAnimationFrame(paint);
+        if (inViewportRef.current) {
+          queueNextFrame();
+        }
+      },
+      {
+        threshold: 0.01,
+      },
+    );
+    const resizeObserver = new ResizeObserver(() => {
+      updateFrameRect();
+      queueNextFrame();
+    });
+
+    observer.observe(frame);
+    resizeObserver.observe(frame);
+    const handleResize = () => {
+      updateFrameRect();
+      queueNextFrame();
+    };
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        queueNextFrame();
+      }
+    };
+    const handleReducedMotionChange = () => {
+      queueNextFrame();
+    };
+
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleReducedMotionChange);
+    } else {
+      mediaQuery.addListener(handleReducedMotionChange);
+    }
+
+    function queueNextFrame() {
+      if (rafRef.current !== undefined) {
         return;
       }
 
-      if (!mediaQuery.matches && now - lastPaintRef.current < 28) {
-        rafRef.current = window.requestAnimationFrame(paint);
+      rafRef.current = window.requestAnimationFrame(paint);
+    }
+
+    function paint(now: number) {
+      rafRef.current = undefined;
+
+      updateFrameRect();
+      if (document.visibilityState !== "visible") {
+        return;
+      }
+
+      const reducedMotion = mediaQuery.matches;
+      const activePulses = pulsesRef.current.filter((pulse) => now - pulse.createdAt <= pulse.duration);
+      pulsesRef.current = reducedMotion ? [] : activePulses;
+
+      const shouldRun = shouldRunHeroAnimationLoop({
+        documentVisible: document.visibilityState === "visible",
+        hasRenderableBox: hasRenderableBox(),
+        inViewport: inViewportRef.current,
+        pointerActive: pointerRef.current.active,
+        pulseCount: pulsesRef.current.length,
+        reducedMotion,
+      });
+
+      if (!shouldRun) {
+        return;
+      }
+
+      const frameInterval = pointerRef.current.active || pulsesRef.current.length ? 28 : 42;
+
+      if (now - lastPaintRef.current < frameInterval) {
+        queueNextFrame();
         return;
       }
 
       lastPaintRef.current = now;
-      pulsesRef.current = pulsesRef.current.filter((pulse) => now - pulse.createdAt <= pulse.duration);
 
       for (let index = 0; index < TILES.length; index += 1) {
         const tile = TILES[index];
@@ -135,26 +253,56 @@ export default function EntryStationHero({
           point: tile,
           pointer: pointerRef.current,
           pulses: pulsesRef.current,
-          time: mediaQuery.matches ? 0 : now,
+          time: reducedMotion ? 0 : now,
         });
+        const snapshot = formatTileRenderSnapshot(state);
 
-        refs.tile.style.transform = `translate3d(${state.translateX.toFixed(2)}px, ${state.translateY.toFixed(2)}px, 0)`;
-        refs.glow.style.opacity = state.glowOpacity.toFixed(3);
-        refs.edge.style.opacity = state.edgeOpacity.toFixed(3);
-        refs.highlight.style.opacity = state.highlightOpacity.toFixed(3);
+        if (!tileRenderSnapshotChanged(tileSnapshotRef.current[index] ?? null, snapshot)) {
+          continue;
+        }
+
+        refs.tile.style.transform = snapshot.transform;
+        refs.glow.style.opacity =
+          resolvedRenderProfile === "light"
+            ? Number(snapshot.glowOpacity) > 0.18
+              ? "0.18"
+              : snapshot.glowOpacity
+            : snapshot.glowOpacity;
+        refs.edge.style.opacity =
+          resolvedRenderProfile === "light"
+            ? Number(snapshot.edgeOpacity) > 0.12
+              ? "0.12"
+              : snapshot.edgeOpacity
+            : snapshot.edgeOpacity;
+        refs.highlight.style.opacity =
+          resolvedRenderProfile === "light"
+            ? Number(snapshot.highlightOpacity) > 0.16
+              ? "0.16"
+              : snapshot.highlightOpacity
+            : snapshot.highlightOpacity;
+        tileSnapshotRef.current[index] = snapshot;
       }
 
-      rafRef.current = window.requestAnimationFrame(paint);
+      queueNextFrame();
     }
 
-    rafRef.current = window.requestAnimationFrame(paint);
+    queueNextFrame();
 
     return () => {
       frame.removeEventListener("pointerenter", onPointerEnter);
       frame.removeEventListener("pointermove", onPointerMove);
       frame.removeEventListener("pointerleave", onPointerLeave);
+      observer.disconnect();
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      if (typeof mediaQuery.addEventListener === "function") {
+        mediaQuery.removeEventListener("change", handleReducedMotionChange);
+      } else {
+        mediaQuery.removeListener(handleReducedMotionChange);
+      }
 
-      if (rafRef.current) {
+      if (rafRef.current !== undefined) {
         window.cancelAnimationFrame(rafRef.current);
       }
     };
@@ -213,7 +361,9 @@ export default function EntryStationHero({
                     className="absolute inset-0 overflow-hidden border border-[rgba(202,224,228,0.12)] bg-[#091015] bg-cover bg-no-repeat shadow-[inset_0_0_0_1px_rgba(255,255,255,0.025)]"
                   />
                   <div
-                    className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,transparent_0_38%,rgba(224,247,247,0.18)_50%,transparent_62%),linear-gradient(180deg,transparent_0_38%,rgba(224,247,247,0.18)_50%,transparent_62%)] mix-blend-screen opacity-0"
+                    className={`pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,transparent_0_38%,rgba(224,247,247,0.18)_50%,transparent_62%),linear-gradient(180deg,transparent_0_38%,rgba(224,247,247,0.18)_50%,transparent_62%)] opacity-0 ${
+                      renderProfile === "light" ? "" : "mix-blend-screen"
+                    }`}
                     ref={(node) => {
                       tileRefs.current[index] = {
                         ...tileRefs.current[index],
@@ -222,7 +372,11 @@ export default function EntryStationHero({
                     }}
                   />
                   <div
-                    className="pointer-events-none absolute inset-0 border border-[rgba(47,211,213,0.34)] opacity-0 shadow-[0_0_18px_rgba(47,211,213,0.16),inset_0_0_10px_rgba(255,255,255,0.05)]"
+                    className={`pointer-events-none absolute inset-0 border border-[rgba(47,211,213,0.34)] opacity-0 ${
+                      renderProfile === "light"
+                        ? "shadow-[inset_0_0_6px_rgba(255,255,255,0.04)]"
+                        : "shadow-[0_0_18px_rgba(47,211,213,0.16),inset_0_0_10px_rgba(255,255,255,0.05)]"
+                    }`}
                     ref={(node) => {
                       tileRefs.current[index] = {
                         ...tileRefs.current[index],
@@ -231,7 +385,9 @@ export default function EntryStationHero({
                     }}
                   />
                   <div
-                    className="pointer-events-none absolute inset-x-[10%] bottom-[-10px] h-[12px] bg-[linear-gradient(180deg,rgba(47,211,213,0.55),rgba(16,53,58,0.06))] opacity-0 blur-[6px]"
+                    className={`pointer-events-none absolute inset-x-[10%] bottom-[-10px] h-[12px] bg-[linear-gradient(180deg,rgba(47,211,213,0.55),rgba(16,53,58,0.06))] opacity-0 ${
+                      renderProfile === "light" ? "" : "blur-[6px]"
+                    }`}
                     ref={(node) => {
                       tileRefs.current[index] = {
                         ...tileRefs.current[index],

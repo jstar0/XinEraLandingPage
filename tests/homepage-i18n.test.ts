@@ -142,3 +142,13 @@ test("mobile adaptation mounts a dedicated hero overlay and bottom dock", () => 
   assert.match(en, /Explore/);
   assert.match(en, /Status/);
 });
+
+test("responsive hero renders a single animated grid instance plus static posters for other breakpoints", () => {
+  const html = render("zh-CN");
+
+  const animatedHeroCount = (html.match(/data-hero-grid="entry-station"/g) ?? []).length;
+  const posterCount = (html.match(/data-hero-poster="entry-station"/g) ?? []).length;
+
+  assert.equal(animatedHeroCount, 1);
+  assert.ok(posterCount >= 2, "expected static posters to cover the non-active breakpoint layouts");
+});

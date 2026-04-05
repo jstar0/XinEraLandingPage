@@ -5,6 +5,7 @@ import { landingCopy } from "../components/home/i18n";
 
 type EffectsModule = {
   createSignalBandItems: (copy: (typeof landingCopy)["zh-CN"]) => string[];
+  resolveHeroLayout: (viewportWidth: number) => "desktop" | "medium" | "mobile";
   resolveActiveNavHref: (
     nav: Array<{ href: string; label: string }>,
     hash?: string | null,
@@ -28,6 +29,7 @@ async function loadEffectsModule(): Promise<EffectsModule> {
   } catch {
     return {
       createSignalBandItems: () => [],
+      resolveHeroLayout: () => "desktop",
       resolveActiveNavHref: () => null,
       resolveScrollActiveNavHref: () => null,
       resolveMagneticTranslation: () => ({ intensity: 0, x: 0, y: 0 }),
@@ -75,6 +77,15 @@ test("signal band items stay short, ordered, and deduplicated", async () => {
   assert.ok(items.includes("玩家入口矩阵"), "expected the access matrix label to be present");
   assert.equal(new Set(items).size, items.length, "expected the signal band base items to stay deduplicated");
   assert.ok(items.every((item) => item.length <= 20), "expected all signal phrases to remain compact");
+});
+
+test("hero layout resolves to a single active breakpoint bucket", async () => {
+  const effects = await loadEffectsModule();
+
+  assert.equal(effects.resolveHeroLayout(375), "mobile");
+  assert.equal(effects.resolveHeroLayout(1024), "medium");
+  assert.equal(effects.resolveHeroLayout(1279), "medium");
+  assert.equal(effects.resolveHeroLayout(1280), "desktop");
 });
 
 test("active nav href follows internal section hashes and falls back to the first section", async () => {
