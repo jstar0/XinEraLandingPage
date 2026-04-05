@@ -3,7 +3,9 @@
 import React, { useEffect, useRef, type CSSProperties } from "react";
 
 import {
+  createTileRenderSnapshot,
   formatTileRenderSnapshot,
+  resolveHeroFrameInterval,
   resolveHeroRenderProfile,
   shouldRunHeroAnimationLoop,
   tileRenderSnapshotChanged,
@@ -135,6 +137,7 @@ export default function EntryStationHero({
     }
 
     function onPointerEnter(event: PointerEvent) {
+      updateFrameRect();
       handlePointer(event, true);
       queueNextFrame();
     }
@@ -210,7 +213,6 @@ export default function EntryStationHero({
     function paint(now: number) {
       rafRef.current = undefined;
 
-      updateFrameRect();
       if (document.visibilityState !== "visible") {
         return;
       }
@@ -232,7 +234,11 @@ export default function EntryStationHero({
         return;
       }
 
-      const frameInterval = pointerRef.current.active || pulsesRef.current.length ? 28 : 42;
+      const frameInterval = resolveHeroFrameInterval({
+        pointerActive: pointerRef.current.active,
+        pulseCount: pulsesRef.current.length,
+        renderProfile: resolvedRenderProfile,
+      });
 
       if (now - lastPaintRef.current < frameInterval) {
         queueNextFrame();
@@ -255,31 +261,18 @@ export default function EntryStationHero({
           pulses: pulsesRef.current,
           time: reducedMotion ? 0 : now,
         });
-        const snapshot = formatTileRenderSnapshot(state);
+        const snapshot = createTileRenderSnapshot(state, resolvedRenderProfile);
 
         if (!tileRenderSnapshotChanged(tileSnapshotRef.current[index] ?? null, snapshot)) {
           continue;
         }
 
-        refs.tile.style.transform = snapshot.transform;
-        refs.glow.style.opacity =
-          resolvedRenderProfile === "light"
-            ? Number(snapshot.glowOpacity) > 0.18
-              ? "0.18"
-              : snapshot.glowOpacity
-            : snapshot.glowOpacity;
-        refs.edge.style.opacity =
-          resolvedRenderProfile === "light"
-            ? Number(snapshot.edgeOpacity) > 0.12
-              ? "0.12"
-              : snapshot.edgeOpacity
-            : snapshot.edgeOpacity;
-        refs.highlight.style.opacity =
-          resolvedRenderProfile === "light"
-            ? Number(snapshot.highlightOpacity) > 0.16
-              ? "0.16"
-              : snapshot.highlightOpacity
-            : snapshot.highlightOpacity;
+        const formattedSnapshot = formatTileRenderSnapshot(snapshot);
+
+        refs.tile.style.transform = formattedSnapshot.transform;
+        refs.glow.style.opacity = formattedSnapshot.glowOpacity;
+        refs.edge.style.opacity = formattedSnapshot.edgeOpacity;
+        refs.highlight.style.opacity = formattedSnapshot.highlightOpacity;
         tileSnapshotRef.current[index] = snapshot;
       }
 

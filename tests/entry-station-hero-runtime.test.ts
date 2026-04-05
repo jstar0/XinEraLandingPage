@@ -1,15 +1,27 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
+type NumericSnapshot = {
+  edgeOpacity: number;
+  glowOpacity: number;
+  highlightOpacity: number;
+  translateX: number;
+  translateY: number;
+};
+
 type RuntimeModule = {
-  formatTileRenderSnapshot: (input: {
-    edgeOpacity: number;
-    glowOpacity: number;
-    highlightOpacity: number;
-    lift: number;
-    translateX: number;
-    translateY: number;
-  }) => {
+  createTileRenderSnapshot: (
+    input: {
+      edgeOpacity: number;
+      glowOpacity: number;
+      highlightOpacity: number;
+      lift: number;
+      translateX: number;
+      translateY: number;
+    },
+    renderProfile?: "full" | "light",
+  ) => NumericSnapshot;
+  formatTileRenderSnapshot: (input: NumericSnapshot) => {
     edgeOpacity: string;
     glowOpacity: string;
     highlightOpacity: string;
@@ -23,22 +35,15 @@ type RuntimeModule = {
     pulseCount: number;
     reducedMotion: boolean;
   }) => boolean;
+  resolveHeroFrameInterval: (input: {
+    pointerActive: boolean;
+    pulseCount: number;
+    renderProfile: "full" | "light";
+  }) => number;
   tileRenderSnapshotChanged: (
-    previous:
-      | {
-          edgeOpacity: string;
-          glowOpacity: string;
-          highlightOpacity: string;
-          transform: string;
-        }
-      | null,
-    next: {
-      edgeOpacity: string;
-      glowOpacity: string;
-      highlightOpacity: string;
-      transform: string;
-    },
-      ) => boolean;
+    previous: NumericSnapshot | null,
+    next: NumericSnapshot,
+  ) => boolean;
   resolveHeroRenderProfile: (userAgent: string) => "full" | "light";
 };
 
@@ -47,6 +52,13 @@ async function loadRuntimeModule(): Promise<RuntimeModule> {
     return await import("../components/home/entry-station-hero-runtime");
   } catch {
     return {
+      createTileRenderSnapshot: () => ({
+        edgeOpacity: 0,
+        glowOpacity: 0,
+        highlightOpacity: 0,
+        translateX: 0,
+        translateY: 0,
+      }),
       formatTileRenderSnapshot: () => ({
         edgeOpacity: "",
         glowOpacity: "",
@@ -54,6 +66,7 @@ async function loadRuntimeModule(): Promise<RuntimeModule> {
         transform: "",
       }),
       shouldRunHeroAnimationLoop: () => false,
+      resolveHeroFrameInterval: () => 42,
       tileRenderSnapshotChanged: () => false,
       resolveHeroRenderProfile: () => "full",
     };
@@ -152,35 +165,107 @@ test("reduced motion disables idle looping but keeps active interaction frames e
   );
 });
 
-test("tile snapshots are rounded and only count as changed when rendered output changes", async () => {
+test("light render profile slows idle cadence but keeps active cadence intact", async () => {
   const runtime = await loadRuntimeModule();
 
-  const base = runtime.formatTileRenderSnapshot({
-    edgeOpacity: 0.33331,
-    glowOpacity: 0.44441,
-    highlightOpacity: 0.55551,
-    lift: 10,
-    translateX: -1.2344,
-    translateY: -5.6784,
-  });
-  const visuallyEqual = runtime.formatTileRenderSnapshot({
-    edgeOpacity: 0.33329,
-    glowOpacity: 0.44439,
-    highlightOpacity: 0.55559,
-    lift: 10,
-    translateX: -1.23441,
-    translateY: -5.67839,
-  });
-  const visiblyDifferent = runtime.formatTileRenderSnapshot({
-    edgeOpacity: 0.36,
-    glowOpacity: 0.48,
-    highlightOpacity: 0.62,
-    lift: 12,
-    translateX: -1.4,
-    translateY: -6.2,
-  });
+  assert.equal(
+    runtime.resolveHeroFrameInterval({
+      pointerActive: false,
+      pulseCount: 0,
+      renderProfile: "full",
+    }),
+    42,
+  );
+  assert.equal(
+    runtime.resolveHeroFrameInterval({
+      pointerActive: false,
+      pulseCount: 0,
+      renderProfile: "light",
+    }),
+    72,
+  );
+  assert.equal(
+    runtime.resolveHeroFrameInterval({
+      pointerActive: true,
+      pulseCount: 0,
+      renderProfile: "light",
+    }),
+    28,
+  );
+  assert.equal(
+    runtime.resolveHeroFrameInterval({
+      pointerActive: false,
+      pulseCount: 1,
+      renderProfile: "light",
+    }),
+    28,
+  );
+});
 
-  assert.match(base.transform, /^translate3d\(-1\.23px, -5\.68px, 0\)$/);
+test("tile snapshots are quantized before formatting and light profile clamps expensive opacity ranges", async () => {
+  const runtime = await loadRuntimeModule();
+
+  const base = runtime.createTileRenderSnapshot(
+    {
+      edgeOpacity: 0.33331,
+      glowOpacity: 0.44441,
+      highlightOpacity: 0.55551,
+      lift: 10,
+      translateX: -1.2344,
+      translateY: -5.6784,
+    },
+    "full",
+  );
+  const visuallyEqual = runtime.createTileRenderSnapshot(
+    {
+      edgeOpacity: 0.33329,
+      glowOpacity: 0.44439,
+      highlightOpacity: 0.55559,
+      lift: 10,
+      translateX: -1.23441,
+      translateY: -5.67839,
+    },
+    "full",
+  );
+  const light = runtime.createTileRenderSnapshot(
+    {
+      edgeOpacity: 0.33331,
+      glowOpacity: 0.44441,
+      highlightOpacity: 0.55551,
+      lift: 10,
+      translateX: -1.2344,
+      translateY: -5.6784,
+    },
+    "light",
+  );
+  const visiblyDifferent = runtime.createTileRenderSnapshot(
+    {
+      edgeOpacity: 0.36,
+      glowOpacity: 0.48,
+      highlightOpacity: 0.62,
+      lift: 12,
+      translateX: -1.4,
+      translateY: -6.2,
+    },
+    "full",
+  );
+  const formatted = runtime.formatTileRenderSnapshot(base);
+
+  assert.deepEqual(base, {
+    edgeOpacity: 0.333,
+    glowOpacity: 0.444,
+    highlightOpacity: 0.556,
+    translateX: -1.23,
+    translateY: -5.68,
+  });
+  assert.deepEqual(light, {
+    edgeOpacity: 0.12,
+    glowOpacity: 0.18,
+    highlightOpacity: 0.16,
+    translateX: -1.23,
+    translateY: -5.68,
+  });
+  assert.match(formatted.transform, /^translate3d\(-1\.23px, -5\.68px, 0\)$/);
   assert.equal(runtime.tileRenderSnapshotChanged(null, base), true);
   assert.equal(runtime.tileRenderSnapshotChanged(base, visuallyEqual), false);
   assert.equal(runtime.tileRenderSnapshotChanged(base, visiblyDifferent), true);

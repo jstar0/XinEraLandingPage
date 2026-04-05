@@ -1,18 +1,55 @@
 import type { TileVisualState } from "./hero-grid-motion";
 
 export type TileRenderSnapshot = {
-  edgeOpacity: string;
-  glowOpacity: string;
-  highlightOpacity: string;
-  transform: string;
+  edgeOpacity: number;
+  glowOpacity: number;
+  highlightOpacity: number;
+  translateX: number;
+  translateY: number;
 };
 
-export function formatTileRenderSnapshot(state: TileVisualState): TileRenderSnapshot {
+const ACTIVE_FRAME_INTERVAL_MS = 28;
+const FULL_IDLE_FRAME_INTERVAL_MS = 42;
+const LIGHT_IDLE_FRAME_INTERVAL_MS = 72;
+const LIGHT_GLOW_OPACITY_MAX = 0.18;
+const LIGHT_EDGE_OPACITY_MAX = 0.12;
+const LIGHT_HIGHLIGHT_OPACITY_MAX = 0.16;
+
+function roundTo(value: number, digits: number) {
+  const precision = 10 ** digits;
+  const rounded = Math.round(value * precision) / precision;
+
+  return Object.is(rounded, -0) ? 0 : rounded;
+}
+
+export function createTileRenderSnapshot(
+  state: TileVisualState,
+  renderProfile: "full" | "light" = "full",
+): TileRenderSnapshot {
+  const edgeOpacity =
+    renderProfile === "light" ? Math.min(state.edgeOpacity, LIGHT_EDGE_OPACITY_MAX) : state.edgeOpacity;
+  const glowOpacity =
+    renderProfile === "light" ? Math.min(state.glowOpacity, LIGHT_GLOW_OPACITY_MAX) : state.glowOpacity;
+  const highlightOpacity =
+    renderProfile === "light"
+      ? Math.min(state.highlightOpacity, LIGHT_HIGHLIGHT_OPACITY_MAX)
+      : state.highlightOpacity;
+
   return {
-    edgeOpacity: state.edgeOpacity.toFixed(3),
-    glowOpacity: state.glowOpacity.toFixed(3),
-    highlightOpacity: state.highlightOpacity.toFixed(3),
-    transform: `translate3d(${state.translateX.toFixed(2)}px, ${state.translateY.toFixed(2)}px, 0)`,
+    edgeOpacity: roundTo(edgeOpacity, 3),
+    glowOpacity: roundTo(glowOpacity, 3),
+    highlightOpacity: roundTo(highlightOpacity, 3),
+    translateX: roundTo(state.translateX, 2),
+    translateY: roundTo(state.translateY, 2),
+  };
+}
+
+export function formatTileRenderSnapshot(snapshot: TileRenderSnapshot) {
+  return {
+    edgeOpacity: snapshot.edgeOpacity.toFixed(3),
+    glowOpacity: snapshot.glowOpacity.toFixed(3),
+    highlightOpacity: snapshot.highlightOpacity.toFixed(3),
+    transform: `translate3d(${snapshot.translateX.toFixed(2)}px, ${snapshot.translateY.toFixed(2)}px, 0)`,
   };
 }
 
@@ -25,11 +62,24 @@ export function tileRenderSnapshotChanged(
   }
 
   return (
-    previous.transform !== next.transform ||
+    previous.translateX !== next.translateX ||
+    previous.translateY !== next.translateY ||
     previous.glowOpacity !== next.glowOpacity ||
     previous.edgeOpacity !== next.edgeOpacity ||
     previous.highlightOpacity !== next.highlightOpacity
   );
+}
+
+export function resolveHeroFrameInterval(input: {
+  pointerActive: boolean;
+  pulseCount: number;
+  renderProfile: "full" | "light";
+}) {
+  if (input.pointerActive || input.pulseCount > 0) {
+    return ACTIVE_FRAME_INTERVAL_MS;
+  }
+
+  return input.renderProfile === "light" ? LIGHT_IDLE_FRAME_INTERVAL_MS : FULL_IDLE_FRAME_INTERVAL_MS;
 }
 
 export function shouldRunHeroAnimationLoop(input: {
