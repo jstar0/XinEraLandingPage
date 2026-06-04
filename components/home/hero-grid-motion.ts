@@ -44,6 +44,9 @@ const HOVER_RADIUS = 0.19;
 const HOVER_AMPLITUDE = 46;
 const MAX_IDLE_LIFT = 24;
 const MAX_ACTIVE_LIFT = 62;
+const IDLE_SWEEP_ACTIVE_PADDING = 0;
+const HOVER_ACTIVE_PADDING = 0.03;
+const RIPPLE_ACTIVE_PADDING = 0.02;
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -81,6 +84,37 @@ export function buildHeroGridTiles(
   return tiles;
 }
 
+function clampToRange(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function indexFor(col: number, row: number, columns: number) {
+  return row * columns + col;
+}
+
+function visitRectIndices(
+  set: Set<number>,
+  input: {
+    centerX: number;
+    centerY: number;
+    columns: number;
+    radiusX: number;
+    radiusY: number;
+    rows: number;
+  },
+) {
+  const minCol = clampToRange(Math.floor((input.centerX - input.radiusX) * input.columns), 0, input.columns - 1);
+  const maxCol = clampToRange(Math.floor((input.centerX + input.radiusX) * input.columns), 0, input.columns - 1);
+  const minRow = clampToRange(Math.floor((input.centerY - input.radiusY) * input.rows), 0, input.rows - 1);
+  const maxRow = clampToRange(Math.floor((input.centerY + input.radiusY) * input.rows), 0, input.rows - 1);
+
+  for (let row = minRow; row <= maxRow; row += 1) {
+    for (let col = minCol; col <= maxCol; col += 1) {
+      set.add(indexFor(col, row, input.columns));
+    }
+  }
+}
+
 export function createHoverPulse(origin: GridPoint, createdAt: number): GridPulse {
   return {
     amplitude: 14,
@@ -90,6 +124,61 @@ export function createHoverPulse(origin: GridPoint, createdAt: number): GridPuls
     speed: 0.0003,
     thickness: 0.09,
   };
+}
+
+export function collectActiveTileIndices(input: {
+  columns: number;
+  pointer: GridPointer;
+  previousActiveIndices?: number[];
+  pulses: GridPulse[];
+  rows: number;
+  time: number;
+}) {
+  const active = new Set<number>(input.previousActiveIndices ?? []);
+  const phase = ((input.time % IDLE_CYCLE_MS) + IDLE_CYCLE_MS) % IDLE_CYCLE_MS;
+  const progress = phase / IDLE_CYCLE_MS;
+  const idleCenterX = IDLE_SWEEP_START + IDLE_SWEEP_TRAVEL * progress;
+
+  visitRectIndices(active, {
+    centerX: idleCenterX,
+    centerY: 0.5,
+    columns: input.columns,
+    radiusX: IDLE_SWEEP_RADIUS + IDLE_SWEEP_ACTIVE_PADDING,
+    radiusY: 0.5,
+    rows: input.rows,
+  });
+
+  if (input.pointer.active) {
+    visitRectIndices(active, {
+      centerX: input.pointer.x,
+      centerY: input.pointer.y,
+      columns: input.columns,
+      radiusX: HOVER_RADIUS + HOVER_ACTIVE_PADDING,
+      radiusY: HOVER_RADIUS + HOVER_ACTIVE_PADDING,
+      rows: input.rows,
+    });
+  }
+
+  for (const pulse of input.pulses) {
+    const age = input.time - pulse.createdAt;
+
+    if (age < 0 || age > pulse.duration) {
+      continue;
+    }
+
+    const waveFront = age * pulse.speed;
+    const radius = waveFront + pulse.thickness + RIPPLE_ACTIVE_PADDING;
+    visitRectIndices(active, {
+      centerX: pulse.origin.x,
+      centerY: pulse.origin.y,
+      columns: input.columns,
+      radiusX: radius,
+      radiusY: radius,
+      rows: input.rows,
+    });
+  }
+
+  return Array.from(active).sort((left, right) => left - right);
 }
 
 export function sampleIdleSweepLift(point: GridPoint, time: number) {

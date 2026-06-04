@@ -1,4 +1,4 @@
-import type { TileVisualState } from "./hero-grid-motion";
+import { HERO_GRID_COLUMNS, HERO_GRID_ROWS, type TileVisualState } from "./hero-grid-motion";
 
 export type TileRenderSnapshot = {
   edgeOpacity: number;
@@ -8,9 +8,17 @@ export type TileRenderSnapshot = {
   translateY: number;
 };
 
+export type HeroGridDefinition = {
+  columns: number;
+  layerMode: "compact" | "full";
+  rows: number;
+};
+
 const ACTIVE_FRAME_INTERVAL_MS = 28;
 const FULL_IDLE_FRAME_INTERVAL_MS = 42;
 const LIGHT_IDLE_FRAME_INTERVAL_MS = 72;
+const LIGHT_GRID_COLUMNS = 18;
+const LIGHT_GRID_ROWS = 10;
 const LIGHT_GLOW_OPACITY_MAX = 0.18;
 const LIGHT_EDGE_OPACITY_MAX = 0.12;
 const LIGHT_HIGHLIGHT_OPACITY_MAX = 0.16;
@@ -80,6 +88,22 @@ export function resolveHeroFrameInterval(input: {
   }
 
   return input.renderProfile === "light" ? LIGHT_IDLE_FRAME_INTERVAL_MS : FULL_IDLE_FRAME_INTERVAL_MS;
+}
+
+export function resolveHeroGridDefinition(renderProfile: "full" | "light"): HeroGridDefinition {
+  if (renderProfile === "light") {
+    return {
+      columns: LIGHT_GRID_COLUMNS,
+      layerMode: "compact",
+      rows: LIGHT_GRID_ROWS,
+    };
+  }
+
+  return {
+    columns: HERO_GRID_COLUMNS,
+    layerMode: "full",
+    rows: HERO_GRID_ROWS,
+  };
 }
 
 export function shouldRunHeroAnimationLoop(input: {

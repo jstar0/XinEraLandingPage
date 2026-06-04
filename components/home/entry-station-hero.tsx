@@ -6,16 +6,17 @@ import {
   createTileRenderSnapshot,
   formatTileRenderSnapshot,
   resolveHeroFrameInterval,
+  resolveHeroGridDefinition,
   resolveHeroRenderProfile,
   shouldRunHeroAnimationLoop,
   tileRenderSnapshotChanged,
+  type HeroGridDefinition,
   type TileRenderSnapshot,
 } from "./entry-station-hero-runtime";
 import {
   buildHeroGridTiles,
+  collectActiveTileIndices,
   createHoverPulse,
-  HERO_GRID_COLUMNS,
-  HERO_GRID_ROWS,
   resolveTileVisualState,
   type GridPoint,
   type GridPointer,
@@ -26,9 +27,6 @@ type EntryStationHeroProps = {
   imageAlt: string;
   imageSrc: string;
 };
-
-const TILES = buildHeroGridTiles();
-const TILE_BACKGROUND_SIZE = `${HERO_GRID_COLUMNS * 100}% ${HERO_GRID_ROWS * 100}%`;
 
 type TileRefs = {
   edge: HTMLDivElement | null;
@@ -52,7 +50,14 @@ export default function EntryStationHero({
   imageAlt,
   imageSrc,
 }: EntryStationHeroProps) {
-  const [renderProfile, setRenderProfile] = React.useState<"full" | "light">("full");
+  const [renderProfile, setRenderProfile] = React.useState<"full" | "light">(() =>
+    typeof window === "undefined" ? "full" : resolveHeroRenderProfile(window.navigator.userAgent),
+  );
+  const [gridDefinition, setGridDefinition] = React.useState<HeroGridDefinition>(() =>
+    resolveHeroGridDefinition(
+      typeof window === "undefined" ? "full" : resolveHeroRenderProfile(window.navigator.userAgent),
+    ),
+  );
   const frameRef = useRef<HTMLDivElement>(null);
   const pointerRef = useRef<GridPointer>({ active: false, x: 0.5, y: 0.5 });
   const pulsesRef = useRef<GridPulse[]>([]);
@@ -64,6 +69,16 @@ export default function EntryStationHero({
   const rafRef = useRef<number>();
   const tileRefs = useRef<TileRefs[]>([]);
   const tileSnapshotRef = useRef<Array<TileRenderSnapshot | null>>([]);
+  const previousActiveIndicesRef = useRef<number[]>([]);
+
+  const tiles = React.useMemo(
+    () => buildHeroGridTiles(gridDefinition.columns, gridDefinition.rows),
+    [gridDefinition.columns, gridDefinition.rows],
+  );
+  const tileBackgroundSize = React.useMemo(
+    () => `${gridDefinition.columns * 100}% ${gridDefinition.rows * 100}%`,
+    [gridDefinition.columns, gridDefinition.rows],
+  );
 
   useEffect(() => {
     const node = frameRef.current;
@@ -75,6 +90,9 @@ export default function EntryStationHero({
     const frame = node;
     const resolvedRenderProfile = resolveHeroRenderProfile(window.navigator.userAgent);
     setRenderProfile(resolvedRenderProfile);
+    setGridDefinition(resolveHeroGridDefinition(resolvedRenderProfile));
+    tileSnapshotRef.current = [];
+    previousActiveIndicesRef.current = [];
 
     function updateFrameRect() {
       const rect = frame.getBoundingClientRect();
@@ -247,11 +265,24 @@ export default function EntryStationHero({
 
       lastPaintRef.current = now;
 
-      for (let index = 0; index < TILES.length; index += 1) {
-        const tile = TILES[index];
+      const currentActiveIndices = collectActiveTileIndices({
+        columns: gridDefinition.columns,
+        pointer: pointerRef.current,
+        pulses: pulsesRef.current,
+        rows: gridDefinition.rows,
+        time: reducedMotion ? 0 : now,
+      });
+      const activeIndexSet = new Set<number>(previousActiveIndicesRef.current);
+      for (const index of currentActiveIndices) {
+        activeIndexSet.add(index);
+      }
+      previousActiveIndicesRef.current = currentActiveIndices;
+
+      for (const index of Array.from(activeIndexSet)) {
+        const tile = tiles[index];
         const refs = tileRefs.current[index];
 
-        if (!refs?.tile || !refs.glow || !refs.edge || !refs.highlight) {
+        if (!tile || !refs?.tile || !refs.glow || !refs.edge || !refs.highlight) {
           continue;
         }
 
@@ -297,15 +328,16 @@ export default function EntryStationHero({
 
       if (rafRef.current !== undefined) {
         window.cancelAnimationFrame(rafRef.current);
+        rafRef.current = undefined;
       }
     };
-  }, []);
+  }, [gridDefinition.columns, gridDefinition.rows, tiles]);
 
   return (
     <div
       ref={frameRef}
-      data-grid-columns={HERO_GRID_COLUMNS}
-      data-grid-rows={HERO_GRID_ROWS}
+      data-grid-columns={gridDefinition.columns}
+      data-grid-rows={gridDefinition.rows}
       data-hero-grid="entry-station"
       className="group relative mx-auto aspect-[11/8] w-full max-w-[720px] touch-none select-none"
     >
@@ -324,17 +356,17 @@ export default function EntryStationHero({
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,11,0.06),rgba(5,8,11,0.18)),linear-gradient(135deg,rgba(47,211,213,0.1),transparent_36%,rgba(212,169,94,0.06)_82%)]" />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.045)_0,rgba(255,255,255,0.045)_1px,transparent_1px,transparent_4px)] opacity-30 mix-blend-screen" />
 
-            {TILES.map((tile, index) => {
+            {tiles.map((tile, index) => {
               const tileStyle: CSSProperties = {
-                height: `${100 / HERO_GRID_ROWS}%`,
-                left: `${(tile.col * 100) / HERO_GRID_COLUMNS}%`,
-                top: `${(tile.row * 100) / HERO_GRID_ROWS}%`,
-                width: `${100 / HERO_GRID_COLUMNS}%`,
+                height: `${100 / gridDefinition.rows}%`,
+                left: `${(tile.col * 100) / gridDefinition.columns}%`,
+                top: `${(tile.row * 100) / gridDefinition.rows}%`,
+                width: `${100 / gridDefinition.columns}%`,
               };
               const faceStyle: CSSProperties = {
                 backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0)), url(${imageSrc})`,
                 backgroundPosition: tile.backgroundPosition,
-                backgroundSize: TILE_BACKGROUND_SIZE,
+                backgroundSize: tileBackgroundSize,
               };
 
               return (
@@ -366,9 +398,11 @@ export default function EntryStationHero({
                   />
                   <div
                     className={`pointer-events-none absolute inset-0 border border-[rgba(47,211,213,0.34)] opacity-0 ${
-                      renderProfile === "light"
-                        ? "shadow-[inset_0_0_6px_rgba(255,255,255,0.04)]"
-                        : "shadow-[0_0_18px_rgba(47,211,213,0.16),inset_0_0_10px_rgba(255,255,255,0.05)]"
+                      gridDefinition.layerMode === "compact"
+                        ? "shadow-[inset_0_0_4px_rgba(255,255,255,0.025)]"
+                        : renderProfile === "light"
+                          ? "shadow-[inset_0_0_6px_rgba(255,255,255,0.04)]"
+                          : "shadow-[0_0_18px_rgba(47,211,213,0.16),inset_0_0_10px_rgba(255,255,255,0.05)]"
                     }`}
                     ref={(node) => {
                       tileRefs.current[index] = {
@@ -379,7 +413,7 @@ export default function EntryStationHero({
                   />
                   <div
                     className={`pointer-events-none absolute inset-x-[10%] bottom-[-10px] h-[12px] bg-[linear-gradient(180deg,rgba(47,211,213,0.55),rgba(16,53,58,0.06))] opacity-0 ${
-                      renderProfile === "light" ? "" : "blur-[6px]"
+                      gridDefinition.layerMode === "compact" ? "" : renderProfile === "light" ? "" : "blur-[6px]"
                     }`}
                     ref={(node) => {
                       tileRefs.current[index] = {
@@ -392,7 +426,12 @@ export default function EntryStationHero({
               );
             })}
 
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(196,214,218,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(196,214,218,0.08)_1px,transparent_1px)] bg-[size:calc(100%/24)_calc(100%/14)] opacity-55" />
+            <div
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(196,214,218,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(196,214,218,0.08)_1px,transparent_1px)] opacity-55"
+              style={{
+                backgroundSize: `calc(100%/${gridDefinition.columns}) calc(100%/${gridDefinition.rows})`,
+              }}
+            />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_12%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(180deg,transparent_0%,rgba(5,8,11,0.24)_72%,rgba(5,8,11,0.65)_100%)]" />
           </div>
         </div>

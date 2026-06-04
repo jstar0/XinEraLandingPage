@@ -40,6 +40,11 @@ type RuntimeModule = {
     pulseCount: number;
     renderProfile: "full" | "light";
   }) => number;
+  resolveHeroGridDefinition: (renderProfile: "full" | "light") => {
+    columns: number;
+    layerMode: "compact" | "full";
+    rows: number;
+  };
   tileRenderSnapshotChanged: (
     previous: NumericSnapshot | null,
     next: NumericSnapshot,
@@ -67,6 +72,11 @@ async function loadRuntimeModule(): Promise<RuntimeModule> {
       }),
       shouldRunHeroAnimationLoop: () => false,
       resolveHeroFrameInterval: () => 42,
+      resolveHeroGridDefinition: () => ({
+        columns: 24,
+        layerMode: "full",
+        rows: 14,
+      }),
       tileRenderSnapshotChanged: () => false,
       resolveHeroRenderProfile: () => "full",
     };
@@ -200,6 +210,21 @@ test("light render profile slows idle cadence but keeps active cadence intact", 
     }),
     28,
   );
+});
+
+test("light render profile also reduces grid density and overlay complexity", async () => {
+  const runtime = await loadRuntimeModule();
+
+  assert.deepEqual(runtime.resolveHeroGridDefinition("full"), {
+    columns: 24,
+    layerMode: "full",
+    rows: 14,
+  });
+  assert.deepEqual(runtime.resolveHeroGridDefinition("light"), {
+    columns: 18,
+    layerMode: "compact",
+    rows: 10,
+  });
 });
 
 test("tile snapshots are quantized before formatting and light profile clamps expensive opacity ranges", async () => {

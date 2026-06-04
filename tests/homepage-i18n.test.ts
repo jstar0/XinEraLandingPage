@@ -91,12 +91,12 @@ test("dispatch CTA section keeps decorative layers behind clickable content", ()
   assert.match(html, /class="relative z-10 mx-auto max-w-4xl text-center"/);
 });
 
-test("landing hero renders the dedicated entry-station banner scaffold", () => {
+test("landing hero uses the poster-first entry-station scaffold during SSR", () => {
   const html = render("zh-CN");
 
-  assert.match(html, /data-hero-grid="entry-station"/);
-  assert.match(html, /data-grid-columns="24"/);
-  assert.match(html, /data-grid-rows="14"/);
+  assert.match(html, /data-desktop-hero="entry-station"/);
+  assert.match(html, /data-hero-poster="entry-station"/);
+  assert.doesNotMatch(html, /data-hero-grid="entry-station"/);
   assert.match(html, /rotateX\(12deg\)_rotateY\(-18deg\)_rotateZ\(-1\.9deg\)/);
 });
 
@@ -119,21 +119,18 @@ test("top navigation renders subtle hover and active animation hooks", () => {
   assert.match(html, /group-hover:-translate-y-px/);
 });
 
-test("mobile adaptation mounts a dedicated hero overlay and bottom dock", () => {
+test("SSR keeps the mobile dock but defers mobile hero overlays until hydration", () => {
   const zhCn = render("zh-CN");
   const en = render("en");
 
-  assert.match(zhCn, /data-mobile-hero="entry-station"/);
-  assert.match(zhCn, /data-medium-hero="entry-station"/);
-  assert.match(zhCn, /data-mobile-hero-copy="tilted-overlay"/);
-  assert.match(zhCn, /data-medium-hero-copy="tilted-overlay"/);
-  assert.match(zhCn, /translate3d\(6px,32px,40px\)/);
-  assert.match(en, /translate3d\(6px,40px,40px\)/);
+  assert.doesNotMatch(zhCn, /data-mobile-hero="entry-station"/);
+  assert.doesNotMatch(zhCn, /data-mobile-hero-copy="tilted-overlay"/);
+  assert.doesNotMatch(zhCn, /translate3d\(6px,32px,40px\)/);
+  assert.doesNotMatch(en, /translate3d\(6px,40px,40px\)/);
+  assert.match(zhCn, /data-desktop-hero="entry-station"/);
+  assert.match(zhCn, /data-hero-poster="entry-station"/);
   assert.match(zhCn, /header class="[^"]*pb-5[^"]*md:pb-24/);
   assert.match(zhCn, /data-signal-band="world-entry"/);
-  assert.match(zhCn, /lg:hidden/);
-  assert.match(zhCn, /lg:block xl:hidden/);
-  assert.match(zhCn, /xl:grid/);
   assert.match(zhCn, /data-mobile-dock="entry-station"/);
   assert.match(zhCn, /data-mobile-dock-item="explore"/);
   assert.match(zhCn, /data-mobile-dock-item="status"/);
@@ -143,12 +140,18 @@ test("mobile adaptation mounts a dedicated hero overlay and bottom dock", () => 
   assert.match(en, /Status/);
 });
 
-test("responsive hero renders a single animated grid instance plus static posters for other breakpoints", () => {
+test("responsive hero SSR renders one desktop poster branch and no animated grid", () => {
   const html = render("zh-CN");
 
   const animatedHeroCount = (html.match(/data-hero-grid="entry-station"/g) ?? []).length;
   const posterCount = (html.match(/data-hero-poster="entry-station"/g) ?? []).length;
+  const mobileHeroBranchCount = (html.match(/data-mobile-hero="entry-station"/g) ?? []).length;
+  const mediumHeroBranchCount = (html.match(/data-medium-hero="entry-station"/g) ?? []).length;
+  const desktopHeroBranchCount = (html.match(/data-desktop-hero="entry-station"/g) ?? []).length;
 
-  assert.equal(animatedHeroCount, 1);
-  assert.ok(posterCount >= 2, "expected static posters to cover the non-active breakpoint layouts");
+  assert.equal(animatedHeroCount, 0);
+  assert.equal(posterCount, 1);
+  assert.equal(mobileHeroBranchCount, 0);
+  assert.equal(mediumHeroBranchCount, 0);
+  assert.equal(desktopHeroBranchCount, 1);
 });

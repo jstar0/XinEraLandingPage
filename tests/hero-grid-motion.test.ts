@@ -1,8 +1,25 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
+type TestGridPulse = {
+  amplitude: number;
+  createdAt: number;
+  duration: number;
+  origin: { x: number; y: number };
+  speed: number;
+  thickness: number;
+};
+
 type MotionModule = {
-  createHoverPulse: (origin: { x: number; y: number }, createdAt: number) => unknown;
+  collectActiveTileIndices: (input: {
+    columns: number;
+    pointer: { active: boolean; x: number; y: number };
+    previousActiveIndices?: number[];
+    pulses: TestGridPulse[];
+    rows: number;
+    time: number;
+  }) => number[];
+  createHoverPulse: (origin: { x: number; y: number }, createdAt: number) => TestGridPulse;
   sampleHoverLift: (
     point: { x: number; y: number },
     pointer: { active: boolean; x: number; y: number },
@@ -11,7 +28,7 @@ type MotionModule = {
   resolveTileVisualState: (input: {
     point: { x: number; y: number };
     pointer: { active: boolean; x: number; y: number };
-    pulses: unknown[];
+    pulses: TestGridPulse[];
     time: number;
   }) => {
     edgeOpacity: number;
@@ -28,7 +45,15 @@ async function loadMotionModule(): Promise<MotionModule> {
     return await import("../components/home/hero-grid-motion");
   } catch {
     return {
-      createHoverPulse: () => ({ missing: true }),
+      createHoverPulse: (origin, createdAt) => ({
+        amplitude: 0,
+        createdAt,
+        duration: 0,
+        origin,
+        speed: 0,
+        thickness: 0,
+      }),
+      collectActiveTileIndices: () => [],
       sampleHoverLift: () => 0,
       sampleIdleSweepLift: () => 0,
       resolveTileVisualState: () => ({
@@ -134,4 +159,30 @@ test("tile visual offsets stay shallow enough to avoid strong perspective overla
   assert.ok(Math.abs(state.translateY) < state.lift * 0.1, "expected y offset to stay shallow");
   assert.ok(state.glowOpacity > 0, "expected lift to drive highlight opacity");
   assert.ok(state.edgeOpacity > 0, "expected lift to drive edge opacity");
+});
+
+test("active tile selection stays local to the sweep, hover radius, and ripple rings", async () => {
+  const motion = await loadMotionModule();
+  const pulse = motion.createHoverPulse({ x: 0.52, y: 0.5 }, 0);
+
+  const idleOnly = motion.collectActiveTileIndices({
+    columns: 24,
+    pointer: { active: false, x: 0.5, y: 0.5 },
+    pulses: [],
+    rows: 14,
+    time: 4_500,
+  });
+  const active = motion.collectActiveTileIndices({
+    columns: 24,
+    pointer: { active: true, x: 0.52, y: 0.5 },
+    previousActiveIndices: idleOnly,
+    pulses: [pulse],
+    rows: 14,
+    time: 260,
+  });
+
+  assert.ok(idleOnly.length > 0, "expected the idle sweep to mark a local active band");
+  assert.ok(idleOnly.length < 220, "expected idle selection to stay below a full-grid scan");
+  assert.ok(active.length > idleOnly.length, "expected hover + ripple to enlarge the active set");
+  assert.ok(active.length < 280, "expected active selection to remain local instead of touching the whole grid");
 });

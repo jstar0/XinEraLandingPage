@@ -3,7 +3,7 @@
 import React from "react";
 import { LazyMotion, domAnimation, m, type Variants } from "motion/react";
 
-import EntryStationHero from "./entry-station-hero";
+import EntryStationHeroThree from "./entry-station-hero-three";
 import {
   createSignalBandItems,
   resolveActiveNavHref,
@@ -142,9 +142,8 @@ export default function LandingPageShell({
   const heroMark = copy.brand.replace(/\s+ARCHIVE$/, "");
   const mobilePortalLabel = copy.access.cards[0]?.title ?? copy.hero.primaryLabel;
   const signalBandItems = createSignalBandItems(copy);
-  const [heroLayout, setHeroLayout] = React.useState<"desktop" | "medium" | "mobile">(() =>
-    typeof window === "undefined" ? "desktop" : resolveHeroLayout(window.innerWidth),
-  );
+  const [heroLayout, setHeroLayout] = React.useState<"desktop" | "medium" | "mobile">("desktop");
+  const [isHeroHydrated, setIsHeroHydrated] = React.useState(false);
   const [activeNavHref, setActiveNavHref] = React.useState<string | null>(() =>
     resolveActiveNavHref(copy.nav),
   );
@@ -241,6 +240,7 @@ export default function LandingPageShell({
     };
 
     syncHeroLayout();
+    setIsHeroHydrated(true);
     window.addEventListener("resize", syncHeroLayout);
 
     return () => {
@@ -347,245 +347,154 @@ export default function LandingPageShell({
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_0%,rgba(47,211,213,0.12),transparent_32%),radial-gradient(circle_at_86%_18%,rgba(76,110,123,0.16),transparent_34%),linear-gradient(180deg,#0b0e11_0%,#0e1216_100%)]" />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:44px_44px] opacity-[0.08]" />
 
-            <div
-              data-mobile-hero="entry-station"
-              className="relative mx-auto block max-w-[30rem] overflow-visible lg:hidden"
-            >
-              <div className="relative">
-                <div className="mx-auto w-full max-w-[34rem]">
-                  {heroLayout === "mobile" ? (
-                    <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                  ) : (
-                    <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                  )}
-                </div>
+            {heroLayout === "mobile" ? (
+              <div
+                data-mobile-hero="entry-station"
+                className="relative mx-auto max-w-[30rem] overflow-visible lg:hidden"
+              >
+                <div className="relative">
+                  <div className="mx-auto w-full max-w-[34rem]">
+                    {isHeroHydrated ? (
+                      <EntryStationHeroThree imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                    ) : (
+                      <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                    )}
+                  </div>
 
-                <div
-                  data-mobile-hero-copy="tilted-overlay"
-                  className="pointer-events-none absolute inset-[16%_7%_18%_11%] z-10 flex items-end justify-center"
-                >
                   <div
-                    className={`w-[70%] max-w-[17rem] ${mobileHeroCopyTransform} [transform-style:preserve-3d] text-center`}
+                    data-mobile-hero-copy="tilted-overlay"
+                    className="pointer-events-none absolute inset-[16%_7%_18%_11%] z-10 flex items-end justify-center"
                   >
-                    <div className="mb-3 flex items-center justify-center gap-2">
-                      <span className="h-px w-7 bg-[#2fd3d5]" />
-                      <span className={labelClass(locale, "text-[9px] text-[#7bdfe1]")}>
-                        {copy.hero.plaque}
-                      </span>
-                      <span className="h-px w-7 bg-[#2fd3d5]" />
+                    <div
+                      className={`w-[70%] max-w-[17rem] ${mobileHeroCopyTransform} [transform-style:preserve-3d] text-center`}
+                    >
+                      <div className="mb-3 flex items-center justify-center gap-2">
+                        <span className="h-px w-7 bg-[#2fd3d5]" />
+                        <span className={labelClass(locale, "text-[9px] text-[#7bdfe1]")}>
+                          {copy.hero.plaque}
+                        </span>
+                        <span className="h-px w-7 bg-[#2fd3d5]" />
+                      </div>
+
+                      <p className={labelClass(locale, "mb-2 text-[9px] text-white/34")}>
+                        {copy.metaLine}
+                      </p>
+                      <h1 className={headlineClass(locale, chinese ? "text-4xl" : "text-4xl")}>
+                        {copy.hero.title}
+                      </h1>
+                      <p
+                        className={`${heroAccentClass(locale, chinese)} ${
+                          chinese ? "mt-2 text-[1.15rem] tracking-[0.28em]" : "mt-2 text-xl tracking-[0.1em]"
+                        }`}
+                      >
+                        {chinese ? heroMark : "心纪元"}
+                      </p>
+                      <p className={bodyClass(locale, "mx-auto mt-4 max-w-[14rem] text-xs text-white/70")}>
+                        {copy.hero.description}
+                      </p>
                     </div>
-
-                    <p className={labelClass(locale, "mb-2 text-[9px] text-white/34")}>
-                      {copy.metaLine}
-                    </p>
-                    <h1 className={headlineClass(locale, chinese ? "text-4xl" : "text-4xl")}>
-                      {copy.hero.title}
-                    </h1>
-                    <p
-                      className={`${heroAccentClass(locale, chinese)} ${
-                        chinese ? "mt-2 text-[1.15rem] tracking-[0.28em]" : "mt-2 text-xl tracking-[0.1em]"
-                      }`}
-                    >
-                      {chinese ? heroMark : "心纪元"}
-                    </p>
-                    <p className={bodyClass(locale, "mx-auto mt-4 max-w-[14rem] text-xs text-white/70")}>
-                      {copy.hero.description}
-                    </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="relative z-10 mx-auto mt-6 flex max-w-[24rem] flex-col gap-3 px-1">
-                <a
-                  href={copy.hero.primaryHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={labelClass(
-                    locale,
-                    "inline-flex items-center justify-center bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-6 py-4 text-[#081113]",
-                  )}
-                >
-                  {copy.hero.primaryLabel}
-                </a>
-                <a
-                  href={copy.hero.secondaryHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={labelClass(
-                    locale,
-                    "inline-flex items-center justify-center bg-[#141a1f] px-6 py-4 text-white/82",
-                  )}
-                >
-                  {copy.hero.secondaryLabel}
-                </a>
-              </div>
-
-              <div className="relative z-10 mx-auto mt-5 flex max-w-[24rem] flex-col gap-2 px-1 text-left">
-                {copy.hero.routes.map((route, index) => (
-                  <div key={route.title} className="flex items-center gap-3 text-white/26">
-                    <span className="font-[family-name:var(--font-label)] text-3xl tracking-[-0.05em]">
-                      0{index + 1}.
-                    </span>
-                    <span className={labelClass(locale, "text-[10px] text-[#53d6d8]/82")}>
-                      {route.title}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div
-              data-medium-hero="entry-station"
-              className="relative mx-auto hidden max-w-[72rem] overflow-visible lg:block xl:hidden"
-            >
-              <div className="relative">
-                <div className="mx-auto w-full max-w-[62rem]">
-                  {heroLayout === "medium" ? (
-                    <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                  ) : (
-                    <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                  )}
-                </div>
-
-                <div
-                  data-medium-hero-copy="tilted-overlay"
-                  className="pointer-events-none absolute inset-[10%_7%_21%_50%] z-10 flex items-end justify-end"
-                >
-                  <div className="w-[min(26rem,78%)] [transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)_translate3d(0,0,48px)] [transform-style:preserve-3d] text-left">
-                    <div className="mb-4 flex items-center gap-4">
-                      <span className="h-px w-10 bg-[#2fd3d5]" />
-                      <span className={labelClass(locale, "text-[10px] text-[#7bdfe1] md:text-xs")}>
-                        {copy.hero.plaque}
-                      </span>
-                    </div>
-
-                    <p className={labelClass(locale, "mb-4 text-[10px] text-white/28 md:text-xs")}>
-                      {copy.metaLine}
-                    </p>
-                    <h1
-                      className={headlineClass(
-                        locale,
-                        chinese ? "text-5xl xl:text-6xl" : "text-5xl xl:text-6xl",
-                      )}
-                    >
-                      {copy.hero.title}
-                    </h1>
-                    <p
-                      className={`${heroAccentClass(locale, chinese)} ${
-                        chinese
-                          ? "mt-3 text-sm tracking-[0.38em] xl:text-base"
-                          : "mt-3 text-2xl tracking-[0.14em] xl:text-[2rem]"
-                      }`}
-                    >
-                      {chinese ? heroMark : "心纪元"}
-                    </p>
-                    <p
-                      className={bodyClass(
-                        locale,
-                        chinese
-                          ? "mt-6 max-w-xl text-sm text-white/68 md:text-base"
-                          : "mt-6 max-w-xl text-base text-white/72 md:text-lg",
-                      )}
-                    >
-                      {copy.hero.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative z-10 mx-auto mt-6 flex max-w-[62rem] flex-col gap-3 px-4 sm:flex-row sm:justify-center lg:justify-end">
-                <MagneticAnchor
-                  href={copy.hero.primaryHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  targetName="hero-primary"
-                  maxOffsetX={8}
-                  maxOffsetY={6}
-                  className={labelClass(
-                    locale,
-                    "inline-flex items-center justify-center gap-3 bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-7 py-4 text-[#081113] transition-transform duration-300 hover:-translate-y-0.5",
-                  )}
-                >
-                  <span className="magnetic-layer">{copy.hero.primaryLabel}</span>
-                  <span className="magnetic-layer-strong">↗</span>
-                </MagneticAnchor>
-                <a
-                  href={copy.hero.secondaryHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={labelClass(
-                    locale,
-                    "inline-flex items-center justify-center bg-[#141a1f] px-7 py-4 text-white/84 transition-colors duration-300 hover:bg-[#1b2429] hover:text-white",
-                  )}
-                >
-                  {copy.hero.secondaryLabel}
-                </a>
-              </div>
-            </div>
-
-            <div className="relative mx-auto hidden max-w-7xl items-center gap-12 xl:grid xl:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]">
-              <m.div
-                className="order-2 lg:order-1"
-                variants={sectionReveal}
-                initial="hidden"
-                animate="visible"
-              >
-                {heroLayout === "desktop" ? (
-                  <EntryStationHero imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                ) : (
-                  <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
-                )}
-              </m.div>
-
-              <m.div
-                className="order-1 flex flex-col justify-center lg:order-2"
-                variants={staggerChildren}
-                initial="hidden"
-                animate="visible"
-              >
-                <m.div variants={riseIn} className="mb-4 flex items-center gap-4">
-                  <span className="h-px w-12 bg-[#2fd3d5]" />
-                  <span className={labelClass(locale, "text-[11px] text-[#7bdfe1] md:text-xs")}>
-                    {copy.hero.plaque}
-                  </span>
-                </m.div>
-
-                <m.div variants={riseIn}>
-                  <p className={labelClass(locale, "mb-4 text-[10px] text-white/28 md:text-xs")}>
-                    {copy.metaLine}
-                  </p>
-                  <h1
-                    className={headlineClass(
+                <div className="relative z-10 mx-auto mt-6 flex max-w-[24rem] flex-col gap-3 px-1">
+                  <a
+                    href={copy.hero.primaryHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={labelClass(
                       locale,
-                      chinese ? "text-5xl md:text-7xl lg:text-[5.1rem]" : "text-5xl md:text-7xl",
+                      "inline-flex items-center justify-center bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-6 py-4 text-[#081113]",
                     )}
                   >
-                    {copy.hero.title}
-                  </h1>
-                  <p
-                    className={
-                      chinese
-                        ? "mt-3 font-[family-name:var(--font-label)] text-sm tracking-[0.38em] text-[#53d6d8] uppercase md:text-base"
-                        : "mt-3 font-pixel text-2xl tracking-[0.14em] text-[#53d6d8] md:text-[2rem]"
-                    }
+                    {copy.hero.primaryLabel}
+                  </a>
+                  <a
+                    href={copy.hero.secondaryHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={labelClass(
+                      locale,
+                      "inline-flex items-center justify-center bg-[#141a1f] px-6 py-4 text-white/82",
+                    )}
                   >
-                    {chinese ? heroMark : "心纪元"}
-                  </p>
-                </m.div>
+                    {copy.hero.secondaryLabel}
+                  </a>
+                </div>
 
-                <m.p
-                  variants={riseIn}
-                  className={bodyClass(
-                    locale,
-                    chinese
-                      ? "mt-6 max-w-xl text-sm text-white/68 md:text-base"
-                      : "mt-6 max-w-xl text-base text-white/72 md:text-lg",
-                  )}
-                >
-                  {copy.hero.description}
-                </m.p>
+                <div className="relative z-10 mx-auto mt-5 flex max-w-[24rem] flex-col gap-2 px-1 text-left">
+                  {copy.hero.routes.map((route, index) => (
+                    <div key={route.title} className="flex items-center gap-3 text-white/26">
+                      <span className="font-[family-name:var(--font-label)] text-3xl tracking-[-0.05em]">
+                        0{index + 1}.
+                      </span>
+                      <span className={labelClass(locale, "text-[10px] text-[#53d6d8]/82")}>
+                        {route.title}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : heroLayout === "medium" ? (
+              <div
+                data-medium-hero="entry-station"
+                className="relative mx-auto max-w-[72rem] overflow-visible"
+              >
+                <div className="relative">
+                  <div className="mx-auto w-full max-w-[62rem]">
+                    {isHeroHydrated ? (
+                      <EntryStationHeroThree imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                    ) : (
+                      <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                    )}
+                  </div>
 
-                <m.div variants={riseIn} className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <div
+                    data-medium-hero-copy="tilted-overlay"
+                    className="pointer-events-none absolute inset-[10%_7%_21%_50%] z-10 flex items-end justify-end"
+                  >
+                    <div className="w-[min(26rem,78%)] [transform:rotateX(12deg)_rotateY(-18deg)_rotateZ(-1.9deg)_translate3d(0,0,48px)] [transform-style:preserve-3d] text-left">
+                      <div className="mb-4 flex items-center gap-4">
+                        <span className="h-px w-10 bg-[#2fd3d5]" />
+                        <span className={labelClass(locale, "text-[10px] text-[#7bdfe1] md:text-xs")}>
+                          {copy.hero.plaque}
+                        </span>
+                      </div>
+
+                      <p className={labelClass(locale, "mb-4 text-[10px] text-white/28 md:text-xs")}>
+                        {copy.metaLine}
+                      </p>
+                      <h1
+                        className={headlineClass(
+                          locale,
+                          chinese ? "text-5xl xl:text-6xl" : "text-5xl xl:text-6xl",
+                        )}
+                      >
+                        {copy.hero.title}
+                      </h1>
+                      <p
+                        className={`${heroAccentClass(locale, chinese)} ${
+                          chinese
+                            ? "mt-3 text-sm tracking-[0.38em] xl:text-base"
+                            : "mt-3 text-2xl tracking-[0.14em] xl:text-[2rem]"
+                        }`}
+                      >
+                        {chinese ? heroMark : "心纪元"}
+                      </p>
+                      <p
+                        className={bodyClass(
+                          locale,
+                          chinese
+                            ? "mt-6 max-w-xl text-sm text-white/68 md:text-base"
+                            : "mt-6 max-w-xl text-base text-white/72 md:text-lg",
+                        )}
+                      >
+                        {copy.hero.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative z-10 mx-auto mt-6 flex max-w-[62rem] flex-col gap-3 px-4 sm:flex-row sm:justify-center lg:justify-end">
                   <MagneticAnchor
                     href={copy.hero.primaryHref}
                     target="_blank"
@@ -612,30 +521,126 @@ export default function LandingPageShell({
                   >
                     {copy.hero.secondaryLabel}
                   </a>
+                </div>
+              </div>
+            ) : (
+              <div
+                data-desktop-hero="entry-station"
+                className="relative mx-auto max-w-7xl items-center gap-12 xl:grid xl:grid-cols-[minmax(0,1.02fr)_minmax(340px,0.98fr)]"
+              >
+                <m.div
+                  className="order-2 lg:order-1"
+                  variants={sectionReveal}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {isHeroHydrated ? (
+                    <EntryStationHeroThree imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  ) : (
+                    <HeroPoster imageAlt="Xin Era entry station scene" imageSrc={HERO_IMAGE} />
+                  )}
                 </m.div>
 
                 <m.div
-                  variants={riseIn}
-                  className="mt-7 bg-[#11171b] px-5 py-4 text-left shadow-[0_16px_36px_rgba(0,0,0,0.22)]"
+                  className="order-1 flex flex-col justify-center lg:order-2"
+                  variants={staggerChildren}
+                  initial="hidden"
+                  animate="visible"
                 >
-                  <p className={labelClass(locale, "text-[10px] text-[#53d6d8] md:text-xs")}>
-                    {copy.hero.panelTitle}
-                  </p>
-                  <p className={bodyClass(locale, "mt-3 max-w-lg text-sm text-white/56")}>
-                    {copy.hero.panelSubtitle}
-                  </p>
-                </m.div>
+                  <m.div variants={riseIn} className="mb-4 flex items-center gap-4">
+                    <span className="h-px w-12 bg-[#2fd3d5]" />
+                    <span className={labelClass(locale, "text-[11px] text-[#7bdfe1] md:text-xs")}>
+                      {copy.hero.plaque}
+                    </span>
+                  </m.div>
 
-                {copy.hero.note ? (
+                  <m.div variants={riseIn}>
+                    <p className={labelClass(locale, "mb-4 text-[10px] text-white/28 md:text-xs")}>
+                      {copy.metaLine}
+                    </p>
+                    <h1
+                      className={headlineClass(
+                        locale,
+                        chinese ? "text-5xl md:text-7xl lg:text-[5.1rem]" : "text-5xl md:text-7xl",
+                      )}
+                    >
+                      {copy.hero.title}
+                    </h1>
+                    <p
+                      className={
+                        chinese
+                          ? "mt-3 font-[family-name:var(--font-label)] text-sm tracking-[0.38em] text-[#53d6d8] uppercase md:text-base"
+                          : "mt-3 font-pixel text-2xl tracking-[0.14em] text-[#53d6d8] md:text-[2rem]"
+                      }
+                    >
+                      {chinese ? heroMark : "心纪元"}
+                    </p>
+                  </m.div>
+
                   <m.p
                     variants={riseIn}
-                    className={bodyClass(locale, "mt-4 max-w-xl text-[10px] text-white/34 md:text-xs")}
+                    className={bodyClass(
+                      locale,
+                      chinese
+                        ? "mt-6 max-w-xl text-sm text-white/68 md:text-base"
+                        : "mt-6 max-w-xl text-base text-white/72 md:text-lg",
+                    )}
                   >
-                    {copy.hero.note}
+                    {copy.hero.description}
                   </m.p>
-                ) : null}
-              </m.div>
-            </div>
+
+                  <m.div variants={riseIn} className="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <MagneticAnchor
+                      href={copy.hero.primaryHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      targetName="hero-primary"
+                      maxOffsetX={8}
+                      maxOffsetY={6}
+                      className={labelClass(
+                        locale,
+                        "inline-flex items-center justify-center gap-3 bg-[linear-gradient(135deg,#2fd3d5_0%,#11878d_100%)] px-7 py-4 text-[#081113] transition-transform duration-300 hover:-translate-y-0.5",
+                      )}
+                    >
+                      <span className="magnetic-layer">{copy.hero.primaryLabel}</span>
+                      <span className="magnetic-layer-strong">↗</span>
+                    </MagneticAnchor>
+                    <a
+                      href={copy.hero.secondaryHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={labelClass(
+                        locale,
+                        "inline-flex items-center justify-center bg-[#141a1f] px-7 py-4 text-white/84 transition-colors duration-300 hover:bg-[#1b2429] hover:text-white",
+                      )}
+                    >
+                      {copy.hero.secondaryLabel}
+                    </a>
+                  </m.div>
+
+                  <m.div
+                    variants={riseIn}
+                    className="mt-7 bg-[#11171b] px-5 py-4 text-left shadow-[0_16px_36px_rgba(0,0,0,0.22)]"
+                  >
+                    <p className={labelClass(locale, "text-[10px] text-[#53d6d8] md:text-xs")}>
+                      {copy.hero.panelTitle}
+                    </p>
+                    <p className={bodyClass(locale, "mt-3 max-w-lg text-sm text-white/56")}>
+                      {copy.hero.panelSubtitle}
+                    </p>
+                  </m.div>
+
+                  {copy.hero.note ? (
+                    <m.p
+                      variants={riseIn}
+                      className={bodyClass(locale, "mt-4 max-w-xl text-[10px] text-white/34 md:text-xs")}
+                    >
+                      {copy.hero.note}
+                    </m.p>
+                  ) : null}
+                </m.div>
+              </div>
+            )}
           </header>
 
           <div>
