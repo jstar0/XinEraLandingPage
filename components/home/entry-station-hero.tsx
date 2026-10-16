@@ -66,7 +66,7 @@ export default function EntryStationHero({
   const inViewportRef = useRef(true);
   const lastRippleRef = useRef(0);
   const lastPaintRef = useRef(0);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
   const tileRefs = useRef<TileRefs[]>([]);
   const tileSnapshotRef = useRef<Array<TileRenderSnapshot | null>>([]);
   const previousActiveIndicesRef = useRef<number[]>([]);

@@ -1,0 +1,8719 @@
+{
+  "scene": "royal",
+  "unitScale": 0.1,
+  "source": "read-only world.zip blockstates / source-volume.npz",
+  "coordinate_system": "Same local coordinates as scene GLB; actual block center, Y + 0.7 block",
+  "sources": [
+    {
+      "world": [
+        -278,
+        64,
+        -84
+      ],
+      "position": [
+        -1.35,
+        0.07,
+        -1.95
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -306,
+        66,
+        -118
+      ],
+      "position": [
+        -4.15,
+        0.27,
+        -5.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -302,
+        66,
+        -118
+      ],
+      "position": [
+        -3.75,
+        0.27,
+        -5.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -309,
+        66,
+        -115
+      ],
+      "position": [
+        -4.45,
+        0.27,
+        -5.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -309,
+        66,
+        -112
+      ],
+      "position": [
+        -4.45,
+        0.27,
+        -4.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -285,
+        66,
+        -112
+      ],
+      "position": [
+        -2.05,
+        0.27,
+        -4.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -332,
+        68,
+        -110
+      ],
+      "position": [
+        -6.75,
+        0.47,
+        -4.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -325,
+        68,
+        -110
+      ],
+      "position": [
+        -6.05,
+        0.47,
+        -4.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -305,
+        68,
+        -60
+      ],
+      "position": [
+        -4.05,
+        0.47,
+        0.45
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -326,
+        68,
+        -50
+      ],
+      "position": [
+        -6.15,
+        0.47,
+        1.45
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -333,
+        69,
+        -59
+      ],
+      "position": [
+        -6.85,
+        0.57,
+        0.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -112
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -4.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -265,
+        70,
+        -112
+      ],
+      "position": [
+        -0.05,
+        0.67,
+        -4.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -330,
+        70,
+        -75
+      ],
+      "position": [
+        -6.55,
+        0.67,
+        -1.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -271,
+        70,
+        -52
+      ],
+      "position": [
+        -0.65,
+        0.67,
+        1.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -304,
+        71,
+        -120
+      ],
+      "position": [
+        -3.95,
+        0.77,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -264,
+        71,
+        -61
+      ],
+      "position": [
+        0.05,
+        0.77,
+        0.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -308,
+        72,
+        -130
+      ],
+      "position": [
+        -4.35,
+        0.87,
+        -6.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -306,
+        72,
+        -130
+      ],
+      "position": [
+        -4.15,
+        0.87,
+        -6.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -310,
+        72,
+        -128
+      ],
+      "position": [
+        -4.55,
+        0.87,
+        -6.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -304,
+        72,
+        -128
+      ],
+      "position": [
+        -3.95,
+        0.87,
+        -6.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -310,
+        72,
+        -126
+      ],
+      "position": [
+        -4.55,
+        0.87,
+        -6.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -304,
+        72,
+        -126
+      ],
+      "position": [
+        -3.95,
+        0.87,
+        -6.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -308,
+        72,
+        -124
+      ],
+      "position": [
+        -4.35,
+        0.87,
+        -5.95
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -306,
+        72,
+        -124
+      ],
+      "position": [
+        -4.15,
+        0.87,
+        -5.95
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -282,
+        72,
+        -102
+      ],
+      "position": [
+        -1.75,
+        0.87,
+        -3.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -267,
+        72,
+        -82
+      ],
+      "position": [
+        -0.25,
+        0.87,
+        -1.75
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -267,
+        72,
+        -77
+      ],
+      "position": [
+        -0.25,
+        0.87,
+        -1.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -270,
+        73,
+        -123
+      ],
+      "position": [
+        -0.55,
+        0.97,
+        -5.85
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -123
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -5.85
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -270,
+        73,
+        -120
+      ],
+      "position": [
+        -0.55,
+        0.97,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -120
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -295,
+        73,
+        -96
+      ],
+      "position": [
+        -3.05,
+        0.97,
+        -3.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -293,
+        74,
+        -127
+      ],
+      "position": [
+        -2.85,
+        1.07,
+        -6.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -264,
+        74,
+        -121
+      ],
+      "position": [
+        0.05,
+        1.07,
+        -5.65
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -275,
+        74,
+        -120
+      ],
+      "position": [
+        -1.05,
+        1.07,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -332,
+        74,
+        -98
+      ],
+      "position": [
+        -6.75,
+        1.07,
+        -3.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -271,
+        74,
+        -64
+      ],
+      "position": [
+        -0.65,
+        1.07,
+        0.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -287,
+        75,
+        -105
+      ],
+      "position": [
+        -2.25,
+        1.17,
+        -4.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -278,
+        75,
+        -97
+      ],
+      "position": [
+        -1.35,
+        1.17,
+        -3.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -334,
+        75,
+        -73
+      ],
+      "position": [
+        -6.95,
+        1.17,
+        -0.85
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -324,
+        75,
+        -68
+      ],
+      "position": [
+        -5.95,
+        1.17,
+        -0.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -276,
+        75,
+        -61
+      ],
+      "position": [
+        -1.15,
+        1.17,
+        0.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -273,
+        75,
+        -60
+      ],
+      "position": [
+        -0.85,
+        1.17,
+        0.45
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -276,
+        75,
+        -56
+      ],
+      "position": [
+        -1.15,
+        1.17,
+        0.85
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -272,
+        75,
+        -55
+      ],
+      "position": [
+        -0.75,
+        1.17,
+        0.95
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -307,
+        76,
+        -127
+      ],
+      "position": [
+        -4.25,
+        1.27,
+        -6.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -265,
+        76,
+        -100
+      ],
+      "position": [
+        -0.05,
+        1.27,
+        -3.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -289,
+        76,
+        -98
+      ],
+      "position": [
+        -2.45,
+        1.27,
+        -3.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -263,
+        76,
+        -84
+      ],
+      "position": [
+        0.15,
+        1.27,
+        -1.95
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -282,
+        76,
+        -62
+      ],
+      "position": [
+        -1.75,
+        1.27,
+        0.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -271,
+        76,
+        -51
+      ],
+      "position": [
+        -0.65,
+        1.27,
+        1.35
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -287,
+        77,
+        -116
+      ],
+      "position": [
+        -2.25,
+        1.37,
+        -5.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -300,
+        77,
+        -105
+      ],
+      "position": [
+        -3.55,
+        1.37,
+        -4.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -292,
+        77,
+        -105
+      ],
+      "position": [
+        -2.75,
+        1.37,
+        -4.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -263,
+        77,
+        -75
+      ],
+      "position": [
+        0.15,
+        1.37,
+        -1.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -273,
+        77,
+        -70
+      ],
+      "position": [
+        -0.85,
+        1.37,
+        -0.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -284,
+        78,
+        -120
+      ],
+      "position": [
+        -1.95,
+        1.47,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -302,
+        78,
+        -103
+      ],
+      "position": [
+        -3.75,
+        1.47,
+        -3.85
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -333,
+        78,
+        -65
+      ],
+      "position": [
+        -6.85,
+        1.47,
+        -0.05
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -336,
+        79,
+        -48
+      ],
+      "position": [
+        -7.15,
+        1.57,
+        1.65
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -296,
+        80,
+        -126
+      ],
+      "position": [
+        -3.15,
+        1.67,
+        -6.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -295,
+        80,
+        -120
+      ],
+      "position": [
+        -3.05,
+        1.67,
+        -5.55
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -264,
+        80,
+        -67
+      ],
+      "position": [
+        0.05,
+        1.67,
+        -0.25
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -261,
+        81,
+        -50
+      ],
+      "position": [
+        0.35,
+        1.77,
+        1.45
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -282,
+        83,
+        -106
+      ],
+      "position": [
+        -1.75,
+        1.97,
+        -4.15
+      ],
+      "block": "minecraft:torch",
+      "properties": {},
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "torch"
+    },
+    {
+      "world": [
+        -308,
+        56,
+        -127
+      ],
+      "position": [
+        -4.35,
+        -0.73,
+        -6.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -304,
+        57,
+        -130
+      ],
+      "position": [
+        -3.95,
+        -0.63,
+        -6.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -320,
+        68,
+        -112
+      ],
+      "position": [
+        -5.55,
+        0.47,
+        -4.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -320,
+        68,
+        -105
+      ],
+      "position": [
+        -5.55,
+        0.47,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -328,
+        68,
+        -95
+      ],
+      "position": [
+        -6.35,
+        0.47,
+        -3.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -314,
+        69,
+        -107
+      ],
+      "position": [
+        -4.95,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -300,
+        69,
+        -91
+      ],
+      "position": [
+        -3.55,
+        0.57,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        69,
+        -85
+      ],
+      "position": [
+        -4.15,
+        0.57,
+        -2.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -336,
+        69,
+        -81
+      ],
+      "position": [
+        -7.15,
+        0.57,
+        -1.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -267,
+        70,
+        -120
+      ],
+      "position": [
+        -0.25,
+        0.67,
+        -5.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        70,
+        -113
+      ],
+      "position": [
+        -1.45,
+        0.67,
+        -4.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        70,
+        -109
+      ],
+      "position": [
+        -1.55,
+        0.67,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -263,
+        70,
+        -95
+      ],
+      "position": [
+        0.15,
+        0.67,
+        -3.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -263,
+        70,
+        -92
+      ],
+      "position": [
+        0.15,
+        0.67,
+        -2.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -336,
+        70,
+        -77
+      ],
+      "position": [
+        -7.15,
+        0.67,
+        -1.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -308,
+        71,
+        -91
+      ],
+      "position": [
+        -4.35,
+        0.77,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -331,
+        71,
+        -89
+      ],
+      "position": [
+        -6.65,
+        0.77,
+        -2.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -308,
+        71,
+        -84
+      ],
+      "position": [
+        -4.35,
+        0.77,
+        -1.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -331,
+        71,
+        -65
+      ],
+      "position": [
+        -6.65,
+        0.77,
+        -0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -290,
+        71,
+        -56
+      ],
+      "position": [
+        -2.55,
+        0.77,
+        0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        71,
+        -55
+      ],
+      "position": [
+        -1.65,
+        0.77,
+        0.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -290,
+        71,
+        -53
+      ],
+      "position": [
+        -2.55,
+        0.77,
+        1.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -288,
+        72,
+        -116
+      ],
+      "position": [
+        -2.35,
+        0.87,
+        -5.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -327,
+        72,
+        -96
+      ],
+      "position": [
+        -6.25,
+        0.87,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        72,
+        -62
+      ],
+      "position": [
+        -1.85,
+        0.87,
+        0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -268,
+        73,
+        -91
+      ],
+      "position": [
+        -0.35,
+        0.97,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        73,
+        -67
+      ],
+      "position": [
+        -1.65,
+        0.97,
+        -0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -268,
+        73,
+        -67
+      ],
+      "position": [
+        -0.35,
+        0.97,
+        -0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        74,
+        -114
+      ],
+      "position": [
+        -2.05,
+        1.07,
+        -4.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -272,
+        74,
+        -98
+      ],
+      "position": [
+        -0.75,
+        1.07,
+        -3.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        75,
+        -117
+      ],
+      "position": [
+        -2.85,
+        1.17,
+        -5.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        75,
+        -115
+      ],
+      "position": [
+        -2.85,
+        1.17,
+        -5.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -292,
+        76,
+        -65
+      ],
+      "position": [
+        -2.75,
+        1.27,
+        -0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        79,
+        -107
+      ],
+      "position": [
+        -2.15,
+        1.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        79,
+        -105
+      ],
+      "position": [
+        -2.15,
+        1.57,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        79,
+        -104
+      ],
+      "position": [
+        -1.65,
+        1.57,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        79,
+        -96
+      ],
+      "position": [
+        -2.15,
+        1.57,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        79,
+        -73
+      ],
+      "position": [
+        -2.15,
+        1.57,
+        -0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        79,
+        -56
+      ],
+      "position": [
+        -2.05,
+        1.57,
+        0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -295,
+        80,
+        -85
+      ],
+      "position": [
+        -3.05,
+        1.67,
+        -2.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        81,
+        -100
+      ],
+      "position": [
+        -4.65,
+        1.77,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -297,
+        82,
+        -112
+      ],
+      "position": [
+        -3.25,
+        1.87,
+        -4.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "west"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        65,
+        -116
+      ],
+      "position": [
+        -4.65,
+        0.17,
+        -5.15
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -323,
+        67,
+        -93
+      ],
+      "position": [
+        -5.85,
+        0.37,
+        -2.85
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -323,
+        67,
+        -90
+      ],
+      "position": [
+        -5.85,
+        0.37,
+        -2.55
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -325,
+        67,
+        -78
+      ],
+      "position": [
+        -6.05,
+        0.37,
+        -1.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -323,
+        67,
+        -78
+      ],
+      "position": [
+        -5.85,
+        0.37,
+        -1.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -325,
+        67,
+        -76
+      ],
+      "position": [
+        -6.05,
+        0.37,
+        -1.15
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -300,
+        67,
+        -58
+      ],
+      "position": [
+        -3.55,
+        0.37,
+        0.65
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -295,
+        67,
+        -52
+      ],
+      "position": [
+        -3.05,
+        0.37,
+        1.25
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -264,
+        67,
+        -52
+      ],
+      "position": [
+        0.05,
+        0.37,
+        1.25
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -274,
+        68,
+        -128
+      ],
+      "position": [
+        -0.95,
+        0.47,
+        -6.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -274,
+        69,
+        -95
+      ],
+      "position": [
+        -0.95,
+        0.57,
+        -3.05
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -274,
+        69,
+        -92
+      ],
+      "position": [
+        -0.95,
+        0.57,
+        -2.75
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -274,
+        69,
+        -80
+      ],
+      "position": [
+        -0.95,
+        0.57,
+        -1.55
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -272,
+        69,
+        -80
+      ],
+      "position": [
+        -0.75,
+        0.57,
+        -1.55
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -274,
+        69,
+        -78
+      ],
+      "position": [
+        -0.95,
+        0.57,
+        -1.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -272,
+        69,
+        -78
+      ],
+      "position": [
+        -0.75,
+        0.57,
+        -1.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -291,
+        70,
+        -92
+      ],
+      "position": [
+        -2.65,
+        0.67,
+        -2.75
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -284,
+        72,
+        -130
+      ],
+      "position": [
+        -1.95,
+        0.87,
+        -6.55
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -324,
+        72,
+        -68
+      ],
+      "position": [
+        -5.95,
+        0.87,
+        -0.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -303,
+        73,
+        -95
+      ],
+      "position": [
+        -3.85,
+        0.97,
+        -3.05
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -288,
+        73,
+        -91
+      ],
+      "position": [
+        -2.35,
+        0.97,
+        -2.65
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -282,
+        74,
+        -91
+      ],
+      "position": [
+        -1.75,
+        1.07,
+        -2.65
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -88
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -2.35
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -70
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -0.55
+      ],
+      "block": "minecraft:redstone_torch",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_torch"
+    },
+    {
+      "world": [
+        -325,
+        68,
+        -78
+      ],
+      "position": [
+        -6.05,
+        0.47,
+        -1.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -323,
+        68,
+        -78
+      ],
+      "position": [
+        -5.85,
+        0.47,
+        -1.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -325,
+        68,
+        -76
+      ],
+      "position": [
+        -6.05,
+        0.47,
+        -1.15
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -264,
+        68,
+        -52
+      ],
+      "position": [
+        0.05,
+        0.47,
+        1.25
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -323,
+        69,
+        -93
+      ],
+      "position": [
+        -5.85,
+        0.57,
+        -2.85
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -300,
+        69,
+        -58
+      ],
+      "position": [
+        -3.55,
+        0.57,
+        0.65
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -295,
+        69,
+        -52
+      ],
+      "position": [
+        -3.05,
+        0.57,
+        1.25
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        70,
+        -128
+      ],
+      "position": [
+        -0.95,
+        0.67,
+        -6.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -115
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -5.05
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -265,
+        70,
+        -115
+      ],
+      "position": [
+        -0.05,
+        0.67,
+        -5.05
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -108
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -4.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -265,
+        70,
+        -108
+      ],
+      "position": [
+        -0.05,
+        0.67,
+        -4.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        70,
+        -80
+      ],
+      "position": [
+        -0.95,
+        0.67,
+        -1.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -80
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -1.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        70,
+        -78
+      ],
+      "position": [
+        -0.95,
+        0.67,
+        -1.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -78
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -1.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -287,
+        70,
+        -70
+      ],
+      "position": [
+        -2.25,
+        0.67,
+        -0.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        71,
+        -95
+      ],
+      "position": [
+        -0.95,
+        0.77,
+        -3.05
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        71,
+        -92
+      ],
+      "position": [
+        -0.95,
+        0.77,
+        -2.75
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -325,
+        72,
+        -68
+      ],
+      "position": [
+        -6.05,
+        0.87,
+        -0.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -323,
+        72,
+        -68
+      ],
+      "position": [
+        -5.85,
+        0.87,
+        -0.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -324,
+        72,
+        -67
+      ],
+      "position": [
+        -5.95,
+        0.87,
+        -0.25
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -302,
+        73,
+        -95
+      ],
+      "position": [
+        -3.75,
+        0.97,
+        -3.05
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -301,
+        73,
+        -95
+      ],
+      "position": [
+        -3.65,
+        0.97,
+        -3.05
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -303,
+        73,
+        -94
+      ],
+      "position": [
+        -3.85,
+        0.97,
+        -2.95
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -300,
+        73,
+        -94
+      ],
+      "position": [
+        -3.55,
+        0.97,
+        -2.95
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -288,
+        73,
+        -92
+      ],
+      "position": [
+        -2.35,
+        0.97,
+        -2.75
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -284,
+        74,
+        -130
+      ],
+      "position": [
+        -1.95,
+        1.07,
+        -6.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -282,
+        74,
+        -92
+      ],
+      "position": [
+        -1.75,
+        1.07,
+        -2.75
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -89
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -2.45
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        74,
+        -88
+      ],
+      "position": [
+        -0.95,
+        1.07,
+        -2.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        74,
+        -88
+      ],
+      "position": [
+        -0.75,
+        1.07,
+        -2.35
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -87
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -2.25
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -71
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -0.65
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -274,
+        74,
+        -70
+      ],
+      "position": [
+        -0.95,
+        1.07,
+        -0.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -272,
+        74,
+        -70
+      ],
+      "position": [
+        -0.75,
+        1.07,
+        -0.55
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -273,
+        74,
+        -69
+      ],
+      "position": [
+        -0.85,
+        1.07,
+        -0.45
+      ],
+      "block": "minecraft:redstone_lamp",
+      "properties": {
+        "lit": "true"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "redstone_lamp"
+    },
+    {
+      "world": [
+        -309,
+        56,
+        -127
+      ],
+      "position": [
+        -4.45,
+        -0.73,
+        -6.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -334,
+        68,
+        -93
+      ],
+      "position": [
+        -6.95,
+        0.47,
+        -2.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -334,
+        68,
+        -90
+      ],
+      "position": [
+        -6.95,
+        0.47,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -317,
+        69,
+        -107
+      ],
+      "position": [
+        -5.25,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -270,
+        70,
+        -120
+      ],
+      "position": [
+        -0.55,
+        0.67,
+        -5.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        70,
+        -114
+      ],
+      "position": [
+        -2.05,
+        0.67,
+        -4.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -277,
+        70,
+        -114
+      ],
+      "position": [
+        -1.25,
+        0.67,
+        -4.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -277,
+        70,
+        -110
+      ],
+      "position": [
+        -1.25,
+        0.67,
+        -4.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        70,
+        -109
+      ],
+      "position": [
+        -1.95,
+        0.67,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -277,
+        70,
+        -107
+      ],
+      "position": [
+        -1.25,
+        0.67,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -269,
+        70,
+        -97
+      ],
+      "position": [
+        -0.45,
+        0.67,
+        -3.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        71,
+        -91
+      ],
+      "position": [
+        -4.15,
+        0.77,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -329,
+        71,
+        -89
+      ],
+      "position": [
+        -6.45,
+        0.77,
+        -2.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        71,
+        -84
+      ],
+      "position": [
+        -4.15,
+        0.77,
+        -1.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -261,
+        71,
+        -83
+      ],
+      "position": [
+        0.35,
+        0.77,
+        -1.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -290,
+        71,
+        -77
+      ],
+      "position": [
+        -2.55,
+        0.77,
+        -1.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -329,
+        71,
+        -65
+      ],
+      "position": [
+        -6.45,
+        0.77,
+        -0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -288,
+        71,
+        -56
+      ],
+      "position": [
+        -2.35,
+        0.77,
+        0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        71,
+        -55
+      ],
+      "position": [
+        -1.45,
+        0.77,
+        0.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -288,
+        71,
+        -53
+      ],
+      "position": [
+        -2.35,
+        0.77,
+        1.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        72,
+        -90
+      ],
+      "position": [
+        -1.65,
+        0.87,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -261,
+        72,
+        -79
+      ],
+      "position": [
+        0.35,
+        0.87,
+        -1.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        73,
+        -117
+      ],
+      "position": [
+        -2.65,
+        0.97,
+        -5.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        73,
+        -111
+      ],
+      "position": [
+        -2.65,
+        0.97,
+        -4.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -302,
+        73,
+        -107
+      ],
+      "position": [
+        -3.75,
+        0.97,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        73,
+        -100
+      ],
+      "position": [
+        -2.65,
+        0.97,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        73,
+        -100
+      ],
+      "position": [
+        -1.65,
+        0.97,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        73,
+        -99
+      ],
+      "position": [
+        -1.65,
+        0.97,
+        -3.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        73,
+        -96
+      ],
+      "position": [
+        -1.65,
+        0.97,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        73,
+        -95
+      ],
+      "position": [
+        -1.65,
+        0.97,
+        -3.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -266,
+        73,
+        -91
+      ],
+      "position": [
+        -0.15,
+        0.97,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        73,
+        -67
+      ],
+      "position": [
+        -1.45,
+        0.97,
+        -0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -266,
+        73,
+        -67
+      ],
+      "position": [
+        -0.15,
+        0.97,
+        -0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        74,
+        -114
+      ],
+      "position": [
+        -1.85,
+        1.07,
+        -4.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        74,
+        -107
+      ],
+      "position": [
+        -1.45,
+        1.07,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        74,
+        -105
+      ],
+      "position": [
+        -1.45,
+        1.07,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -270,
+        74,
+        -98
+      ],
+      "position": [
+        -0.55,
+        1.07,
+        -3.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -302,
+        76,
+        -100
+      ],
+      "position": [
+        -3.75,
+        1.27,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -290,
+        76,
+        -65
+      ],
+      "position": [
+        -2.55,
+        1.27,
+        -0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -278,
+        79,
+        -107
+      ],
+      "position": [
+        -1.35,
+        1.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -278,
+        79,
+        -105
+      ],
+      "position": [
+        -1.35,
+        1.57,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        79,
+        -104
+      ],
+      "position": [
+        -1.85,
+        1.57,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        79,
+        -104
+      ],
+      "position": [
+        -1.45,
+        1.57,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -96
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -73
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        -0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        79,
+        -56
+      ],
+      "position": [
+        -1.85,
+        1.57,
+        0.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        80,
+        -85
+      ],
+      "position": [
+        -2.85,
+        1.67,
+        -2.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -309,
+        81,
+        -100
+      ],
+      "position": [
+        -4.45,
+        1.77,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -295,
+        82,
+        -112
+      ],
+      "position": [
+        -3.05,
+        1.87,
+        -4.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -279,
+        82,
+        -106
+      ],
+      "position": [
+        -1.45,
+        1.87,
+        -4.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "east"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        57,
+        -128
+      ],
+      "position": [
+        -4.65,
+        -0.63,
+        -6.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        57,
+        -128
+      ],
+      "position": [
+        -4.15,
+        -0.63,
+        -6.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -303,
+        57,
+        -128
+      ],
+      "position": [
+        -3.85,
+        -0.63,
+        -6.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        57,
+        -123
+      ],
+      "position": [
+        -4.65,
+        -0.63,
+        -5.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        57,
+        -123
+      ],
+      "position": [
+        -4.15,
+        -0.63,
+        -5.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        67,
+        -110
+      ],
+      "position": [
+        -2.15,
+        0.37,
+        -4.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -325,
+        68,
+        -102
+      ],
+      "position": [
+        -6.05,
+        0.47,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -323,
+        68,
+        -102
+      ],
+      "position": [
+        -5.85,
+        0.47,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -334,
+        68,
+        -100
+      ],
+      "position": [
+        -6.95,
+        0.47,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -332,
+        68,
+        -100
+      ],
+      "position": [
+        -6.75,
+        0.47,
+        -3.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -327,
+        68,
+        -94
+      ],
+      "position": [
+        -6.25,
+        0.47,
+        -2.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -304,
+        69,
+        -94
+      ],
+      "position": [
+        -3.95,
+        0.57,
+        -2.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        69,
+        -91
+      ],
+      "position": [
+        -3.15,
+        0.57,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -294,
+        69,
+        -82
+      ],
+      "position": [
+        -2.95,
+        0.57,
+        -1.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        69,
+        -82
+      ],
+      "position": [
+        -2.65,
+        0.57,
+        -1.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -275,
+        70,
+        -119
+      ],
+      "position": [
+        -1.05,
+        0.67,
+        -5.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        70,
+        -115
+      ],
+      "position": [
+        -1.95,
+        0.67,
+        -5.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        70,
+        -107
+      ],
+      "position": [
+        -1.65,
+        0.67,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -274,
+        70,
+        -104
+      ],
+      "position": [
+        -0.95,
+        0.67,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -104
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -265,
+        70,
+        -102
+      ],
+      "position": [
+        -0.05,
+        0.67,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -263,
+        70,
+        -102
+      ],
+      "position": [
+        0.15,
+        0.67,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        70,
+        -70
+      ],
+      "position": [
+        -4.65,
+        0.67,
+        -0.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -276,
+        70,
+        -60
+      ],
+      "position": [
+        -1.15,
+        0.67,
+        0.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -307,
+        71,
+        -90
+      ],
+      "position": [
+        -4.25,
+        0.77,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -307,
+        71,
+        -83
+      ],
+      "position": [
+        -4.25,
+        0.77,
+        -1.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -287,
+        71,
+        -79
+      ],
+      "position": [
+        -2.25,
+        0.77,
+        -1.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -330,
+        71,
+        -64
+      ],
+      "position": [
+        -6.55,
+        0.77,
+        0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        71,
+        -50
+      ],
+      "position": [
+        -1.55,
+        0.77,
+        1.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -326,
+        72,
+        -95
+      ],
+      "position": [
+        -6.15,
+        0.87,
+        -3.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        72,
+        -90
+      ],
+      "position": [
+        -2.15,
+        0.87,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -299,
+        73,
+        -109
+      ],
+      "position": [
+        -3.45,
+        0.97,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        73,
+        -109
+      ],
+      "position": [
+        -3.15,
+        0.97,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        73,
+        -109
+      ],
+      "position": [
+        -2.85,
+        0.97,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -90
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        73,
+        -66
+      ],
+      "position": [
+        -1.55,
+        0.97,
+        -0.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -66
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -0.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -305,
+        73,
+        -57
+      ],
+      "position": [
+        -4.05,
+        0.97,
+        0.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -288,
+        73,
+        -50
+      ],
+      "position": [
+        -2.35,
+        0.97,
+        1.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        73,
+        -50
+      ],
+      "position": [
+        -2.15,
+        0.97,
+        1.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        74,
+        -113
+      ],
+      "position": [
+        -1.95,
+        1.07,
+        -4.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        74,
+        -107
+      ],
+      "position": [
+        -1.65,
+        1.07,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        74,
+        -103
+      ],
+      "position": [
+        -1.85,
+        1.07,
+        -3.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        74,
+        -103
+      ],
+      "position": [
+        -1.65,
+        1.07,
+        -3.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -271,
+        74,
+        -97
+      ],
+      "position": [
+        -0.65,
+        1.07,
+        -3.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -304,
+        74,
+        -94
+      ],
+      "position": [
+        -3.95,
+        1.07,
+        -2.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        74,
+        -94
+      ],
+      "position": [
+        -2.85,
+        1.07,
+        -2.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        76,
+        -64
+      ],
+      "position": [
+        -2.65,
+        1.27,
+        0.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        77,
+        -89
+      ],
+      "position": [
+        -2.15,
+        1.37,
+        -2.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -107
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        79,
+        -107
+      ],
+      "position": [
+        -1.55,
+        1.57,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        79,
+        -102
+      ],
+      "position": [
+        -1.85,
+        1.57,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        79,
+        -102
+      ],
+      "position": [
+        -1.65,
+        1.57,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        79,
+        -95
+      ],
+      "position": [
+        -2.05,
+        1.57,
+        -3.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        79,
+        -72
+      ],
+      "position": [
+        -2.05,
+        1.57,
+        -0.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -55
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        0.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -294,
+        80,
+        -84
+      ],
+      "position": [
+        -2.95,
+        1.67,
+        -1.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -310,
+        81,
+        -99
+      ],
+      "position": [
+        -4.55,
+        1.77,
+        -3.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        82,
+        -111
+      ],
+      "position": [
+        -3.15,
+        1.87,
+        -4.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        82,
+        -105
+      ],
+      "position": [
+        -1.55,
+        1.87,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "south"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        57,
+        -125
+      ],
+      "position": [
+        -4.65,
+        -0.63,
+        -6.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -306,
+        57,
+        -125
+      ],
+      "position": [
+        -4.15,
+        -0.63,
+        -6.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -303,
+        57,
+        -125
+      ],
+      "position": [
+        -3.85,
+        -0.63,
+        -6.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -325,
+        68,
+        -104
+      ],
+      "position": [
+        -6.05,
+        0.47,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -334,
+        68,
+        -102
+      ],
+      "position": [
+        -6.95,
+        0.47,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -332,
+        68,
+        -102
+      ],
+      "position": [
+        -6.75,
+        0.47,
+        -3.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -264,
+        69,
+        -122
+      ],
+      "position": [
+        0.05,
+        0.57,
+        -5.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -294,
+        69,
+        -84
+      ],
+      "position": [
+        -2.95,
+        0.57,
+        -1.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -272,
+        70,
+        -106
+      ],
+      "position": [
+        -0.75,
+        0.67,
+        -4.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -265,
+        70,
+        -104
+      ],
+      "position": [
+        -0.05,
+        0.67,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -263,
+        70,
+        -104
+      ],
+      "position": [
+        0.15,
+        0.67,
+        -3.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -334,
+        70,
+        -103
+      ],
+      "position": [
+        -6.95,
+        0.67,
+        -3.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -333,
+        70,
+        -103
+      ],
+      "position": [
+        -6.85,
+        0.67,
+        -3.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -332,
+        70,
+        -103
+      ],
+      "position": [
+        -6.75,
+        0.67,
+        -3.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -289,
+        70,
+        -66
+      ],
+      "position": [
+        -2.45,
+        0.67,
+        -0.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -276,
+        70,
+        -62
+      ],
+      "position": [
+        -1.15,
+        0.67,
+        0.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -307,
+        71,
+        -92
+      ],
+      "position": [
+        -4.25,
+        0.77,
+        -2.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -330,
+        71,
+        -90
+      ],
+      "position": [
+        -6.55,
+        0.77,
+        -2.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -307,
+        71,
+        -85
+      ],
+      "position": [
+        -4.25,
+        0.77,
+        -2.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -330,
+        71,
+        -66
+      ],
+      "position": [
+        -6.55,
+        0.77,
+        -0.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -287,
+        72,
+        -117
+      ],
+      "position": [
+        -2.25,
+        0.87,
+        -5.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        72,
+        -105
+      ],
+      "position": [
+        -1.85,
+        0.87,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -265,
+        72,
+        -105
+      ],
+      "position": [
+        -0.05,
+        0.87,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -264,
+        72,
+        -105
+      ],
+      "position": [
+        0.05,
+        0.87,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -263,
+        72,
+        -105
+      ],
+      "position": [
+        0.15,
+        0.87,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -326,
+        72,
+        -97
+      ],
+      "position": [
+        -6.15,
+        0.87,
+        -3.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -295,
+        72,
+        -93
+      ],
+      "position": [
+        -3.05,
+        0.87,
+        -2.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -292,
+        72,
+        -93
+      ],
+      "position": [
+        -2.75,
+        0.87,
+        -2.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -92
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -2.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        73,
+        -68
+      ],
+      "position": [
+        -1.55,
+        0.97,
+        -0.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -267,
+        73,
+        -68
+      ],
+      "position": [
+        -0.25,
+        0.97,
+        -0.35
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -305,
+        73,
+        -59
+      ],
+      "position": [
+        -4.05,
+        0.97,
+        0.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -299,
+        74,
+        -122
+      ],
+      "position": [
+        -3.45,
+        1.07,
+        -5.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        74,
+        -122
+      ],
+      "position": [
+        -3.15,
+        1.07,
+        -5.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        74,
+        -115
+      ],
+      "position": [
+        -1.95,
+        1.07,
+        -5.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        74,
+        -109
+      ],
+      "position": [
+        -1.85,
+        1.07,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        74,
+        -109
+      ],
+      "position": [
+        -1.65,
+        1.07,
+        -4.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -299,
+        74,
+        -106
+      ],
+      "position": [
+        -3.45,
+        1.07,
+        -4.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        74,
+        -106
+      ],
+      "position": [
+        -3.15,
+        1.07,
+        -4.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -293,
+        74,
+        -106
+      ],
+      "position": [
+        -2.85,
+        1.07,
+        -4.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -271,
+        74,
+        -99
+      ],
+      "position": [
+        -0.65,
+        1.07,
+        -3.45
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        74,
+        -96
+      ],
+      "position": [
+        -1.85,
+        1.07,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        75,
+        -105
+      ],
+      "position": [
+        -1.85,
+        1.17,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        75,
+        -96
+      ],
+      "position": [
+        -3.15,
+        1.17,
+        -3.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -311,
+        76,
+        -105
+      ],
+      "position": [
+        -4.65,
+        1.27,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -309,
+        76,
+        -105
+      ],
+      "position": [
+        -4.45,
+        1.27,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -307,
+        76,
+        -105
+      ],
+      "position": [
+        -4.25,
+        1.27,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -305,
+        76,
+        -105
+      ],
+      "position": [
+        -4.05,
+        1.27,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -303,
+        76,
+        -105
+      ],
+      "position": [
+        -3.85,
+        1.27,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -291,
+        76,
+        -66
+      ],
+      "position": [
+        -2.65,
+        1.27,
+        -0.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -286,
+        77,
+        -91
+      ],
+      "position": [
+        -2.15,
+        1.37,
+        -2.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -283,
+        79,
+        -110
+      ],
+      "position": [
+        -1.85,
+        1.57,
+        -4.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -281,
+        79,
+        -110
+      ],
+      "position": [
+        -1.65,
+        1.57,
+        -4.55
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -105
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        79,
+        -105
+      ],
+      "position": [
+        -1.55,
+        1.57,
+        -4.05
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -285,
+        79,
+        -74
+      ],
+      "position": [
+        -2.05,
+        1.57,
+        -0.95
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -284,
+        79,
+        -57
+      ],
+      "position": [
+        -1.95,
+        1.57,
+        0.75
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -294,
+        80,
+        -86
+      ],
+      "position": [
+        -2.95,
+        1.67,
+        -2.15
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -310,
+        81,
+        -101
+      ],
+      "position": [
+        -4.55,
+        1.77,
+        -3.65
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -296,
+        82,
+        -113
+      ],
+      "position": [
+        -3.15,
+        1.87,
+        -4.85
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -280,
+        82,
+        -107
+      ],
+      "position": [
+        -1.55,
+        1.87,
+        -4.25
+      ],
+      "block": "minecraft:wall_torch",
+      "properties": {
+        "facing": "north"
+      },
+      "color": "#ffbc6c",
+      "level": 14,
+      "kind": "wall_torch"
+    },
+    {
+      "world": [
+        -272,
+        68,
+        -115
+      ],
+      "position": [
+        -0.75,
+        0.47,
+        -5.05
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "south",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    },
+    {
+      "world": [
+        -265,
+        68,
+        -108
+      ],
+      "position": [
+        -0.05,
+        0.47,
+        -4.35
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "south",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    },
+    {
+      "world": [
+        -300,
+        73,
+        -95
+      ],
+      "position": [
+        -3.55,
+        0.97,
+        -3.05
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "south",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    },
+    {
+      "world": [
+        -265,
+        68,
+        -115
+      ],
+      "position": [
+        -0.05,
+        0.47,
+        -5.05
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "west",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    },
+    {
+      "world": [
+        -309,
+        69,
+        -107
+      ],
+      "position": [
+        -4.45,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -308,
+        69,
+        -107
+      ],
+      "position": [
+        -4.35,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -306,
+        69,
+        -107
+      ],
+      "position": [
+        -4.15,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -305,
+        69,
+        -107
+      ],
+      "position": [
+        -4.05,
+        0.57,
+        -4.25
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -273,
+        69,
+        -100
+      ],
+      "position": [
+        -0.85,
+        0.57,
+        -3.55
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -272,
+        69,
+        -100
+      ],
+      "position": [
+        -0.75,
+        0.57,
+        -3.55
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -271,
+        69,
+        -100
+      ],
+      "position": [
+        -0.65,
+        0.57,
+        -3.55
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -273,
+        69,
+        -99
+      ],
+      "position": [
+        -0.85,
+        0.57,
+        -3.45
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -272,
+        69,
+        -99
+      ],
+      "position": [
+        -0.75,
+        0.57,
+        -3.45
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -271,
+        69,
+        -99
+      ],
+      "position": [
+        -0.65,
+        0.57,
+        -3.45
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -273,
+        69,
+        -98
+      ],
+      "position": [
+        -0.85,
+        0.57,
+        -3.35
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -272,
+        69,
+        -98
+      ],
+      "position": [
+        -0.75,
+        0.57,
+        -3.35
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -271,
+        69,
+        -98
+      ],
+      "position": [
+        -0.65,
+        0.57,
+        -3.35
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -306,
+        80,
+        -47
+      ],
+      "position": [
+        -4.15,
+        1.67,
+        1.75
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -323,
+        80,
+        -30
+      ],
+      "position": [
+        -5.85,
+        1.67,
+        3.45
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -306,
+        80,
+        -30
+      ],
+      "position": [
+        -4.15,
+        1.67,
+        3.45
+      ],
+      "block": "minecraft:fire",
+      "properties": {
+        "west": "false",
+        "age": "15",
+        "up": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "fire"
+    },
+    {
+      "world": [
+        -272,
+        68,
+        -108
+      ],
+      "position": [
+        -0.75,
+        0.47,
+        -4.35
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "east",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    },
+    {
+      "world": [
+        -287,
+        70,
+        -69
+      ],
+      "position": [
+        -2.25,
+        0.67,
+        -0.45
+      ],
+      "block": "minecraft:redstone_wall_torch",
+      "properties": {
+        "facing": "north",
+        "lit": "true"
+      },
+      "color": "#ff5535",
+      "level": 7,
+      "kind": "redstone_wall_torch"
+    }
+  ],
+  "clusters": [
+    {
+      "position": [
+        -0.65,
+        0.57,
+        -3.55
+      ],
+      "world": [
+        -271,
+        69,
+        -100
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 17,
+      "blocks": {
+        "minecraft:redstone_lamp": 2,
+        "minecraft:wall_torch": 6,
+        "minecraft:fire": 9
+      }
+    },
+    {
+      "position": [
+        -1.75,
+        1.07,
+        -2.75
+      ],
+      "world": [
+        -282,
+        74,
+        -92
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 12,
+      "blocks": {
+        "minecraft:wall_torch": 10,
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -0.85,
+        1.07,
+        -0.45
+      ],
+      "world": [
+        -273,
+        74,
+        -69
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 11,
+      "blocks": {
+        "minecraft:torch": 3,
+        "minecraft:wall_torch": 4,
+        "minecraft:redstone_lamp": 4
+      }
+    },
+    {
+      "position": [
+        -0.75,
+        1.07,
+        -2.35
+      ],
+      "world": [
+        -272,
+        74,
+        -88
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 8,
+      "blocks": {
+        "minecraft:wall_torch": 4,
+        "minecraft:redstone_lamp": 4
+      }
+    },
+    {
+      "position": [
+        -0.75,
+        0.67,
+        -5.05
+      ],
+      "world": [
+        -272,
+        70,
+        -115
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 7,
+      "blocks": {
+        "minecraft:torch": 2,
+        "minecraft:wall_torch": 3,
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -3.05,
+        0.97,
+        -3.15
+      ],
+      "world": [
+        -295,
+        73,
+        -96
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 6,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:redstone_lamp": 1,
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -6.55,
+        0.67,
+        -1.05
+      ],
+      "world": [
+        -330,
+        70,
+        -75
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 5,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 2,
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -4.35,
+        0.57,
+        -4.25
+      ],
+      "world": [
+        -308,
+        69,
+        -107
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 4,
+      "blocks": {
+        "minecraft:fire": 4
+      }
+    },
+    {
+      "position": [
+        -3.75,
+        0.97,
+        -3.05
+      ],
+      "world": [
+        -302,
+        73,
+        -95
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 4,
+      "blocks": {
+        "minecraft:redstone_lamp": 3,
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -3.05,
+        0.57,
+        1.25
+      ],
+      "world": [
+        -295,
+        69,
+        -52
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 2,
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.67,
+        -1.55
+      ],
+      "world": [
+        -274,
+        70,
+        -80
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 4,
+      "blocks": {
+        "minecraft:redstone_lamp": 4
+      }
+    },
+    {
+      "position": [
+        -5.95,
+        0.87,
+        -0.25
+      ],
+      "world": [
+        -324,
+        72,
+        -67
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 3,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -6.05,
+        0.87,
+        -0.35
+      ],
+      "world": [
+        -325,
+        72,
+        -68
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.77,
+        -3.05
+      ],
+      "world": [
+        -274,
+        71,
+        -95
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_lamp": 2
+      }
+    },
+    {
+      "position": [
+        -5.85,
+        0.47,
+        -1.35
+      ],
+      "world": [
+        -323,
+        68,
+        -78
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -5.85,
+        0.57,
+        -2.85
+      ],
+      "world": [
+        -323,
+        69,
+        -93
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -5.85,
+        1.67,
+        3.45
+      ],
+      "world": [
+        -323,
+        80,
+        -30
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:fire": 1
+      }
+    },
+    {
+      "position": [
+        -4.15,
+        1.67,
+        1.75
+      ],
+      "world": [
+        -306,
+        80,
+        -47
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:fire": 1
+      }
+    },
+    {
+      "position": [
+        -4.15,
+        1.67,
+        3.45
+      ],
+      "world": [
+        -306,
+        80,
+        -30
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:fire": 1
+      }
+    },
+    {
+      "position": [
+        -2.25,
+        0.67,
+        -0.55
+      ],
+      "world": [
+        -287,
+        70,
+        -70
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -1.95,
+        1.07,
+        -6.55
+      ],
+      "world": [
+        -284,
+        74,
+        -130
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.67,
+        -6.35
+      ],
+      "world": [
+        -274,
+        70,
+        -128
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        0.47,
+        1.25
+      ],
+      "world": [
+        -264,
+        68,
+        -52
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_lamp": 1
+      }
+    },
+    {
+      "position": [
+        -1.85,
+        1.17,
+        -4.05
+      ],
+      "world": [
+        -283,
+        75,
+        -105
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 25,
+      "blocks": {
+        "minecraft:torch": 3,
+        "minecraft:wall_torch": 22
+      }
+    },
+    {
+      "position": [
+        -1.95,
+        1.07,
+        -4.85
+      ],
+      "world": [
+        -284,
+        74,
+        -113
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 12,
+      "blocks": {
+        "minecraft:torch": 2,
+        "minecraft:wall_torch": 10
+      }
+    },
+    {
+      "position": [
+        -4.35,
+        -0.73,
+        -6.25
+      ],
+      "world": [
+        -308,
+        56,
+        -127
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 11,
+      "blocks": {
+        "minecraft:wall_torch": 11
+      }
+    },
+    {
+      "position": [
+        -6.75,
+        0.47,
+        -3.75
+      ],
+      "world": [
+        -332,
+        68,
+        -102
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 9,
+      "blocks": {
+        "minecraft:wall_torch": 9
+      }
+    },
+    {
+      "position": [
+        -4.35,
+        0.87,
+        -6.55
+      ],
+      "world": [
+        -308,
+        72,
+        -130
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 9,
+      "blocks": {
+        "minecraft:torch": 9
+      }
+    },
+    {
+      "position": [
+        -1.45,
+        0.67,
+        -4.85
+      ],
+      "world": [
+        -279,
+        70,
+        -113
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 9,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 8
+      }
+    },
+    {
+      "position": [
+        -4.05,
+        1.27,
+        -4.05
+      ],
+      "world": [
+        -305,
+        76,
+        -105
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 8,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 7
+      }
+    },
+    {
+      "position": [
+        -6.55,
+        0.77,
+        -2.55
+      ],
+      "world": [
+        -330,
+        71,
+        -90
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 7,
+      "blocks": {
+        "minecraft:wall_torch": 7
+      }
+    },
+    {
+      "position": [
+        -4.25,
+        0.77,
+        -2.55
+      ],
+      "world": [
+        -307,
+        71,
+        -90
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 7,
+      "blocks": {
+        "minecraft:wall_torch": 7
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        1.07,
+        -4.15
+      ],
+      "world": [
+        -293,
+        74,
+        -106
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 7,
+      "blocks": {
+        "minecraft:torch": 3,
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        1.17,
+        -5.05
+      ],
+      "world": [
+        -293,
+        75,
+        -115
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 7,
+      "blocks": {
+        "minecraft:wall_torch": 7
+      }
+    },
+    {
+      "position": [
+        -1.65,
+        0.97,
+        -0.25
+      ],
+      "world": [
+        -281,
+        73,
+        -67
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 7,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 6
+      }
+    },
+    {
+      "position": [
+        -1.95,
+        1.57,
+        0.95
+      ],
+      "world": [
+        -284,
+        79,
+        -55
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 6,
+      "blocks": {
+        "minecraft:wall_torch": 6
+      }
+    },
+    {
+      "position": [
+        -0.55,
+        1.07,
+        -3.35
+      ],
+      "world": [
+        -270,
+        74,
+        -98
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 6,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 5
+      }
+    },
+    {
+      "position": [
+        -4.15,
+        0.27,
+        -5.35
+      ],
+      "world": [
+        -306,
+        66,
+        -118
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 5,
+      "blocks": {
+        "minecraft:torch": 5
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.87,
+        -4.85
+      ],
+      "world": [
+        -296,
+        82,
+        -113
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 5,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -1.65,
+        0.77,
+        0.95
+      ],
+      "world": [
+        -281,
+        71,
+        -55
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 5,
+      "blocks": {
+        "minecraft:wall_torch": 5
+      }
+    },
+    {
+      "position": [
+        -6.65,
+        0.77,
+        -0.05
+      ],
+      "world": [
+        -331,
+        71,
+        -65
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -5.55,
+        0.47,
+        -4.05
+      ],
+      "world": [
+        -320,
+        68,
+        -105
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -4.65,
+        1.77,
+        -3.55
+      ],
+      "world": [
+        -311,
+        81,
+        -100
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        0.57,
+        -1.75
+      ],
+      "world": [
+        -291,
+        69,
+        -82
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.27,
+        -0.15
+      ],
+      "world": [
+        -291,
+        76,
+        -66
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:wall_torch": 4
+      }
+    },
+    {
+      "position": [
+        -1.55,
+        1.87,
+        -4.25
+      ],
+      "world": [
+        -280,
+        82,
+        -107
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 3
+      }
+    },
+    {
+      "position": [
+        -0.75,
+        1.17,
+        0.95
+      ],
+      "world": [
+        -272,
+        75,
+        -55
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 4,
+      "blocks": {
+        "minecraft:torch": 4
+      }
+    },
+    {
+      "position": [
+        -4.25,
+        0.77,
+        -1.85
+      ],
+      "world": [
+        -307,
+        71,
+        -83
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:wall_torch": 3
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.07,
+        -5.75
+      ],
+      "world": [
+        -296,
+        74,
+        -122
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -2.95,
+        1.67,
+        -2.15
+      ],
+      "world": [
+        -294,
+        80,
+        -86
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:wall_torch": 3
+      }
+    },
+    {
+      "position": [
+        -2.05,
+        1.57,
+        -0.95
+      ],
+      "world": [
+        -285,
+        79,
+        -74
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:wall_torch": 3
+      }
+    },
+    {
+      "position": [
+        -0.55,
+        0.97,
+        -5.55
+      ],
+      "world": [
+        -270,
+        73,
+        -120
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:torch": 3
+      }
+    },
+    {
+      "position": [
+        0.35,
+        0.87,
+        -1.45
+      ],
+      "world": [
+        -261,
+        72,
+        -79
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 3,
+      "blocks": {
+        "minecraft:torch": 2,
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -6.75,
+        0.47,
+        -4.55
+      ],
+      "world": [
+        -332,
+        68,
+        -110
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 2
+      }
+    },
+    {
+      "position": [
+        -6.15,
+        0.47,
+        1.45
+      ],
+      "world": [
+        -326,
+        68,
+        -50
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 2
+      }
+    },
+    {
+      "position": [
+        -6.15,
+        0.87,
+        -3.25
+      ],
+      "world": [
+        -326,
+        72,
+        -97
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -6.15,
+        0.87,
+        -3.05
+      ],
+      "world": [
+        -326,
+        72,
+        -95
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -4.05,
+        0.97,
+        0.75
+      ],
+      "world": [
+        -305,
+        73,
+        -57
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        0.57,
+        -2.65
+      ],
+      "world": [
+        -296,
+        69,
+        -91
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -1.35,
+        0.07,
+        -1.95
+      ],
+      "world": [
+        -278,
+        64,
+        -84
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -1.25,
+        0.67,
+        -4.25
+      ],
+      "world": [
+        -277,
+        70,
+        -107
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -0.65,
+        0.67,
+        1.25
+      ],
+      "world": [
+        -271,
+        70,
+        -52
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 1,
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -0.55,
+        0.97,
+        -5.85
+      ],
+      "world": [
+        -270,
+        73,
+        -123
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 2
+      }
+    },
+    {
+      "position": [
+        -0.25,
+        0.87,
+        -1.75
+      ],
+      "world": [
+        -267,
+        72,
+        -82
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:torch": 2
+      }
+    },
+    {
+      "position": [
+        0.15,
+        0.67,
+        -3.75
+      ],
+      "world": [
+        -263,
+        70,
+        -102
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        0.15,
+        0.67,
+        -3.05
+      ],
+      "world": [
+        -263,
+        70,
+        -95
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        0.15,
+        0.87,
+        -4.05
+      ],
+      "world": [
+        -263,
+        72,
+        -105
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 2,
+      "blocks": {
+        "minecraft:wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -7.15,
+        1.57,
+        1.65
+      ],
+      "world": [
+        -336,
+        79,
+        -48
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        -6.95,
+        1.17,
+        -0.85
+      ],
+      "world": [
+        -334,
+        75,
+        -73
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        -5.55,
+        0.47,
+        -4.75
+      ],
+      "world": [
+        -320,
+        68,
+        -112
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -4.65,
+        0.67,
+        -0.55
+      ],
+      "world": [
+        -311,
+        70,
+        -70
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -4.05,
+        0.47,
+        0.45
+      ],
+      "world": [
+        -305,
+        68,
+        -60
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.67,
+        -6.15
+      ],
+      "world": [
+        -296,
+        80,
+        -126
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        -2.95,
+        1.67,
+        -1.95
+      ],
+      "world": [
+        -294,
+        80,
+        -84
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -2.45,
+        0.67,
+        -0.15
+      ],
+      "world": [
+        -289,
+        70,
+        -66
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -1.15,
+        0.67,
+        0.25
+      ],
+      "world": [
+        -276,
+        70,
+        -62
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        0.57,
+        -5.75
+      ],
+      "world": [
+        -264,
+        69,
+        -122
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        0.77,
+        0.35
+      ],
+      "world": [
+        -264,
+        71,
+        -61
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        1.07,
+        -5.65
+      ],
+      "world": [
+        -264,
+        74,
+        -121
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        1.67,
+        -0.25
+      ],
+      "world": [
+        -264,
+        80,
+        -67
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        0.35,
+        0.77,
+        -1.85
+      ],
+      "world": [
+        -261,
+        71,
+        -83
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        0.35,
+        1.77,
+        1.45
+      ],
+      "world": [
+        -261,
+        81,
+        -50
+      ],
+      "color": "#ffbc6c",
+      "level": 14,
+      "count": 1,
+      "blocks": {
+        "minecraft:torch": 1
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.57,
+        -1.55
+      ],
+      "world": [
+        -274,
+        69,
+        -80
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 4,
+      "blocks": {
+        "minecraft:redstone_torch": 4
+      }
+    },
+    {
+      "position": [
+        -6.05,
+        0.37,
+        -1.35
+      ],
+      "world": [
+        -325,
+        67,
+        -78
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_torch": 2
+      }
+    },
+    {
+      "position": [
+        -5.85,
+        0.37,
+        -2.85
+      ],
+      "world": [
+        -323,
+        67,
+        -93
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_torch": 2
+      }
+    },
+    {
+      "position": [
+        -3.55,
+        0.37,
+        0.65
+      ],
+      "world": [
+        -300,
+        67,
+        -58
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_torch": 2
+      }
+    },
+    {
+      "position": [
+        -1.75,
+        1.07,
+        -2.65
+      ],
+      "world": [
+        -282,
+        74,
+        -91
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_torch": 2
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.57,
+        -3.05
+      ],
+      "world": [
+        -274,
+        69,
+        -95
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_torch": 2
+      }
+    },
+    {
+      "position": [
+        -0.75,
+        0.47,
+        -5.05
+      ],
+      "world": [
+        -272,
+        68,
+        -115
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -0.75,
+        0.47,
+        -4.35
+      ],
+      "world": [
+        -272,
+        68,
+        -108
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 2,
+      "blocks": {
+        "minecraft:redstone_wall_torch": 2
+      }
+    },
+    {
+      "position": [
+        -5.95,
+        0.87,
+        -0.35
+      ],
+      "world": [
+        -324,
+        72,
+        -68
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -5.85,
+        0.37,
+        -1.35
+      ],
+      "world": [
+        -323,
+        67,
+        -78
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -4.65,
+        0.17,
+        -5.15
+      ],
+      "world": [
+        -311,
+        65,
+        -116
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -3.85,
+        0.97,
+        -3.05
+      ],
+      "world": [
+        -303,
+        73,
+        -95
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -3.55,
+        0.97,
+        -3.05
+      ],
+      "world": [
+        -300,
+        73,
+        -95
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        0.67,
+        -2.75
+      ],
+      "world": [
+        -291,
+        70,
+        -92
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -2.25,
+        0.67,
+        -0.45
+      ],
+      "world": [
+        -287,
+        70,
+        -69
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_wall_torch": 1
+      }
+    },
+    {
+      "position": [
+        -1.95,
+        0.87,
+        -6.55
+      ],
+      "world": [
+        -284,
+        72,
+        -130
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -0.95,
+        0.47,
+        -6.35
+      ],
+      "world": [
+        -274,
+        68,
+        -128
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -0.85,
+        1.07,
+        -2.35
+      ],
+      "world": [
+        -273,
+        74,
+        -88
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        -0.85,
+        1.07,
+        -0.55
+      ],
+      "world": [
+        -273,
+        74,
+        -70
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    },
+    {
+      "position": [
+        0.05,
+        0.37,
+        1.25
+      ],
+      "world": [
+        -264,
+        67,
+        -52
+      ],
+      "color": "#ff5535",
+      "level": 7,
+      "count": 1,
+      "blocks": {
+        "minecraft:redstone_torch": 1
+      }
+    }
+  ],
+  "beacons": [],
+  "unlit_excluded": {
+    "minecraft:redstone_lamp": 12,
+    "minecraft:furnace": 4
+  },
+  "runtime_hint": "Select a small nearest subset of clusters; emissive atlas includes every visible light. Only activeConfirmed beacons have verified base and clear sky.",
+  "limitations": [
+    "Non-air scene sources may be hidden inside the solid volume; renderer must choose relevant nearby lights.",
+    "Beacon transmission treats unknown blocks conservatively; activeConfirmed is false if unknown.",
+    "Volcano sources are exposed candidates; shell does not include interiors."
+  ]
+}

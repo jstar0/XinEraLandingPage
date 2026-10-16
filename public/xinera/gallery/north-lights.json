@@ -1,0 +1,16 @@
+{
+  "scene": "north",
+  "unitScale": 0.1,
+  "source": "read-only world.zip blockstates / source-volume.npz",
+  "coordinate_system": "Same local coordinates as scene GLB; actual block center, Y + 0.7 block",
+  "sources": [],
+  "clusters": [],
+  "beacons": [],
+  "unlit_excluded": {},
+  "runtime_hint": "Select a small nearest subset of clusters; emissive atlas includes every visible light. Only activeConfirmed beacons have verified base and clear sky.",
+  "limitations": [
+    "Non-air scene sources may be hidden inside the solid volume; renderer must choose relevant nearby lights.",
+    "Beacon transmission treats unknown blocks conservatively; activeConfirmed is false if unknown.",
+    "Volcano sources are exposed candidates; shell does not include interiors."
+  ]
+}

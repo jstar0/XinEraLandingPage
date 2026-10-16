@@ -1,30 +1,41 @@
-import "./css/style.css";
-import localFont from "next/font/local";
-
-const pixelFont = localFont({
-  src: "./fonts/ChillBitmap_16px.ttf",
-  display: "swap",
-  variable: "--font-pixel",
-});
-
-export const metadata = {
-  title: "心纪元 MC",
-  description: "心纪元 MC 的个人游戏分享站与玩家入口。",
+import type { Metadata, Viewport } from "next";
+import "./site.css";
+import "@/components/site/theme.css";
+import { site } from "@/lib/site";
+import { themeInitialization } from "@/lib/theme";
+import { ThemeSync } from "@/components/site/theme-toggle";
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: "心纪元 · Minecraft 原创剧情 RPG",
+    template: "%s · 心纪元",
+  },
+  description: site.description,
+  openGraph: {
+    siteName: "心纪元",
+    locale: "zh_CN",
+    type: "website",
+    images: [{ url: "/xinera/courtyard.jpg", alt: "心纪元西奥格勒教堂庭院" }],
+  },
+  icons: { icon: "/xinera/logo-pixel-96.png" },
 };
-
+export const viewport: Viewport = { themeColor: "#f4dfc9" };
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN" className="scroll-smooth">
-      <body
-        className={`${pixelFont.variable} bg-[#131313] text-slate-100 antialiased`}
-      >
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-          {children}
-        </div>
+    <html lang="zh-CN" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitialization }} />
+      </head>
+      <body>
+        <ThemeSync />
+        <a className="skip-link" href="#main">
+          跳到内容
+        </a>
+        {children}
       </body>
     </html>
   );

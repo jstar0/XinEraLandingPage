@@ -1,0 +1,442 @@
+.gallery-page {
+  max-width: 1760px;
+  margin: auto;
+  padding: 34px 4% 72px;
+}
+.gallery-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 0 40px;
+}
+.gallery-kicker {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+.gallery-heading h1 {
+  text-wrap: balance;
+  font-size: clamp(32px, 3.4vw, 56px);
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  margin: 0;
+}
+.gallery-map-link {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+}
+.gallery-map-link:hover {
+  color: #bf4d2c;
+}
+.gallery-map-link span {
+  font-size: 25px;
+}
+.gallery-exhibit {
+  margin: 0;
+}
+#gallery-view {
+  scroll-margin-top: 88px;
+}
+.island-viewer,
+.gallery-photo {
+  position: relative;
+  height: clamp(450px, 65vh, 850px);
+  overflow: hidden;
+  background: #82adb0;
+  isolation: isolate;
+}
+.island-viewer {
+  --viewer-ink: #1f3942;
+  --viewer-paper: #f7f4e9eb;
+}
+.island-viewer[data-night="true"] {
+  --viewer-ink: #edf0e5;
+  --viewer-paper: #1c3043ed;
+}
+.island-poster,
+.island-canvas,
+.gallery-photo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.island-canvas {
+  opacity: 0;
+  transition: opacity 0.6s;
+  touch-action: pan-y;
+}
+.island-viewer[data-status="ready"] .island-canvas {
+  opacity: 1;
+}
+.island-viewer[data-status="ready"] .island-poster {
+  visibility: hidden;
+}
+.island-canvas:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: -4px;
+}
+.island-topline {
+  position: absolute;
+  inset: 24px 28px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  color: var(--viewer-ink);
+}
+.island-label {
+  color: #f7f4e9;
+  text-shadow: 0 1px 8px #142e49;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  font-weight: 550;
+}
+.island-light {
+  display: flex;
+  pointer-events: auto;
+  background: var(--viewer-paper);
+  padding: 4px;
+  transition:
+    background 0.7s,
+    color 0.7s;
+}
+.island-light button {
+  min-width: 82px;
+  min-height: 44px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.island-light button span {
+  font-size: 22px;
+}
+.island-light [aria-pressed="true"] {
+  background: var(--viewer-ink);
+  color: var(--viewer-paper);
+}
+.island-controls {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  pointer-events: none;
+  color: var(--viewer-ink);
+}
+.island-controls > * {
+  pointer-events: auto;
+  background: var(--viewer-paper);
+  transition:
+    background 0.7s,
+    color 0.7s;
+}
+.island-presets {
+  display: flex;
+  padding: 4px;
+}
+.island-presets button {
+  min-width: 80px;
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+.island-presets button[aria-pressed="true"] {
+  box-shadow: inset 0 -2px var(--orange);
+}
+.island-orbit {
+  min-height: 52px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.island-orbit > span {
+  font-size: 21px;
+}
+.island-status {
+  position: absolute;
+  bottom: 31px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 10px 14px;
+  color: var(--viewer-ink);
+  font-size: 12px;
+  text-align: center;
+  pointer-events: none;
+  background: var(--viewer-paper);
+}
+.island-viewer:not([data-status="ready"]) .island-status {
+  top: 44%;
+  bottom: auto;
+  background: #f6f3edeb;
+  color: #253043;
+}
+.island-viewer button:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+.gallery-photo > img {
+  object-position: center;
+}
+.gallery-photo > span {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  padding: 10px 15px;
+  background: #f6f3ede8;
+  font-size: 13px;
+}
+.gallery-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 0 40px;
+}
+.gallery-caption h2 {
+  font-size: clamp(27px, 2.5vw, 38px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+.gallery-caption p {
+  font-size: 15px;
+  color: #626d6d;
+  margin: 12px 0 0;
+}
+.gallery-coordinate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  text-align: right;
+  padding: 8px 0;
+}
+.gallery-coordinate > span:first-child {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #626d6d;
+}
+.gallery-coordinate i {
+  margin-left: 18px;
+  font-style: normal;
+}
+.gallery-coordinate:hover {
+  color: #bf4d2c;
+}
+.gallery-caption-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.gallery-journal {
+  font-size: 13px;
+  color: #626d6d;
+}
+.gallery-journal span {
+  margin-left: 12px;
+}
+.gallery-journal:hover {
+  color: #bf4d2c;
+}
+.gallery-selection {
+  border-top: 1px solid #293b4324;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.gallery-selection button {
+  text-align: left;
+  padding: 24px 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+  border-bottom: 2px solid transparent;
+  transition: background 0.2s;
+}
+.gallery-selection button:first-child {
+  padding-left: 0;
+}
+.gallery-selection button[aria-selected="true"] {
+  border-bottom-color: var(--orange);
+}
+.gallery-selection button:hover {
+  background: #e9e7de80;
+}
+.gallery-selection img {
+  width: 72px;
+  flex-shrink: 0;
+  aspect-ratio: 1.2;
+  object-fit: cover;
+}
+.gallery-selection strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 9px;
+}
+.gallery-selection small {
+  font-size: 12px;
+  color: #626d6d;
+}
+.gallery-selection i {
+  margin-left: auto;
+  font-size: 12px;
+  font-style: normal;
+  color: #626d6d;
+}
+.gallery-edition {
+  max-width: 640px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #697271;
+  margin: 32px 0 0;
+}
+@media (max-width: 1100px) {
+  .gallery-selection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .island-status {
+    display: none;
+  }
+  .island-viewer:not([data-status="ready"]) .island-status {
+    display: block;
+    width: 75%;
+  }
+  .gallery-selection button {
+    gap: 12px;
+    padding: 20px 12px;
+  }
+  .gallery-selection img {
+    width: 65px;
+  }
+  .gallery-selection i {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-page {
+    padding: 22px 5% 44px;
+  }
+  .gallery-heading {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .gallery-heading h1 {
+    font-size: 32px;
+  }
+  .gallery-kicker {
+    font-size: 11px;
+  }
+  .gallery-map-link {
+    margin-top: 12px;
+    width: fit-content;
+    font-size: 13px;
+    gap: 12px;
+  }
+  .island-viewer,
+  .gallery-photo {
+    height: 520px;
+    margin-inline: -5.56%;
+  }
+  .island-topline {
+    inset: 18px 18px auto;
+  }
+  .island-label {
+    font-size: 11px;
+  }
+  .island-light button {
+    min-width: 65px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  .island-controls {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    gap: 8px;
+  }
+  .island-presets button {
+    min-width: 58px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+  .island-orbit {
+    padding: 0 10px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .gallery-caption {
+    align-items: start;
+    gap: 14px;
+    padding-block: 24px;
+  }
+  .gallery-caption h2 {
+    font-size: 25px;
+  }
+  .gallery-caption p {
+    font-size: 13px;
+    max-width: 15em;
+    line-height: 1.7;
+  }
+  .gallery-coordinate {
+    font-size: 12px;
+    gap: 12px;
+    white-space: nowrap;
+  }
+  .gallery-coordinate > span:first-child {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .gallery-journal {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .gallery-selection {
+    grid-template-columns: 1fr;
+  }
+  .gallery-selection button,
+  .gallery-selection button:first-child {
+    padding: 16px 0;
+  }
+  .gallery-selection img {
+    width: 90px;
+    aspect-ratio: 1.7;
+  }
+  .gallery-selection i {
+    display: block;
+  }
+  .gallery-selection strong {
+    font-size: 17px;
+    margin-top: 6px;
+  }
+  .gallery-caption .step {
+    font-size: 12px;
+    padding: 12px;
+    gap: 14px;
+    white-space: nowrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .island-canvas,
+  .island-light,
+  .island-controls > * {
+    transition: none;
+  }
+}

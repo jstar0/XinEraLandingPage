@@ -40,3 +40,12 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# Local design sources and verification evidence; never needed by the website.
+/design-exploration/
+/docs/verification/
+/docs/content-sources.md
+/public/xinera/gallery/*-source.json
+/public/xinera/gallery/*-height.json
+/public/xinera/hero/*-source.json
+/public/xinera/skins/manifest.json

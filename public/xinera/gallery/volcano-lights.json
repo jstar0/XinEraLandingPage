@@ -1,0 +1,3508 @@
+{
+  "scene": "volcano",
+  "unitScale": 0.1,
+  "source": "read-only world.zip blockstates / source-volume.npz",
+  "coordinate_system": "Same local coordinates as scene GLB; actual block center, Y + 0.7 block",
+  "sources": [
+    {
+      "world": [
+        1438,
+        122,
+        -1153
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -6.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1153
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -6.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1154
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -6.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "2"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1153
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -6.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1153
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -6.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1152
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1152
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1151
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1151
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1151
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1151
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1150
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1150
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1150
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1150
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1149
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1149
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1149
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1149
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1148
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1148
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1148
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1148
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1148
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1147
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1147
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1147
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1147
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1147
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1433,
+        122,
+        -1146
+      ],
+      "position": [
+        0.15,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1434,
+        122,
+        -1146
+      ],
+      "position": [
+        0.25,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1146
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1146
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1146
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1146
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1146
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1433,
+        122,
+        -1145
+      ],
+      "position": [
+        0.15,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1434,
+        122,
+        -1145
+      ],
+      "position": [
+        0.25,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1145
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1145
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1145
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1145
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1145
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1434,
+        122,
+        -1144
+      ],
+      "position": [
+        0.25,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1144
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1144
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1144
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1144
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1144
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1143
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1143
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1143
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1143
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1435,
+        122,
+        -1142
+      ],
+      "position": [
+        0.35,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1142
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1142
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1142
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1142
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1436,
+        122,
+        -1141
+      ],
+      "position": [
+        0.45,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1141
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1141
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1141
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1437,
+        122,
+        -1140
+      ],
+      "position": [
+        0.55,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1140
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1140
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1438,
+        122,
+        -1139
+      ],
+      "position": [
+        0.65,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1439,
+        122,
+        -1139
+      ],
+      "position": [
+        0.75,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1152
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1152
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1152
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1152
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1152
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1152
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1151
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1151
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1151
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1151
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1151
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1151
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1151
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1150
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1150
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1150
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1150
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1150
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1150
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1150
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1149
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1149
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1149
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1149
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1149
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1149
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1149
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1148
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1148
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1148
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1148
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1148
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1148
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1148
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1147
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1147
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1147
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1147
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1147
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1147
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1147
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.45
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1146
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1146
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1146
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1146
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1146
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1146
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1146
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.35
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1145
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1145
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1145
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1145
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1145
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1145
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1145
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1145
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -5.25
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1144
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1144
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1144
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1144
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1144
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1144
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1144
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1144
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1144
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -5.15
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1143
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1143
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1143
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1143
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1143
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1143
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1143
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1143
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1143
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1449,
+        122,
+        -1143
+      ],
+      "position": [
+        1.75,
+        5.87,
+        -5.05
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1142
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1142
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1142
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1142
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1142
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1142
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1142
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1142
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1142
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -4.95
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1440,
+        122,
+        -1141
+      ],
+      "position": [
+        0.85,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1141
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1141
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1141
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1141
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1141
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1141
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1141
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1141
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -4.85
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1441,
+        122,
+        -1140
+      ],
+      "position": [
+        0.95,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1140
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1140
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1140
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1140
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1140
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1140
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1140
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -4.75
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1442,
+        122,
+        -1139
+      ],
+      "position": [
+        1.05,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1443,
+        122,
+        -1139
+      ],
+      "position": [
+        1.15,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1444,
+        122,
+        -1139
+      ],
+      "position": [
+        1.25,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1139
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1139
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1447,
+        122,
+        -1139
+      ],
+      "position": [
+        1.55,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1139
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -4.65
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1445,
+        122,
+        -1138
+      ],
+      "position": [
+        1.35,
+        5.87,
+        -4.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1446,
+        122,
+        -1138
+      ],
+      "position": [
+        1.45,
+        5.87,
+        -4.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    },
+    {
+      "world": [
+        1448,
+        122,
+        -1138
+      ],
+      "position": [
+        1.65,
+        5.87,
+        -4.55
+      ],
+      "block": "minecraft:lava",
+      "properties": {
+        "level": "0"
+      },
+      "color": "#ffbc6c",
+      "level": 15,
+      "kind": "lava"
+    }
+  ],
+  "clusters": [
+    {
+      "position": [
+        1.15,
+        5.87,
+        -5.35
+      ],
+      "world": [
+        1443,
+        122,
+        -1146
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 93,
+      "blocks": {
+        "minecraft:lava": 93
+      }
+    },
+    {
+      "position": [
+        0.55,
+        5.87,
+        -5.35
+      ],
+      "world": [
+        1437,
+        122,
+        -1146
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 57,
+      "blocks": {
+        "minecraft:lava": 57
+      }
+    },
+    {
+      "position": [
+        1.35,
+        5.87,
+        -4.65
+      ],
+      "world": [
+        1445,
+        122,
+        -1139
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 18,
+      "blocks": {
+        "minecraft:lava": 18
+      }
+    },
+    {
+      "position": [
+        0.65,
+        5.87,
+        -4.75
+      ],
+      "world": [
+        1438,
+        122,
+        -1140
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 5,
+      "blocks": {
+        "minecraft:lava": 5
+      }
+    },
+    {
+      "position": [
+        0.65,
+        5.87,
+        -6.05
+      ],
+      "world": [
+        1438,
+        122,
+        -1153
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 3,
+      "blocks": {
+        "minecraft:lava": 3
+      }
+    },
+    {
+      "position": [
+        1.15,
+        5.87,
+        -6.05
+      ],
+      "world": [
+        1443,
+        122,
+        -1153
+      ],
+      "color": "#ffbc6c",
+      "level": 15,
+      "count": 2,
+      "blocks": {
+        "minecraft:lava": 2
+      }
+    }
+  ],
+  "beacons": [],
+  "unlit_excluded": {},
+  "runtime_hint": "Select a small nearest subset of clusters; emissive atlas includes every visible light. Only activeConfirmed beacons have verified base and clear sky.",
+  "limitations": [
+    "Non-air scene sources may be hidden inside the solid volume; renderer must choose relevant nearby lights.",
+    "Beacon transmission treats unknown blocks conservatively; activeConfirmed is false if unknown.",
+    "Volcano sources are exposed candidates; shell does not include interiors."
+  ]
+}

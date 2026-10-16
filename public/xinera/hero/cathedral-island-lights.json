@@ -1,0 +1,6773 @@
+{
+  "unitScale": 0.1,
+  "sources": [
+    {
+      "position": [
+        1.25,
+        0.572,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        -0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -821
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        -0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -821
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.15,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        249,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.15,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        252,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.45,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        255,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.75,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        258,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.05,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        261,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.25,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        273,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.55,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        276,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.85,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        279,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.15,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        282,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.45,
+        0.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        285,
+        69,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.15,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        249,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.15,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        252,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.45,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        255,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.75,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        258,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.05,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        261,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.25,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        273,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.55,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        276,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.85,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        279,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.15,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        282,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.45,
+        0.572,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        285,
+        69,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -809
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -809
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        0.572,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        263,
+        69,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        0.572,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        271,
+        69,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.772,
+        -2.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        71,
+        -841
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.772,
+        -2.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        71,
+        -841
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.772,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        71,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.772,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        71,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.772,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        71,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.772,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        71,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.772,
+        2.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        71,
+        -789
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.772,
+        2.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        71,
+        -789
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.872,
+        -1.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        72,
+        -829
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.872,
+        -1.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        72,
+        -829
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.872,
+        -0.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        72,
+        -820
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.872,
+        -0.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        72,
+        -820
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.872,
+        0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        72,
+        -810
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.872,
+        0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        72,
+        -810
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.872,
+        1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        72,
+        -801
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.872,
+        1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        72,
+        -801
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.072,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        74,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.072,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        74,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.072,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        74,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.072,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        74,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.072,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        74,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.072,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        74,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.072,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        74,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.072,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        74,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.072,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        74,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.072,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        74,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.072,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        74,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.072,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        74,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        -1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        1.372,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        77,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.95,
+        1.372,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        221,
+        77,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        -0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -817
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        1.372,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        77,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.95,
+        1.372,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        221,
+        77,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        0.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -813
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        1.372,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        77,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.95,
+        1.372,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        221,
+        77,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.372,
+        1.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        77,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        1.472,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        78,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        1.472,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        78,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        -1.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -825
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        -0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -816
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        1.472,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        78,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        1.472,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        78,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        -0.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -814
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        0.85
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -805
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        1.472,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        78,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        1.472,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        78,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.472,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        78,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.572,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        79,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.572,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        79,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.572,
+        -1.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        79,
+        -833
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.572,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        79,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.572,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        79,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.572,
+        -1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        79,
+        -831
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.572,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        79,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.572,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        79,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.572,
+        1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        79,
+        -799
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        1.572,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        79,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        1.572,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        79,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        1.572,
+        1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        79,
+        -797
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        2.072,
+        -2.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        84,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        2.072,
+        -2.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        84,
+        -834
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        2.072,
+        1.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        84,
+        -796
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        2.072,
+        2.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        84,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -821
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -818
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -809
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.172,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        85,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        -0.85
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        2.672,
+        -0.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        90,
+        -820
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.55,
+        2.672,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        225,
+        90,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        2.772,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        91,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        2.772,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        91,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        2.772,
+        0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        91,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        2.772,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        91,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.972,
+        -1.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        93,
+        -830
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        2.972,
+        1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        93,
+        -800
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        3.272,
+        -1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        216,
+        96,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        3.272,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        96,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        3.372,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        97,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        3.472,
+        0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        216,
+        98,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        3.672,
+        -1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        100,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        3.872,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        102,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        3.872,
+        1.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        102,
+        -801
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        4.172,
+        -0.75
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        105,
+        -821
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        4.172,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        216,
+        105,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        4.272,
+        -1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        216,
+        106,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        4.272,
+        0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        106,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.75,
+        4.372,
+        -0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        213,
+        107,
+        -816
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        4.472,
+        -0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        108,
+        -823
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        4.572,
+        0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        109,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        4.572,
+        0.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        109,
+        -807
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        4.672,
+        -0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        110,
+        -817
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        4.772,
+        0.85
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        216,
+        111,
+        -805
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        4.872,
+        -0.95
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        112,
+        -823
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        4.972,
+        -0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        113,
+        -818
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        4.972,
+        0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        222,
+        113,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        5.072,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        214,
+        114,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.55,
+        5.072,
+        0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        215,
+        114,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        5.072,
+        0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        214,
+        114,
+        -810
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        5.172,
+        -0.85
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        115,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        5.172,
+        0.65
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        115,
+        -807
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        5.272,
+        0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        219,
+        116,
+        -809
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        5.372,
+        -1.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        117,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        5.372,
+        -0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        117,
+        -816
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        5.372,
+        1.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        117,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        5.472,
+        -1.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        118,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        5.472,
+        1.05
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        118,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        5.572,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        214,
+        119,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        5.672,
+        -0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        120,
+        -816
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        5.772,
+        0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        220,
+        121,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.35,
+        6.172,
+        -0.35
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        125,
+        -817
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.25,
+        6.372,
+        -0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        127,
+        -816
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        6.672,
+        -0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        211,
+        130,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        7.172,
+        -0.55
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        135,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        7.172,
+        0.25
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        135,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        7.272,
+        -0.45
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        136,
+        -818
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        7.272,
+        0.15
+      ],
+      "kind": "torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        136,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        0.872,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        72,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.272,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        76,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        1.772,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        81,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.772,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        81,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.772,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        81,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.85,
+        2.472,
+        1.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        88,
+        -799
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        2.672,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        90,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        3.172,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        95,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        3.172,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        95,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        3.172,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        95,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.072,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        104,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.572,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        109,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.572,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        109,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.572,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        109,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.472,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        118,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        5.972,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        123,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.972,
+        -2.27
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        123,
+        -836
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.972,
+        2.43
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        123,
+        -789
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -4.25,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        208,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        209,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        210,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        211,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.75,
+        0.45,
+        -2.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        213,
+        68,
+        -837
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -829
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.25
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -825
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -1.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -824
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -0.95
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -823
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -0.75
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -821
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -0.65
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -820
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        208,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        209,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        210,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        211,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.75,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        213,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.35
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -810
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -809
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.65
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -807
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.75
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -806
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -805
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        0.95
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        1.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        1.25
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -801
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.25,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        208,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.15,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        209,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        210,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.95,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        211,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.85,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        212,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.75,
+        0.45,
+        2.05
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        213,
+        68,
+        -793
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.85,
+        -1.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        72,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.85,
+        -0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        72,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.85,
+        0.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        72,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.85,
+        1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        72,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.95,
+        -1.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        73,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.95,
+        -0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        73,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.95,
+        0.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        73,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        0.95,
+        1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        73,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.35,
+        -1.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        77,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.35,
+        -0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        77,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.35,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        77,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.35,
+        0.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        77,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.35,
+        1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        77,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.45,
+        -1.45
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        78,
+        -828
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.45,
+        -0.85
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        78,
+        -822
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.45,
+        -0.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        78,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.45,
+        0.55
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        78,
+        -808
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.65,
+        1.45,
+        1.15
+      ],
+      "kind": "glowstone",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        214,
+        78,
+        -802
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -4.05,
+        0.872,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        72,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.272,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        76,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.772,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        81,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        1.772,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        81,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        1.772,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        81,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.85,
+        2.472,
+        -1.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        212,
+        88,
+        -831
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        2.672,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        90,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        3.172,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        95,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        3.172,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        95,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        3.172,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        95,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.072,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        104,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.572,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        109,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.572,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        109,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        4.572,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        109,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.472,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        118,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.972,
+        -2.73
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        123,
+        -841
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        5.972,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        217,
+        123,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.65,
+        5.972,
+        1.97
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        224,
+        123,
+        -794
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        0.872,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        72,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        0.872,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        72,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        1.772,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        81,
+        -842
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        1.772,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        81,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        1.772,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        81,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        1.772,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        81,
+        -788
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        2.272,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        86,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        2.272,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        86,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.372,
+        -2.35
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        87,
+        -837
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.372,
+        -2.05
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        87,
+        -834
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.372,
+        1.75
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        87,
+        -796
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.372,
+        2.05
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        87,
+        -793
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.972,
+        -2.35
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        93,
+        -837
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.972,
+        -2.05
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        93,
+        -834
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.972,
+        1.75
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        93,
+        -796
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.07,
+        2.972,
+        2.05
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        210,
+        93,
+        -793
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.172,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        95,
+        -842
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.172,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        95,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.172,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        95,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.172,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        95,
+        -788
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.672,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        100,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        3.672,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        100,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        4.572,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        109,
+        -842
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        4.572,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        109,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.17,
+        4.572,
+        -1.75
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        109,
+        -831
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.17,
+        4.572,
+        1.45
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        109,
+        -799
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        4.572,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        109,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        4.572,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        109,
+        -788
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.27,
+        4.772,
+        -1.45
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        111,
+        -828
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.27,
+        4.772,
+        1.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        111,
+        -802
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.072,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        114,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.072,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        114,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.972,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        123,
+        -842
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.972,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        123,
+        -835
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.972,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        123,
+        -795
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.77,
+        5.972,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        223,
+        123,
+        -788
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.17,
+        6.372,
+        -0.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        127,
+        -822
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.17,
+        6.372,
+        0.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        209,
+        127,
+        -808
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.27,
+        6.572,
+        -0.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        129,
+        -819
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -4.27,
+        6.572,
+        0.25
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        208,
+        129,
+        -811
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        1.45,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        78,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        1.45,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        78,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        2.85,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        92,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        2.85,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        92,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.25,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        106,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.25,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        106,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        5.65,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        120,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        5.65,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        120,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.672,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        80,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.672,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        80,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.772,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        81,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.772,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        81,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.772,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        81,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        1.772,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        81,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.072,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        94,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.072,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        94,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.172,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        95,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.172,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        95,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.172,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        95,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        3.172,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        95,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.472,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        108,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.472,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        108,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.572,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        109,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.572,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        109,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.572,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        109,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        4.572,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        109,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.872,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        122,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.872,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        122,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.972,
+        -2.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        123,
+        -842
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.972,
+        -2.15
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        123,
+        -835
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.972,
+        1.85
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        123,
+        -795
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -3.23,
+        5.972,
+        2.55
+      ],
+      "kind": "wall_torch",
+      "color": "#ffb65c",
+      "level": 14,
+      "worldBlock": [
+        218,
+        123,
+        -788
+      ],
+      "state": {
+        "facing": "east"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        1.95,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        83,
+        -835
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        2.15,
+        2.75
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        85,
+        -786
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        3.35,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        97,
+        -835
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        3.55,
+        2.75
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        99,
+        -786
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        4.75,
+        -2.15
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        111,
+        -835
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.95,
+        2.75
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        113,
+        -786
+      ],
+      "state": {
+        "facing": "north"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        1.95,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        83,
+        -795
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        2.15,
+        -3.05
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        85,
+        -844
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        3.35,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        97,
+        -795
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        3.55,
+        -3.05
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        99,
+        -844
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.75,
+        4.75,
+        1.85
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        223,
+        111,
+        -795
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -3.35,
+        4.95,
+        -3.05
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        217,
+        113,
+        -844
+      ],
+      "state": {
+        "facing": "south"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        2.25,
+        -2.95
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        86,
+        -843
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        2.25,
+        2.65
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        86,
+        -787
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        3.65,
+        -2.95
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        100,
+        -843
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        3.65,
+        2.65
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        100,
+        -787
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        5.05,
+        -2.95
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        114,
+        -843
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        -2.55,
+        5.05,
+        2.65
+      ],
+      "kind": "jack_o_lantern",
+      "color": "#ffb65c",
+      "level": 15,
+      "worldBlock": [
+        225,
+        114,
+        -787
+      ],
+      "state": {
+        "facing": "west"
+      }
+    },
+    {
+      "position": [
+        1.65,
+        0.45,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        68,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.35,
+        -1.25
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        219,
+        77,
+        -826
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.35,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        219,
+        77,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.15,
+        1.35,
+        0.95
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        219,
+        77,
+        -804
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.05,
+        1.95,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        220,
+        83,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        3.45,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        222,
+        98,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        3.65,
+        -1.35
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        222,
+        100,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -2.85,
+        3.65,
+        1.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        222,
+        100,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        4.05,
+        -2.25
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        104,
+        -836
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        4.05,
+        -0.55
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        263,
+        104,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        4.05,
+        -0.55
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        271,
+        104,
+        -819
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.45,
+        4.05,
+        -0.35
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        265,
+        104,
+        -817
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.85,
+        4.05,
+        -0.35
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        269,
+        104,
+        -817
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.45,
+        4.05,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        246,
+        104,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        4.05,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        104,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.75,
+        4.05,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        288,
+        104,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.45,
+        4.05,
+        0.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        265,
+        104,
+        -813
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.85,
+        4.05,
+        0.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        269,
+        104,
+        -813
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.25,
+        4.05,
+        0.25
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        263,
+        104,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.05,
+        4.05,
+        0.25
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        271,
+        104,
+        -811
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        4.05,
+        1.95
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        104,
+        -794
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.45,
+        4.15,
+        -2.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        255,
+        105,
+        -834
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.85,
+        4.15,
+        -2.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        279,
+        105,
+        -834
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.25,
+        4.15,
+        -1.35
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        248,
+        105,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.55,
+        4.15,
+        -1.35
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        286,
+        105,
+        -827
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.25,
+        4.15,
+        1.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        248,
+        105,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.55,
+        4.15,
+        1.05
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        286,
+        105,
+        -803
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        0.45,
+        4.15,
+        1.75
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        255,
+        105,
+        -796
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        2.85,
+        4.15,
+        1.75
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        279,
+        105,
+        -796
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        4.85,
+        -2.25
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        112,
+        -836
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -0.45,
+        4.85,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        246,
+        112,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        3.75,
+        4.85,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        288,
+        112,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        4.85,
+        1.95
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        112,
+        -794
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.35,
+        4.95,
+        -0.45
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        264,
+        113,
+        -818
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.95,
+        4.95,
+        -0.45
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        270,
+        113,
+        -818
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.35,
+        4.95,
+        0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        264,
+        113,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.95,
+        4.95,
+        0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        270,
+        113,
+        -812
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        1.65,
+        5.15,
+        -0.15
+      ],
+      "kind": "sea_lantern",
+      "color": "#9edcff",
+      "level": 15,
+      "worldBlock": [
+        267,
+        115,
+        -815
+      ],
+      "state": {}
+    },
+    {
+      "position": [
+        -3.45,
+        0.95,
+        -1.75
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        216,
+        73,
+        -831
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        0.95,
+        -1.75
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        222,
+        73,
+        -831
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -3.45,
+        0.95,
+        -0.75
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        216,
+        73,
+        -821
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        0.95,
+        -0.75
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        222,
+        73,
+        -821
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -3.45,
+        0.95,
+        0.45
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        216,
+        73,
+        -809
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        0.95,
+        0.45
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        222,
+        73,
+        -809
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -3.45,
+        0.95,
+        1.45
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        216,
+        73,
+        -799
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -2.85,
+        0.95,
+        1.45
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        222,
+        73,
+        -799
+      ],
+      "state": {
+        "facing": "up"
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.05,
+        -1.25
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        219,
+        74,
+        -826
+      ],
+      "state": {
+        "facing": "down"
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.05,
+        -0.15
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        219,
+        74,
+        -815
+      ],
+      "state": {
+        "facing": "down"
+      }
+    },
+    {
+      "position": [
+        -3.15,
+        1.05,
+        0.95
+      ],
+      "kind": "end_rod",
+      "color": "#9edcff",
+      "level": 14,
+      "worldBlock": [
+        219,
+        74,
+        -804
+      ],
+      "state": {
+        "facing": "down"
+      }
+    }
+  ],
+  "clusters": [],
+  "beacons": [],
+  "source": "Authored homepage volume, preserving original architectural light blocks; MC lit properties respected.",
+  "counts": {
+    "torch": 173,
+    "wall_torch": 100,
+    "glowstone": 57,
+    "jack_o_lantern": 26,
+    "sea_lantern": 38,
+    "end_rod": 11
+  },
+  "excludedUnlit": [],
+  "beaconFinding": "No beacon blocks in this hero source/presentation volume; no beam or pyramid is invented.",
+  "coordinateTransform": "[(worldX-251)*.1,(worldY-64)*.1,(worldZ+813)*.1]"
+}
