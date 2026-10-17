@@ -21,6 +21,9 @@ import {
 } from "../rendering/block-materials";
 import { createHeroEnvironment } from "../world/scene/environment";
 import { loadBlockPbr } from "../rendering/pbr-textures";
+import { nextPreparationTask } from "../rendering/prepare-budget";
+import { modelAsset } from "@/lib/model-assets";
+import { requestGalleryModel } from "./model-request";
 
 export type IslandController = {
   view: (view: IslandView) => void;
@@ -36,11 +39,18 @@ export async function mountIsland(
   onTourPause: () => void,
   place: GalleryPlace = "volcano",
   onPreparing: () => void = () => {},
+  modelBytes?: Promise<ArrayBuffer>,
 ): Promise<IslandController | undefined> {
   if (signal.aborted) return;
+  const modelRequest = modelBytes ?? requestGalleryModel(place, signal);
+  // A rejected request must remain handled if WebGL initialization fails first.
+  void modelRequest.catch(() => {});
   const mark = (stage: string, detail?: unknown) => {
-    if (process.env.NODE_ENV !== "production")
+    if (process.env.NODE_ENV !== "production") {
       performance.mark(`gallery:${place}:${stage}`, { detail });
+    } else if (["start", "parsed", "first-frame"].includes(stage)) {
+      performance.mark(`gallery:${place}:${stage}`);
+    }
   };
   mark("start");
   const island = place === "volcano";
@@ -474,18 +484,20 @@ export async function mountIsland(
           })
       : Promise.resolve();
     const [bytes, definitions, lightData, waterBytes] = await Promise.all([
-      loadBytes(`/xinera/gallery/${sceneName}.glb?v=materials-20261017`),
+      modelRequest,
       definitionsPromise,
       readBlockLights(`/xinera/gallery/${sceneName}-lights.json`, signal),
       cathedral
-        ? loadBytes("/xinera/gallery/cathedral-water.glb?v=materials-20261017")
+        ? loadBytes(modelAsset("gallery/cathedral-water").url)
         : Promise.resolve(null),
       shorePromise,
       pbrPromise,
     ]);
     if (signal.aborted || disposed) return;
     onPreparing();
-    mark("downloaded");
+    mark("dependencies-ready");
+    // Let React paint the preparation state before GLB parsing starts work.
+    await nextPreparationTask(signal);
     const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
     const model = await loader.parseAsync(bytes, "/xinera/gallery/");
     if (signal.aborted || disposed) {

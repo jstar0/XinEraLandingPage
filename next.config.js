@@ -9,6 +9,17 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: "/xinera/models/:asset([a-z0-9-]+\\.glb\\.br)",
+        headers: [
+          { key: "Content-Type", value: "model/gltf-binary" },
+          { key: "Content-Encoding", value: "br" },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
         source: "/xinera/pbr/:asset([a-z0-9-]+-[a-f0-9]{12}\\.png)",
         headers: [
           {

@@ -96,7 +96,15 @@ export function Gallery({ initialPlace }: { initialPlace: GalleryPlace }) {
             onClick={() => select(value)}
             onKeyDown={key}
           >
-            <img src={scenes[value].image} alt="" loading="lazy" />
+            <img
+              src={`/xinera/gallery/${value}-thumb.webp`}
+              alt=""
+              width="320"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+            />
             <span>
               <small>{scenes[value].kind}</small>
               <strong>{scenes[value].title}</strong>

@@ -1,5 +1,6 @@
 import { cp, mkdir, rm } from "node:fs/promises";
 import { relative } from "node:path";
+import { prepareModelTransport } from "./model-transport.mjs";
 // Next's traced server intentionally omits these static asset directories.
 await mkdir(".next/standalone/.next", { recursive: true });
 await rm(".next/standalone/public", { recursive: true, force: true });
@@ -15,4 +16,5 @@ await cp("public", ".next/standalone/public", {
   },
 });
 await cp(".next/static", ".next/standalone/.next/static", { recursive: true });
+await prepareModelTransport(".next/standalone/public");
 console.log("Standalone server and static assets are ready.");

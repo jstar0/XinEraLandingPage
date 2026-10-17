@@ -10,6 +10,9 @@ import {
 import { themeStorageKey, type SiteTheme } from "@/lib/theme";
 
 let inMemoryPreference: SiteTheme | null = null;
+let pendingTheme: SiteTheme | null = null;
+let themeTransition: ViewTransition | undefined;
+let themeRequest = 0;
 
 function currentTheme(): SiteTheme {
   return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
@@ -31,14 +34,42 @@ function applyTheme(theme: SiteTheme) {
 }
 
 function saveTheme(theme: SiteTheme) {
+  const request = ++themeRequest;
   inMemoryPreference = theme;
-  applyTheme(theme);
+  pendingTheme = theme;
   try {
     localStorage.setItem(themeStorageKey, theme);
   } catch {
     // The visible theme remains usable without persistent storage.
   }
-  window.dispatchEvent(new Event("xinera:world-clock-change"));
+  const update = () => {
+    if (request !== themeRequest) return;
+    pendingTheme = null;
+    applyTheme(theme);
+    window.dispatchEvent(new Event("xinera:world-clock-change"));
+  };
+  themeTransition?.skipTransition();
+  themeTransition = undefined;
+  const root = document.documentElement;
+  if (
+    document.querySelector("#journey") ||
+    matchMedia("(prefers-reduced-motion: reduce)").matches ||
+    !document.startViewTransition
+  ) {
+    delete root.dataset.themeTransition;
+    update();
+    return;
+  }
+  root.dataset.themeTransition = "true";
+  const transition = document.startViewTransition(update);
+  themeTransition = transition;
+  void transition.finished
+    .catch(() => {})
+    .finally(() => {
+      if (themeTransition !== transition) return;
+      themeTransition = undefined;
+      delete root.dataset.themeTransition;
+    });
 }
 
 export function ThemeSync() {
@@ -76,7 +107,9 @@ export function ThemeToggle() {
       aria-label="深色模式"
       title={dark ? "切换浅色主题" : "切换深色主题"}
       onClick={() => {
-        saveTheme(currentTheme() === "dark" ? "light" : "dark");
+        saveTheme(
+          (pendingTheme ?? currentTheme()) === "dark" ? "light" : "dark",
+        );
       }}
     >
       <ThemeIcon />

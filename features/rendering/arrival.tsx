@@ -30,8 +30,16 @@ const CLOUDS = [
   { name: "far-east", depth: "far", side: 1, image: 3 },
   { name: "middle-west", depth: "far", side: -1, image: 0 },
   { name: "middle-east", depth: "far", side: 1, image: 1 },
+  { name: "bridge", depth: "near", side: 0, image: 0 },
   { name: "near-west", depth: "near", side: -1, image: 2 },
   { name: "near-east", depth: "near", side: 1, image: 3 },
+] as const;
+
+const CLOUD_SIZES = [
+  [802, 461],
+  [795, 485],
+  [748, 448],
+  [692, 508],
 ] as const;
 
 type BlockKind = "stone" | "earth" | "grass" | "wood" | "leaf";
@@ -237,14 +245,17 @@ export function Arrival({
         const bounds = cloud.getBoundingClientRect();
         const viewport = element.getBoundingClientRect();
         const travel =
-          side < 0
-            ? viewport.left - bounds.right - 70
-            : viewport.right - bounds.left + 70;
+          side === 0
+            ? 0
+            : side < 0
+              ? viewport.left - bounds.right - 70
+              : viewport.right - bounds.left + 70;
         exit!.to(
           cloud,
           {
             x: travel,
-            y: near ? 100 : -36,
+            y:
+              side === 0 ? viewport.bottom - bounds.top + 70 : near ? 100 : -36,
             scale: near ? 1.08 : 1.02,
             duration: near ? 0.82 : 0.96,
             ease: "power2.inOut",
@@ -434,7 +445,15 @@ export function Arrival({
     });
 
     controller.current = { update: (next) => update(next) };
-    const timer = setTimeout(show, 250);
+    const timer = setTimeout(() => {
+      // Keep the cloud formation intact on slow connections: intrinsic sizes
+      // reserve its geometry, and no individual bitmap pops in mid-entrance.
+      void Promise.allSettled(
+        clouds.map((cloud) =>
+          (cloud.firstElementChild as HTMLImageElement).decode(),
+        ),
+      ).then(() => show());
+    }, 250);
     const onPreferenceChange = () => preferenceChanged();
     reduced.addEventListener("change", onPreferenceChange);
     return () => {
@@ -482,8 +501,10 @@ export function Arrival({
                 <img
                   className="arrival-cloud-body"
                   src={`/xinera/arrival/cloud-${image}.webp`}
+                  width={CLOUD_SIZES[image][0]}
+                  height={CLOUD_SIZES[image][1]}
                   alt=""
-                  loading="lazy"
+                  loading="eager"
                   fetchPriority="low"
                   draggable={false}
                 />

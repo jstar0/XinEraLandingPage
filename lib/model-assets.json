@@ -1,0 +1,56 @@
+{
+  "hero/cathedral-island": {
+    "source": "/xinera/hero/cathedral-island.glb",
+    "url": "/xinera/models/hero-cathedral-island-abc7b920c1e8fea5.glb.br",
+    "bytes": 6285236,
+    "sha256": "abc7b920c1e8fea5b32f3d9dbf2950b957f3f74f4815fb5b6409db99428bdea4"
+  },
+  "gallery/volcano": {
+    "source": "/xinera/gallery/volcano.glb",
+    "url": "/xinera/models/gallery-volcano-addb94694fdabe38.glb.br",
+    "bytes": 7633948,
+    "sha256": "addb94694fdabe38ae9232c55c7a53a22cfa6b03c82d91cb6f5b537841b56332"
+  },
+  "gallery/cathedral": {
+    "source": "/xinera/gallery/cathedral.glb",
+    "url": "/xinera/models/gallery-cathedral-8c677cccb33fb668.glb.br",
+    "bytes": 15816288,
+    "sha256": "8c677cccb33fb668cf3d03ced35d4ae26d10cdcbda9df36cd17487dcd0a580c3"
+  },
+  "gallery/cathedral-water": {
+    "source": "/xinera/gallery/cathedral-water.glb",
+    "url": "/xinera/models/gallery-cathedral-water-f08e0c5fd7d790d8.glb.br",
+    "bytes": 123464,
+    "sha256": "f08e0c5fd7d790d82ab0eebc9b21ddbf0b8ff492293d61732e1fc8bbdbfc65e6"
+  },
+  "gallery/claire": {
+    "source": "/xinera/gallery/claire.glb",
+    "url": "/xinera/models/gallery-claire-3fd959f95add252d.glb.br",
+    "bytes": 7656868,
+    "sha256": "3fd959f95add252def10c96da0d82102f9bb07a1d99c59299837d2ac83420032"
+  },
+  "gallery/west": {
+    "source": "/xinera/gallery/west.glb",
+    "url": "/xinera/models/gallery-west-39101e0f47b2d864.glb.br",
+    "bytes": 18879224,
+    "sha256": "39101e0f47b2d8647027ecb72155b26950f34d97ac39f27f5d6d295ac78fbfaa"
+  },
+  "gallery/asa": {
+    "source": "/xinera/gallery/asa.glb",
+    "url": "/xinera/models/gallery-asa-6e255648e6e47633.glb.br",
+    "bytes": 19049760,
+    "sha256": "6e255648e6e47633d6597b6a21d5f5e6a149c2a9d7bed28bd52e6565153ae681"
+  },
+  "gallery/royal": {
+    "source": "/xinera/gallery/royal.glb",
+    "url": "/xinera/models/gallery-royal-fb34c81457707b0b.glb.br",
+    "bytes": 5648224,
+    "sha256": "fb34c81457707b0b1b87061b30ef00c8c3c2fcacb46bfcc0302958f7dd5bc297"
+  },
+  "gallery/north": {
+    "source": "/xinera/gallery/north.glb",
+    "url": "/xinera/models/gallery-north-2aaefbb411a0e659.glb.br",
+    "bytes": 14796264,
+    "sha256": "2aaefbb411a0e659e18ad6594d95acdd2638d0507886b170b3e479fffcdf54e1"
+  }
+}

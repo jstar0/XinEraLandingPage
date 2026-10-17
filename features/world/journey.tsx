@@ -33,21 +33,24 @@ export function Journey() {
       }
       const current = new AbortController();
       controller = current;
+      const resetWatchdog = (timeout: number) => {
+        clearTimeout(watchdog);
+        watchdog = setTimeout(() => {
+          report({ stage: "fallback" });
+          current.abort();
+        }, timeout);
+      };
       const report = (state: JourneyLoadState) => {
         if (current.signal.aborted) return;
         if (state.stage === "ready" || state.stage === "fallback")
           clearTimeout(watchdog);
+        else if (state.stage === "preparing") resetWatchdog(45_000);
         setLoad(state);
       };
-      watchdog = setTimeout(() => {
-        report({ stage: "fallback" });
-        current.abort();
-      }, 45_000);
-      const signal = AbortSignal.any([
-        current.signal,
-        AbortSignal.timeout(45_000),
-      ]);
-      const download = requestHero(signal, report);
+      resetWatchdog(30_000);
+      const download = requestHero(current.signal, report, () =>
+        resetWatchdog(30_000),
+      );
       // Local design review only; production builds eliminate this branch.
       const inspectArrival =
         process.env.NODE_ENV === "development" &&

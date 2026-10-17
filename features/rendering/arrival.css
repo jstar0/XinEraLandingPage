@@ -72,6 +72,11 @@
   top: 62%;
   width: 110%;
 }
+.arrival-cloud-bridge {
+  left: 8%;
+  top: 48%;
+  width: 92%;
+}
 .arrival-cloud-near-east {
   left: 48%;
   top: 61%;
@@ -258,6 +263,11 @@
     top: 70%;
     width: 200%;
   }
+  .arrival-cloud-bridge {
+    left: -32%;
+    top: 52%;
+    width: 164%;
+  }
   .arrival-center {
     left: 52%;
     top: 66%;
@@ -321,6 +331,11 @@
   top: 59%;
   left: -55%;
   width: 160%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-bridge {
+  left: -12%;
+  top: 25%;
+  width: 124%;
 }
 .arrival[data-scope="scene"] .arrival-cloud-near-east {
   top: 56%;

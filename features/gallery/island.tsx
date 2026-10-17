@@ -6,6 +6,11 @@ import { galleryPlaces, scenes } from "./content";
 import type { IslandController } from "./runtime";
 import { Arrival } from "../rendering/arrival";
 import { SceneHint } from "@/components/site/scene-hint";
+import {
+  GALLERY_DOWNLOAD_IDLE_TIMEOUT,
+  GALLERY_PREPARATION_TIMEOUT,
+  requestGalleryModel,
+} from "./model-request";
 
 function subscribeMotion(callback: () => void) {
   const query = matchMedia("(prefers-reduced-motion: reduce)");
@@ -34,6 +39,7 @@ export function Island({ place }: { place: GalleryPlace }) {
   const [status, setStatus] = useState<
     "loading" | "preparing" | "ready" | "unavailable"
   >("loading");
+  const [progress, setProgress] = useState(0);
   const [revealComplete, setRevealComplete] = useState(false);
   const interactive = status === "ready" && revealComplete;
 
@@ -41,13 +47,28 @@ export function Island({ place }: { place: GalleryPlace }) {
     const el = canvas.current;
     if (!el) return;
     const abort = new AbortController();
+    let watchdog: ReturnType<typeof setTimeout> | undefined;
     const fail = () => {
       if (abort.signal.aborted) return;
+      clearTimeout(watchdog);
       abort.abort();
       controller.current = undefined;
       setStatus("unavailable");
     };
-    const watchdog = setTimeout(fail, 45_000);
+    // Begin the large download before importing Three or initializing WebGL.
+    // A slow stream can run for as long as it keeps receiving bytes.
+    const modelBytes = requestGalleryModel(place, abort.signal, (value) => {
+      if (!abort.signal.aborted) setProgress(value);
+    }).then((bytes) => {
+      if (!abort.signal.aborted) {
+        // The model is complete; bound waiting for the runtime and sidecars.
+        watchdog = setTimeout(fail, GALLERY_DOWNLOAD_IDLE_TIMEOUT);
+      }
+      return bytes;
+    });
+    // Import/GPU setup may take longer than a failed request. Attach a handler
+    // now, while keeping the original promise for the runtime to consume.
+    void modelBytes.catch(fail);
     import("./runtime")
       .then(({ mountIsland }) =>
         mountIsland(
@@ -68,8 +89,12 @@ export function Island({ place }: { place: GalleryPlace }) {
           },
           place,
           () => {
-            if (!abort.signal.aborted) setStatus("preparing");
+            if (abort.signal.aborted) return;
+            clearTimeout(watchdog);
+            watchdog = setTimeout(fail, GALLERY_PREPARATION_TIMEOUT);
+            setStatus("preparing");
           },
+          modelBytes,
         ),
       )
       .then((instance) => {
@@ -123,6 +148,7 @@ export function Island({ place }: { place: GalleryPlace }) {
           scope="scene"
           variant="clouds"
           stage={status === "unavailable" ? "fallback" : status}
+          progress={progress}
           onRevealComplete={() => {
             revealed.current = true;
             setRevealComplete(true);
