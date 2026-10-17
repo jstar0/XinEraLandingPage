@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Arrival, type ArrivalStage } from "@/features/rendering/arrival";
+import { SceneHint } from "@/components/site/scene-hint";
 
 export function SkinPreview({
   src,
@@ -70,7 +71,9 @@ export function SkinPreview({
           三维预览暂时不可用，仍可在下方选择外观。
         </p>
       ) : stage === "ready" && revealed ? (
-        <span className="player-drag-hint">拖动旋转 · 滚轮缩放</span>
+        <div className="player-drag-hint">
+          <SceneHint subject="character" />
+        </div>
       ) : null}
     </div>
   );

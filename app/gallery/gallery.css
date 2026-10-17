@@ -170,27 +170,16 @@
 .island-orbit > span {
   font-size: 21px;
 }
-.island-status {
-  position: absolute;
-  bottom: 31px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 10px 14px;
-  color: var(--viewer-ink);
-  font-size: 12px;
+.island-help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
   text-align: center;
-  pointer-events: none;
-  background: var(--viewer-paper);
-}
-.island-status[hidden] {
-  display: none !important;
-}
-.island-viewer:not([data-status="ready"]) .island-status {
-  top: 44%;
-  bottom: auto;
-  background: #f6f3edeb;
-  color: #253043;
 }
 .island-viewer button:disabled {
   opacity: 0.42;
@@ -319,13 +308,6 @@
   }
 }
 @media (max-width: 900px) {
-  .island-status {
-    display: none;
-  }
-  .island-viewer:not([data-status="ready"]) .island-status {
-    display: block;
-    width: 75%;
-  }
   .gallery-selection button {
     gap: 12px;
     padding: 20px 12px;

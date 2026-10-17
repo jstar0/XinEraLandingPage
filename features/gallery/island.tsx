@@ -5,6 +5,7 @@ import type { GalleryPlace, GallerySettings, IslandView } from "./content";
 import { galleryPlaces, scenes } from "./content";
 import type { IslandController } from "./runtime";
 import { Arrival } from "../rendering/arrival";
+import { SceneHint } from "@/components/site/scene-hint";
 
 function subscribeMotion(callback: () => void) {
   const query = matchMedia("(prefers-reduced-motion: reduce)");
@@ -94,115 +95,112 @@ export function Island({ place }: { place: GalleryPlace }) {
   };
 
   return (
-    <div
-      className="island-viewer"
-      data-status={status}
-      data-place={place}
-      data-night={night}
-      data-route={route}
-      data-touring={interactive && touring && !reducedMotion}
-      data-revealed={revealComplete}
-      aria-busy={status === "loading" || status === "preparing"}
-    >
-      <img
-        className="island-poster"
-        src={scene.image}
-        alt={scene.imageAlt}
-        fetchPriority="high"
-      />
-      <canvas
-        ref={canvas}
-        className="island-canvas"
-        tabIndex={interactive ? 0 : -1}
-        aria-label={`${scene.title}三维视图。沿选定路线自动巡游；拖动或缩放可暂停巡游。键盘方向键旋转，加减键缩放。下方可选择${scene.routes.map(({ label }) => label).join("、")}路线。`}
-        aria-hidden={!interactive}
-      />
-      <Arrival
-        scope="scene"
-        variant="clouds"
-        stage={status === "unavailable" ? "fallback" : status}
-        onRevealComplete={() => {
-          revealed.current = true;
-          setRevealComplete(true);
-          controller.current?.reveal();
-        }}
-      />
-      <div className="island-topline">
-        <span className="island-label">
-          {String(galleryPlaces.indexOf(place) + 1).padStart(2, "0")} /{" "}
-          {scene.title}
-        </span>
-        <div className="island-light" aria-label="场景光照">
-          <button
-            aria-pressed={!night}
-            disabled={!interactive}
-            onClick={() => {
-              settings.current.night = false;
-              setNight(false);
-            }}
-          >
-            <span aria-hidden="true">☀</span> 日景
-          </button>
-          <button
-            aria-pressed={night}
-            disabled={!interactive}
-            onClick={() => {
-              settings.current.night = true;
-              setNight(true);
-            }}
-          >
-            <span aria-hidden="true">☾</span> 夜景
-          </button>
-        </div>
-      </div>
-      <div className="island-controls">
-        <div className="island-presets" aria-label="选择巡游路线">
-          {scene.routes.map(({ id, label, description }) => (
-            <button
-              key={id}
-              aria-pressed={route === id}
-              title={description}
-              disabled={!interactive}
-              onClick={() => chooseRoute(id)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <button
-          className="island-orbit"
-          disabled={!interactive || reducedMotion}
-          aria-pressed={interactive && touring && !reducedMotion}
-          onClick={() => {
-            const next = !touring;
-            settings.current.touring = next;
-            setTouring(next);
-            if (!next) controller.current?.pause();
-          }}
-        >
-          <span aria-hidden="true">
-            {touring && !reducedMotion ? "Ⅱ" : "▷"}
-          </span>
-          {reducedMotion ? "减少动态已开启" : touring ? "暂停巡游" : "继续巡游"}
-        </button>
-      </div>
-      <p
-        className="island-status island-live-status"
-        role="status"
-        hidden={!interactive && status !== "unavailable"}
+    <>
+      <div
+        className="island-viewer"
+        data-status={status}
+        data-place={place}
+        data-night={night}
+        data-route={route}
+        data-touring={interactive && touring && !reducedMotion}
+        data-revealed={revealComplete}
+        aria-busy={status === "loading" || status === "preparing"}
       >
-        {status === "unavailable"
-          ? "当前暂时无法显示三维，已保留场景静帧。"
-          : touring && !reducedMotion
-            ? "沿着风景慢慢走 · 拖动可暂停"
-            : "拖动环顾 · 滚轮缩放"}
-      </p>
-      <noscript>
-        <style>{".island-live-status{display:none!important}"}</style>
-        <p className="island-status">
-          启用 JavaScript 后可转动查看，当前显示场景静帧。
-        </p>
-      </noscript>
-    </div>
+        <img
+          className="island-poster"
+          src={scene.image}
+          alt={scene.imageAlt}
+          fetchPriority="high"
+        />
+        <canvas
+          ref={canvas}
+          className="island-canvas"
+          tabIndex={interactive ? 0 : -1}
+          aria-label={`${scene.title}三维视图。沿选定路线自动巡游；拖动或缩放可暂停巡游。键盘方向键旋转，加减键缩放。下方可选择${scene.routes.map(({ label }) => label).join("、")}路线。`}
+          aria-hidden={!interactive}
+        />
+        <Arrival
+          scope="scene"
+          variant="clouds"
+          stage={status === "unavailable" ? "fallback" : status}
+          onRevealComplete={() => {
+            revealed.current = true;
+            setRevealComplete(true);
+            controller.current?.reveal();
+          }}
+        />
+        <div className="island-topline">
+          <span className="island-label">
+            {String(galleryPlaces.indexOf(place) + 1).padStart(2, "0")} /{" "}
+            {scene.title}
+          </span>
+          <div className="island-light" aria-label="场景光照">
+            <button
+              aria-pressed={!night}
+              disabled={!interactive}
+              onClick={() => {
+                settings.current.night = false;
+                setNight(false);
+              }}
+            >
+              <span aria-hidden="true">☀</span> 日景
+            </button>
+            <button
+              aria-pressed={night}
+              disabled={!interactive}
+              onClick={() => {
+                settings.current.night = true;
+                setNight(true);
+              }}
+            >
+              <span aria-hidden="true">☾</span> 夜景
+            </button>
+          </div>
+        </div>
+        <div className="island-controls">
+          <div className="island-presets" aria-label="选择巡游路线">
+            {scene.routes.map(({ id, label, description }) => (
+              <button
+                key={id}
+                aria-pressed={route === id}
+                title={description}
+                disabled={!interactive}
+                onClick={() => chooseRoute(id)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <button
+            className="island-orbit"
+            disabled={!interactive || reducedMotion}
+            aria-pressed={interactive && touring && !reducedMotion}
+            onClick={() => {
+              const next = !touring;
+              settings.current.touring = next;
+              setTouring(next);
+              if (!next) controller.current?.pause();
+            }}
+          >
+            <span aria-hidden="true">
+              {touring && !reducedMotion ? "Ⅱ" : "▷"}
+            </span>
+            {reducedMotion
+              ? "减少动态已开启"
+              : touring
+                ? "暂停巡游"
+                : "继续巡游"}
+          </button>
+        </div>
+      </div>
+      <div className="island-help" role="status">
+        {status === "unavailable" ? (
+          "当前暂时无法显示三维，已保留场景静帧。"
+        ) : interactive ? (
+          <SceneHint subject="world" touring={touring && !reducedMotion} />
+        ) : null}
+        <noscript>启用 JavaScript 后可转动查看，当前显示场景静帧。</noscript>
+      </div>
+    </>
   );
 }

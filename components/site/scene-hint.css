@@ -1,0 +1,42 @@
+.scene-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  font:
+    400 13px / 1.6 "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+.scene-hint svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.scene-hint-touch,
+.scene-hint-keyboard {
+  display: none;
+}
+@media (pointer: coarse) {
+  .scene-hint-pointer {
+    display: none;
+  }
+  .scene-hint-touch {
+    display: inline;
+  }
+}
+.player-canvas-wrap:has(canvas:focus-visible)
+  .scene-hint
+  :is(.scene-hint-pointer, .scene-hint-touch),
+.island-viewer:has(canvas:focus-visible)
+  + .island-help
+  :is(.scene-hint-pointer, .scene-hint-touch) {
+  display: none;
+}
+.player-canvas-wrap:has(canvas:focus-visible) .scene-hint-keyboard,
+.island-viewer:has(canvas:focus-visible) + .island-help .scene-hint-keyboard {
+  display: inline;
+}

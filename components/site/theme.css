@@ -276,7 +276,6 @@ html[data-theme="dark"]
     .satellite-explanation,
     .player-intro > p,
     .player-local-note,
-    .player-drag-hint,
     .player-sync-note,
     .player-identity-intro,
     .player-places > p,
@@ -435,10 +434,4 @@ html[data-theme="dark"] .world-explorer {
 }
 html[data-theme="dark"] .hero-fallback-night {
   display: block;
-}
-
-.player-drag-hint {
-  color: #fff8ee !important;
-  background: #111e30cc;
-  padding: 5px 10px;
 }
