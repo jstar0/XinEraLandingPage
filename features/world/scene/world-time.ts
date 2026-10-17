@@ -98,6 +98,12 @@ export function sampleWorldTime(hour: number, darkMix = 0): WorldTime {
   };
 }
 
+/** An explicit return to the full cycle should visibly leave the night. */
+export function cycleSelectionHour(hour: number): number {
+  const time = sampleWorldTime(hour);
+  return time.night > 0.5 ? 8 : time.hour;
+}
+
 /** Continue forward even when a new theme interrupts an unfinished change. */
 export function blendWorldTime(
   from: WorldTime,

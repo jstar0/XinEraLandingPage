@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   blendWorldTime,
   cycleHour,
+  cycleSelectionHour,
   localHour,
   sampleWorldTime,
   WORLD_DAY_MS,
@@ -38,6 +39,18 @@ test("local time includes local hours, minutes, seconds and milliseconds", () =>
   const date = new Date(2026, 9, 17, 8, 30, 45, 500);
   closeTo(localHour(date), 8 + 30 / 60 + 45 / 3_600 + 500 / 3_600_000);
   closeTo(localHour(new Date(2026, 9, 17, 0, 0, 0, 0)), 0);
+});
+
+test("selecting the full cycle leaves natural night, but preserves daylight", () => {
+  for (const hour of [0, 3, 5, 19, 21, 23.9]) {
+    const target = cycleSelectionHour(hour);
+    assert.equal(target, 8);
+    assert.equal(sampleWorldTime(target).night, 0);
+    assert.equal(sampleWorldTime(target).period, "morning");
+  }
+  for (const hour of [7, 8.25, 12, 15.5, 17]) {
+    assert.equal(cycleSelectionHour(hour), hour);
+  }
 });
 
 test("the natural day distinguishes dawn, morning, noon, afternoon, dusk and night", () => {

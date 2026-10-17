@@ -1,6 +1,7 @@
 import {
   blendWorldTime,
   cycleHour,
+  cycleSelectionHour,
   localHour,
   sampleWorldTime,
   type WorldTime,
@@ -120,11 +121,22 @@ export function createWorldClock(root: HTMLElement) {
     if (!disposed && !document.hidden && visible && !raf)
       raf = requestAnimationFrame(tick);
   }
-  function sync() {
+  function sync(event?: Event) {
     const next = document.documentElement.dataset.theme === "dark" ? 1 : 0;
-    if (next !== darkTo) {
+    const hour = cycleHour(initialHour, elapsed);
+    const nextHour =
+      next === 0 &&
+      event instanceof CustomEvent &&
+      event.detail?.showDay === true
+        ? cycleSelectionHour(hour)
+        : hour;
+    if (next !== darkTo || nextHour !== hour) {
       transitionFrom = sample();
       darkTo = next;
+      if (nextHour !== hour) {
+        initialHour = nextHour;
+        elapsed = 0;
+      }
       transitionElapsed = reduced.matches ? 2000 : 0;
     }
     if (reduced.matches) {
@@ -133,7 +145,7 @@ export function createWorldClock(root: HTMLElement) {
     paint();
     wake();
   }
-  const themes = new MutationObserver(sync);
+  const themes = new MutationObserver(() => sync());
   themes.observe(document.documentElement, {
     attributes: true,
     attributeFilter: ["data-theme"],

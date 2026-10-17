@@ -33,7 +33,7 @@ function applyTheme(theme: SiteTheme) {
   meta?.setAttribute("content", theme === "dark" ? "#111e30" : "#f4dfc9");
 }
 
-function saveTheme(theme: SiteTheme) {
+function saveTheme(theme: SiteTheme, showDay = false) {
   const request = ++themeRequest;
   inMemoryPreference = theme;
   pendingTheme = theme;
@@ -46,7 +46,9 @@ function saveTheme(theme: SiteTheme) {
     if (request !== themeRequest) return;
     pendingTheme = null;
     applyTheme(theme);
-    window.dispatchEvent(new Event("xinera:world-clock-change"));
+    window.dispatchEvent(
+      new CustomEvent("xinera:world-clock-change", { detail: { showDay } }),
+    );
   };
   themeTransition?.skipTransition();
   themeTransition = undefined;
@@ -278,8 +280,8 @@ export function WorldTimeControl() {
               type="button"
               aria-pressed={theme === "light"}
               aria-label="昼夜流转，浅色主题"
-              title="浅色主题，完整昼夜循环"
-              onClick={() => saveTheme("light")}
+              title="从白天开始，完整昼夜循环"
+              onClick={() => saveTheme("light", true)}
             >
               <TimeGlyph />
               <span>昼夜流转</span>

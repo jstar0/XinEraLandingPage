@@ -264,9 +264,6 @@
   border-bottom: 2px solid transparent;
   transition: background 0.2s;
 }
-.gallery-selection button:first-child {
-  padding-left: 0;
-}
 .gallery-selection button[aria-selected="true"] {
   border-bottom-color: var(--orange);
 }
@@ -400,8 +397,7 @@
   .gallery-selection {
     grid-template-columns: 1fr;
   }
-  .gallery-selection button,
-  .gallery-selection button:first-child {
+  .gallery-selection button {
     padding: 16px 0;
   }
   .gallery-selection img {
