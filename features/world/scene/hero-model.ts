@@ -3,23 +3,54 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
 import { finishHeroMaterials, type HeroMaterialMap } from "./hero-materials";
 import { prepareHeroWater } from "./hero-water";
-import { prepareBlockMaterials } from "../../gallery/block-materials";
+import { prepareBlockMaterialsAsync } from "../../gallery/block-materials";
 import { createBlockLights, readBlockLights } from "../../gallery/block-lights";
+import { requestHero } from "./hero-request";
+import { loadBlockPbr } from "../../rendering/pbr-textures";
 
 /** Authored hero diorama: facade, courtyard, Juyiting and a mossy floating rock base. */
-export async function loadHeroModel(signal: AbortSignal, anisotropy: number) {
-  const response = await fetch("/xinera/hero/cathedral-island.glb?v=abc7b920", {
+export async function loadHeroModel(
+  signal: AbortSignal,
+  anisotropy: number,
+  download?: Promise<ArrayBuffer>,
+) {
+  let materialResources: Awaited<ReturnType<typeof loadBlockPbr>> | undefined;
+  const definitionsPromise = fetch("/xinera/hero/cathedral-materials.json", {
     signal,
+  }).then(async (response) => {
+    if (!response.ok) throw new Error("Hero material definitions unavailable");
+    return (await response.json()) as HeroMaterialMap;
   });
-  if (!response.ok) throw new Error("Cannot load cathedral model");
-  const bytes = await response.arrayBuffer();
-  signal.throwIfAborted();
-  const gltf = await new GLTFLoader()
-    .setMeshoptDecoder(MeshoptDecoder)
-    .parseAsync(bytes, "/xinera/hero/");
+  const pbrPromise = definitionsPromise
+    .then((definitions) => loadBlockPbr(definitions, signal, anisotropy))
+    .then((loaded) => {
+      if (signal.aborted) {
+        loaded.dispose();
+        signal.throwIfAborted();
+      }
+      materialResources = loaded;
+    })
+    .catch((error: unknown) => {
+      if (signal.aborted) throw error;
+      console.warn(
+        "Hero PBR textures unavailable; retaining base materials",
+        error,
+      );
+    });
+  let gltf: Awaited<ReturnType<GLTFLoader["parseAsync"]>> | undefined;
   try {
+    const [bytes, data, definitions] = await Promise.all([
+      download ?? requestHero(signal, () => {}),
+      readBlockLights("/xinera/hero/cathedral-island-lights.json", signal),
+      definitionsPromise,
+      pbrPromise,
+    ]);
     signal.throwIfAborted();
-    prepareBlockMaterials(gltf.scene, anisotropy);
+    gltf = await new GLTFLoader()
+      .setMeshoptDecoder(MeshoptDecoder)
+      .parseAsync(bytes, "/xinera/hero/");
+    signal.throwIfAborted();
+    await prepareBlockMaterialsAsync(gltf.scene, anisotropy, signal);
     gltf.scene.traverse((object) => {
       if (!(object instanceof THREE.Mesh)) return;
       object.castShadow = true;
@@ -39,22 +70,23 @@ export async function loadHeroModel(signal: AbortSignal, anisotropy: number) {
     const group = new THREE.Group();
     group.name = "hero-cathedral-model";
     group.add(gltf.scene);
-    const [data, materialResponse] = await Promise.all([
-      readBlockLights("/xinera/hero/cathedral-island-lights.json", signal),
-      fetch("/xinera/hero/cathedral-materials.json", { signal }),
-    ]);
-    if (!materialResponse.ok)
-      throw new Error("Hero material definitions unavailable");
-    finishHeroMaterials(
+    const materialStats = finishHeroMaterials(
       group,
-      (await materialResponse.json()) as HeroMaterialMap,
+      definitions,
+      materialResources?.textures,
     );
     signal.throwIfAborted();
     const lights = createBlockLights(group, data, 6);
     const water = prepareHeroWater(group);
-    return { group, lights, water };
+    return { group, lights, water, materialResources, materialStats };
   } catch (error) {
-    disposeHeroObject(gltf.scene);
+    if (gltf) disposeHeroObject(gltf.scene);
+    materialResources?.dispose();
+    // A parallel texture request may finish after another branch has failed.
+    void pbrPromise.then(
+      () => materialResources?.dispose(),
+      () => {},
+    );
     throw error;
   }
 }

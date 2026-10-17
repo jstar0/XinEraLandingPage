@@ -4,20 +4,28 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { GTAOPass } from "three/examples/jsm/postprocessing/GTAOPass.js";
+import { BlockGTAOPass } from "../rendering/block-gtao-pass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import type { GalleryPlace, GallerySettings, IslandView } from "./content";
-import { prepareBlockMaterials } from "./block-materials";
+import { prepareBlockMaterialsAsync } from "./block-materials";
+import { warmScene } from "../rendering/scene-warmup";
 import { createAtmosphere, islandSun } from "./atmosphere";
 import { sceneTours } from "./scene-tours";
 import { createSceneWater } from "./scene-water";
 import { createBlockLights, readBlockLights } from "./block-lights";
+import {
+  finishBlockMaterials,
+  type BlockMaterialDefinitions,
+} from "../rendering/block-materials";
+import { createHeroEnvironment } from "../world/scene/environment";
+import { loadBlockPbr } from "../rendering/pbr-textures";
 
 export type IslandController = {
   view: (view: IslandView) => void;
   pause: () => void;
+  reveal: () => void;
 };
 
 export async function mountIsland(
@@ -27,8 +35,14 @@ export async function mountIsland(
   unavailable: () => void,
   onTourPause: () => void,
   place: GalleryPlace = "volcano",
+  onPreparing: () => void = () => {},
 ): Promise<IslandController | undefined> {
   if (signal.aborted) return;
+  const mark = (stage: string, detail?: unknown) => {
+    if (process.env.NODE_ENV !== "production")
+      performance.mark(`gallery:${place}:${stage}`, { detail });
+  };
+  mark("start");
   const island = place === "volcano";
   const interior = place === "hall";
   const cathedral = interior || place === "courtyard";
@@ -56,10 +70,16 @@ export async function mountIsland(
   renderer.toneMappingExposure = 1;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
+  const environment = createHeroEnvironment(renderer);
+  scene.environment = environment.texture;
+  scene.environmentIntensity = 0.45;
   const camera = new THREE.PerspectiveCamera(cathedral ? 55 : 43, 1, 0.1, 2500);
   const firstTarget = new THREE.Vector3();
   sampleTour("coast", 0, camera.position, firstTarget);
   const controls = new OrbitControls(camera, canvas);
+  controls.enabled = false;
+  canvas.dataset.interactive = "false";
+  canvas.dataset.frame = "preparing";
   controls.target.copy(firstTarget);
   controls.enablePan = false;
   controls.enableDamping = true;
@@ -143,7 +163,7 @@ export async function mountIsland(
   });
   const composer = new EffectComposer(renderer, target);
   const basePass = new RenderPass(scene, camera);
-  const occlusion = new GTAOPass(scene, camera);
+  const occlusion = new BlockGTAOPass(scene, camera);
   occlusion.updateGtaoMaterial({
     radius: 0.4,
     thickness: 0.7,
@@ -163,6 +183,7 @@ export async function mountIsland(
 
   let frame = 0,
     disposed = false,
+    prepared = false,
     inView = true,
     previous = 0,
     night = 0;
@@ -181,6 +202,7 @@ export async function mountIsland(
       }
     | undefined;
   let blockLights: ReturnType<typeof createBlockLights> | undefined;
+  let pbr: Awaited<ReturnType<typeof loadBlockPbr>> | undefined;
   const emissiveMaterials: THREE.MeshStandardMaterial[] = [];
   const resize = new ResizeObserver(() => {
     const width = canvas.clientWidth,
@@ -223,6 +245,9 @@ export async function mountIsland(
   function dispose() {
     if (disposed) return;
     disposed = true;
+    controls.enabled = false;
+    canvas.dataset.interactive = "false";
+    canvas.dataset.frame = "disposed";
     cancelAnimationFrame(frame);
     observer.disconnect();
     resize.disconnect();
@@ -232,8 +257,10 @@ export async function mountIsland(
     signal.removeEventListener("abort", dispose);
     controls.dispose();
     atmosphere.dispose();
+    environment.dispose();
     sceneWater?.dispose();
     release(scene);
+    pbr?.dispose();
     sun.shadow.map?.dispose();
     composer.passes.forEach((pass) => pass.dispose());
     composer.dispose();
@@ -246,6 +273,7 @@ export async function mountIsland(
     if (!signal.aborted) unavailable();
   }
   function keyboard(event: KeyboardEvent) {
+    if (!controls.enabled) return;
     if (
       ![
         "ArrowLeft",
@@ -286,11 +314,12 @@ export async function mountIsland(
   function schedule() {
     cancelAnimationFrame(frame);
     previous = 0;
-    if (!disposed && inView && !document.hidden)
+    if (prepared && controls.enabled && !disposed && inView && !document.hidden)
       frame = requestAnimationFrame(render);
   }
-  function render(time: number) {
-    if (disposed || !inView || document.hidden) return;
+  function render(time: number, firstFrame = false) {
+    if (!prepared || disposed || (!firstFrame && (!inView || document.hidden)))
+      return;
     const dt = previous ? Math.min((time - previous) / 1000, 0.05) : 0.016;
     previous = time;
     const options = settings();
@@ -317,6 +346,7 @@ export async function mountIsland(
     sun.intensity = 4.2 * (1 - night);
     moon.intensity = 1.1 * night;
     skyFill.intensity = 1.2 * (1 - night);
+    scene.environmentIntensity = THREE.MathUtils.lerp(0.45, 0.13, night);
     lavaLight.intensity = island ? 9 * night : 0;
     windowLights.forEach((light) => {
       // Colored daylight falls through the windows; glass is not a night lamp.
@@ -353,7 +383,7 @@ export async function mountIsland(
     controls.update(dt);
     blockLights?.update(camera, controls.target, night, dt);
     composer.render(dt);
-    frame = requestAnimationFrame(render);
+    if (controls.enabled) frame = requestAnimationFrame(render);
   }
   signal.addEventListener("abort", dispose, { once: true });
   canvas.addEventListener("webglcontextlost", contextLost);
@@ -391,24 +421,71 @@ export async function mountIsland(
   }
   controls.addEventListener("start", pauseTour);
   try {
-    // The mask follows the source coastline; the shallow-water tint is an artistic light treatment.
-    if (island) {
-      const shore = await new THREE.TextureLoader().loadAsync(
-        "/xinera/gallery/volcano-shore.png",
+    const sceneName = cathedral ? "cathedral" : place;
+    // Sidecars and optional fluid geometry are independent downloads. Start
+    // them together so the main scene never waits on a serial metadata chain.
+    const loadBytes = async (url: string) => {
+      const response = await fetch(url, { signal });
+      if (!response.ok) throw new Error(`Gallery asset unavailable: ${url}`);
+      return response.arrayBuffer();
+    };
+    const loadDefinitions = async () => {
+      const response = await fetch(
+        `/xinera/gallery/${sceneName}-materials.json`,
+        { signal },
       );
-      if (signal.aborted || disposed) {
-        shore.dispose();
-        return;
-      }
-      atmosphere.setShore(shore);
-    }
-    const response = await fetch(
-      `/xinera/gallery/${cathedral ? "cathedral" : place}.glb?v=emission-20261016`,
-      { signal },
-    );
-    if (!response.ok) throw new Error("Gallery scene unavailable");
-    const bytes = await response.arrayBuffer();
-    if (signal.aborted) return;
+      if (!response.ok)
+        throw new Error("Gallery material definitions unavailable");
+      return (await response.json()) as BlockMaterialDefinitions;
+    };
+    const definitionsPromise = loadDefinitions();
+    const pbrPromise = definitionsPromise
+      .then((definitions) =>
+        loadBlockPbr(
+          definitions,
+          signal,
+          renderer.capabilities.getMaxAnisotropy(),
+        ),
+      )
+      .then((loaded) => {
+        if (signal.aborted || disposed) {
+          loaded.dispose();
+          return;
+        }
+        pbr = loaded;
+        canvas.dataset.pbr = "ready";
+      })
+      .catch((error: unknown) => {
+        if (signal.aborted) throw error;
+        // Supplementary surface detail must never turn a complete world into
+        // an error screen when an individual material asset is unavailable.
+        canvas.dataset.pbr = "fallback";
+        console.warn(
+          "Gallery PBR textures unavailable; using base materials",
+          error,
+        );
+      });
+    const shorePromise = island
+      ? new THREE.TextureLoader()
+          .loadAsync("/xinera/gallery/volcano-shore.png")
+          .then((shore) => {
+            if (signal.aborted || disposed) shore.dispose();
+            else atmosphere.setShore(shore);
+          })
+      : Promise.resolve();
+    const [bytes, definitions, lightData, waterBytes] = await Promise.all([
+      loadBytes(`/xinera/gallery/${sceneName}.glb?v=materials-20261017`),
+      definitionsPromise,
+      readBlockLights(`/xinera/gallery/${sceneName}-lights.json`, signal),
+      cathedral
+        ? loadBytes("/xinera/gallery/cathedral-water.glb?v=materials-20261017")
+        : Promise.resolve(null),
+      shorePromise,
+      pbrPromise,
+    ]);
+    if (signal.aborted || disposed) return;
+    onPreparing();
+    mark("downloaded");
     const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
     const model = await loader.parseAsync(bytes, "/xinera/gallery/");
     if (signal.aborted || disposed) {
@@ -416,18 +493,30 @@ export async function mountIsland(
       return;
     }
     scene.add(model.scene);
-    prepareBlockMaterials(
+    if (waterBytes) {
+      const waterModel = await loader.parseAsync(
+        waterBytes,
+        "/xinera/gallery/",
+      );
+      if (signal.aborted || disposed) {
+        release(waterModel.scene);
+        return;
+      }
+      model.scene.add(waterModel.scene);
+    }
+    mark("parsed");
+    await prepareBlockMaterialsAsync(
       model.scene,
       renderer.capabilities.getMaxAnisotropy(),
+      signal,
     );
+    mark("tile-materials");
     model.scene.traverse((node) => {
       if (!(node instanceof THREE.Mesh)) return;
-      node.castShadow = node.receiveShadow = true;
       for (const material of Array.isArray(node.material)
         ? node.material
         : [node.material]) {
         if (material instanceof THREE.MeshStandardMaterial) {
-          material.roughness = 0.94;
           if (/lava/i.test(node.name + material.name)) {
             material.emissive.set("#ff9d48");
             material.emissiveMap = material.map;
@@ -440,10 +529,15 @@ export async function mountIsland(
         }
       }
     });
-    const lightData = await readBlockLights(
-      `/xinera/gallery/${cathedral ? "cathedral" : place}-lights.json`,
-      signal,
+    const materialStats = finishBlockMaterials(
+      model.scene,
+      definitions,
+      pbr?.textures,
     );
+    mark("physical-materials");
+    canvas.dataset.blockMaterials = String(materialStats.materials);
+    canvas.dataset.pbrMaterials = String(materialStats.pbrMaterials);
+    canvas.dataset.waterMeshes = String(materialStats.waterMeshes);
     if (signal.aborted || disposed) return;
     blockLights = createBlockLights(scene, lightData);
     canvas.dataset.lightSources = String(lightData.sources.length);
@@ -459,16 +553,47 @@ export async function mountIsland(
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     camera.updateProjectionMatrix();
 
-    composer.render();
+    mark("scene-ready");
+    await warmScene(
+      renderer,
+      scene,
+      camera,
+      composer.readBuffer,
+      { occlusion, bloom, antialias, output },
+      signal,
+      pbr?.textures,
+    );
+    mark(
+      "compiled",
+      renderer.info.programs?.map(({ id, name }) => ({ id, name })),
+    );
+    if (signal.aborted || disposed) return;
+    prepared = true;
+    // Draw the complete scene, including postprocessing, before the shared
+    // arrival can reveal it. Camera input and touring remain paused until
+    // the clouds have left the viewer.
+    render(performance.now(), true);
+    mark(
+      "first-frame",
+      renderer.info.programs?.map(({ id, name }) => ({ id, name })),
+    );
+    if (signal.aborted || disposed) return;
     // The terrain and sun position are fixed; orbiting does not require rebuilding the shadow map.
     renderer.shadowMap.autoUpdate = false;
     canvas.dataset.view = "coast";
     canvas.dataset.transition = "idle";
-    schedule();
+    canvas.dataset.frame = "ready";
     return {
       pause: pauseTour,
-      view(value) {
+      reveal() {
         if (disposed) return;
+        controls.enabled = true;
+        wasTouring = settings().touring && !reduced.matches;
+        canvas.dataset.interactive = "true";
+        schedule();
+      },
+      view(value) {
+        if (disposed || !controls.enabled) return;
         tourPhase = 0;
         beginFlight(value, 0);
       },

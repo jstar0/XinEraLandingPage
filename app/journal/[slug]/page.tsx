@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { entries, findEntry } from "@/features/journal/content";
 import { Footer } from "@/components/site/footer";
+import { BrandMark } from "@/components/site/brand";
 export function generateStaticParams() {
   return entries.map(({ slug }) => ({ slug }));
 }
@@ -33,12 +34,7 @@ export default async function ArticlePage({
       <header className="article-nav">
         <a href="/journal">← 返回旅途手记</a>
         <a href="/" aria-label="心纪元首页">
-          <img
-            src="/xinera/logo-pixel-96-mono.png"
-            alt=""
-            width="42"
-            height="42"
-          />
+          <BrandMark />
         </a>
         <a href="/account">玩家中心 ↗</a>
       </header>

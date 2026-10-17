@@ -6,16 +6,23 @@ import { createHeroEnvironment } from "./environment";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
 import { createCelestial } from "./celestial";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
-import { GTAOPass } from "three/examples/jsm/postprocessing/GTAOPass.js";
+import { BlockGTAOPass } from "../../rendering/block-gtao-pass";
+import { warmScene } from "../../rendering/scene-warmup";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import type { createBlockLights } from "../../gallery/block-lights";
+import type { JourneyLoadState } from "./hero-request";
+import type { createWorldClock } from "../world-clock";
+import { sampleWorldTime } from "./world-time";
 
 /** Owns only the scene and animated styles inside this root; abort tears down all resources. */
 export async function mountJourney(
   root: HTMLElement,
   parentSignal: AbortSignal,
+  download?: Promise<ArrayBuffer>,
+  report: (state: JourneyLoadState) => void = () => {},
+  clock?: ReturnType<typeof createWorldClock>,
 ) {
   if (parentSignal.aborted) return;
   const controller = new AbortController(),
@@ -27,11 +34,19 @@ export async function mountJourney(
     if (!el) throw new Error(`Missing scene element ${s}`);
     return el;
   };
+  // Used only to export wide, neutral posters from the actual renderer.
+  const posterLayout =
+    process.env.NODE_ENV === "development"
+      ? new URLSearchParams(location.search).get("poster")
+      : null;
+  const mobileLayout = (width: number) =>
+    posterLayout === "mobile" || (posterLayout !== "desktop" && width < 700);
   let width = innerWidth,
     height = innerHeight,
-    mobile = width < 700,
+    mobile = mobileLayout(width),
     progress = 0,
     nowSeconds = 0,
+    heroMotionTime = 0,
     lastTime = 0;
 
   let sceneBlend = 0,
@@ -63,11 +78,16 @@ export async function mountJourney(
     });
     root.classList.remove("is-enhanced");
     delete root.dataset.heroModel;
+    delete root.dataset.worldReady;
     root
-      .querySelectorAll<HTMLElement>("[style]")
+      .querySelectorAll<HTMLElement>(
+        "#sky-scene, #hero-type, #hero-nav, .scroll-hint, #view-window, #world-title, #scene-tabs, #world-caption",
+      )
       .forEach((el) => el.removeAttribute("style"));
     root
-      .querySelectorAll<HTMLElement>("[inert]")
+      .querySelectorAll<HTMLElement>(
+        "#hero-type, #hero-nav, .scroll-hint, #view-window, #scene-tabs",
+      )
       .forEach((el) => (el.inert = false));
   };
   signal.addEventListener("abort", teardown, { once: true });
@@ -113,15 +133,22 @@ export async function mountJourney(
       t.anisotropy = 8;
       return t;
     }
-    const [courtTex, hallTex] = await Promise.all([
-      texture("/xinera/courtyard.jpg"),
-      texture("/xinera/hall.jpg"),
-    ]);
+    const placeholder = new THREE.DataTexture(
+      new Uint8Array([220, 206, 185, 255]),
+      1,
+      1,
+    );
+    placeholder.needsUpdate = true;
+    textures.push(placeholder);
+    let worldReady = false,
+      worldLoading = false;
     let cathedral: THREE.Group | undefined;
+    let heroPrepared = false;
     let heroLights: ReturnType<typeof createBlockLights> | undefined;
     let heroWater: { update(time: number): void } | undefined;
     let lastShadow = -1,
-      shadowRotation = 0;
+      shadowRotation = 0,
+      shadowOrbit = 0;
     const lightTarget = new THREE.Vector3();
     const target = new THREE.WebGLRenderTarget(width, height, {
       type: THREE.HalfFloatType,
@@ -138,7 +165,7 @@ export async function mountJourney(
       0.35,
       1.5,
     );
-    const occlusion = new GTAOPass(scene, camera);
+    const occlusion = new BlockGTAOPass(scene, camera);
     occlusion.updateGtaoMaterial({
       radius: 0.18,
       thickness: 0.35,
@@ -157,7 +184,7 @@ export async function mountJourney(
     effects.push(basePass, occlusion, bloom, antialias, output, composer);
     const ambient = new THREE.HemisphereLight("#ffecd4", "#b69a7f", 1.25);
     const sunLight = new THREE.DirectionalLight("#ffc17c", 3.4);
-    sunLight.position.set(12, 7, -20);
+    sunLight.position.set(2.3, 1.34, 7.8);
     sunLight.castShadow = true;
     sunLight.shadow.mapSize.set(2048, 2048);
     Object.assign(sunLight.shadow.camera, {
@@ -171,7 +198,7 @@ export async function mountJourney(
     sunLight.shadow.normalBias = 0.012;
     sunLight.shadow.bias = -0.0001;
     sunLight.shadow.radius = 3;
-    sunLight.target.position.set(1.8, 0, 0);
+    sunLight.target.position.set(1.8, -2, 0);
     const fill = new THREE.DirectionalLight("#ffe0b5", 1.75);
     fill.position.set(-5, 5, 12);
     scene.add(ambient, sunLight, sunLight.target, fill);
@@ -217,36 +244,21 @@ export async function mountJourney(
     }
     const clouds = createCloudSystem(scene);
     const celestial = createCelestial(scene);
-    let night = document.documentElement.dataset.theme === "dark" ? 1 : 0;
-    let nightFrom = night,
-      nightTo = night,
-      transitionTime = 2;
-    const themeObserver = new MutationObserver(() => {
-      const next = document.documentElement.dataset.theme === "dark" ? 1 : 0;
-      if (next === nightTo) return;
-      nightFrom = night;
-      nightTo = next;
-      transitionTime = 0;
-      wake();
-    });
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["data-theme"],
-    });
-    signal.addEventListener("abort", () => themeObserver.disconnect(), {
-      once: true,
-    });
     const daySun = new THREE.Color("#ffc17c"),
+      noonSun = new THREE.Color("#fff2dc"),
       nightSun = new THREE.Color("#a8c8ff");
     const dayFog = new THREE.Color("#eed9cf"),
+      noonFog = new THREE.Color("#bdd8ed"),
       nightFog = new THREE.Color("#152139");
     const dayCloud = new THREE.Color("#ffffff"),
       nightCloud = new THREE.Color("#b8c6e5");
     const dayLetter = new THREE.Color("#fff8de"),
       nightLetter = new THREE.Color("#9baac5");
     const dayFill = new THREE.Color("#ffe0b5"),
+      noonFill = new THREE.Color("#dcecff"),
       nightFill = new THREE.Color("#aec8ef");
     const dayAmbient = new THREE.Color("#ffecd4"),
+      noonAmbient = new THREE.Color("#e5f1ff"),
       nightAmbient = new THREE.Color("#a3b8de");
     const dayEdge = new THREE.Color("#debea0"),
       nightEdge = new THREE.Color("#485875");
@@ -258,8 +270,8 @@ export async function mountJourney(
       worldCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 2);
     worldCamera.position.z = 1;
     const uniforms = {
-      court: { value: courtTex },
-      hall: { value: hallTex },
+      court: { value: placeholder as THREE.Texture },
+      hall: { value: placeholder as THREE.Texture },
       aspect: { value: width / height },
       blend: { value: 0 },
       zoom: { value: 1 },
@@ -281,11 +293,30 @@ export async function mountJourney(
     worldScene.add(
       new THREE.Mesh(new THREE.PlaneGeometry(2, 2), worldMaterial),
     );
+    function prepareWorld() {
+      if (worldLoading || disposed) return;
+      worldLoading = true;
+      void Promise.all([
+        texture("/xinera/courtyard.webp"),
+        texture("/xinera/hall.webp"),
+      ])
+        .then(([court, hall]) => {
+          if (disposed) return;
+          uniforms.court.value = court;
+          uniforms.hall.value = hall;
+          worldRenderer.render(worldScene, worldCamera);
+          worldReady = true;
+          root.dataset.worldReady = "true";
+        })
+        .catch(() => {
+          /* The ordinary image remains usable on a failed texture load. */
+        });
+    }
 
     function resize() {
-      width = innerWidth;
-      height = innerHeight;
-      mobile = width < 700;
+      width = $("#sky-canvas").clientWidth || innerWidth;
+      height = $("#sky-canvas").clientHeight || innerHeight;
+      mobile = mobileLayout(width);
       renderer.setSize(width, height, false);
       composer.setSize(width, height);
       occlusion.setSize(Math.ceil(width * 0.8), Math.ceil(height * 0.8));
@@ -297,6 +328,7 @@ export async function mountJourney(
       if (cathedral) {
         cathedral.scale.setScalar(mobile ? 0.37 : 0.6);
         cathedral.position.set(mobile ? 0.1 : 2.1, mobile ? -2.3 : -1.6, 0);
+        sunLight.target.position.copy(cathedral.position);
       }
       letters.scale.setScalar(mobile ? 0.8 : 1);
       letters.position.x = mobile ? -1 : 0;
@@ -317,6 +349,14 @@ export async function mountJourney(
     window.addEventListener("resize", resize, { signal });
     resize();
     function render(p: number) {
+      const time =
+        clock?.sample() ??
+        sampleWorldTime(
+          12,
+          document.documentElement.dataset.theme === "dark" ? 1 : 0,
+        );
+      const { night, warmth } = time;
+      if (p > 0.12) prepareWorld();
       const lightState =
         night < 0.001 ? "day" : night > 0.999 ? "night" : "changing";
       if (root.dataset.heroLight !== lightState)
@@ -326,7 +366,13 @@ export async function mountJourney(
         settle = ease(0.79, 1, p);
       const coordinates = heroPosition(p),
         pointerStrength =
-          (1 - ease(0.25, 0.4, p)) * (mobile || !finePointer.matches ? 0 : 1);
+          (1 - ease(0.25, 0.4, p)) *
+          (mobile ||
+          !finePointer.matches ||
+          posterLayout ||
+          root.dataset.arrival !== "complete"
+            ? 0
+            : 1);
       // Mobile keeps the same direction with a shorter horizontal leg.
       camera.position.set(
         coordinates[0] * (mobile ? 0.56 : 1) + mouse.x * 0.32 * pointerStrength,
@@ -339,7 +385,7 @@ export async function mountJourney(
           cathedral.rotation.set(
             0.04 + mouse.y * 0.012 * pointerStrength,
             -1.08 +
-              Math.sin(nowSeconds * 0.1) * 0.065 +
+              Math.sin(heroMotionTime * 0.1) * 0.065 +
               mouse.x * 0.045 * pointerStrength,
             0,
           );
@@ -361,20 +407,44 @@ export async function mountJourney(
           mesh.material[0].color.copy(dayLetter).lerp(nightLetter, night);
           mesh.material[1].color.copy(dayEdge).lerp(nightEdge, night);
         }
-        ambient.intensity = mix(0.4, 0.45, night);
-        scene.environmentIntensity = mix(0.38, 0.12, night);
-        ambient.color.copy(dayAmbient).lerp(nightAmbient, night);
-        sunLight.intensity = mix(4.6, 2.4, night);
-        sunLight.color.copy(daySun).lerp(nightSun, night);
-        scene.fog!.color.copy(dayFog).lerp(nightFog, night);
-        (scene.background as THREE.Color).copy(dayFog).lerp(nightFog, night);
-        fill.intensity = mix(0.85, 0.4, night);
-        fill.color.copy(dayFill).lerp(nightFill, night);
+        ambient.intensity = mix(0.52, 0.45, night);
+        scene.environmentIntensity = mix(0.42, 0.12, night);
+        ambient.color
+          .copy(noonAmbient)
+          .lerp(dayAmbient, warmth)
+          .lerp(nightAmbient, night);
+        sunLight.intensity = mix(mix(3.5, 3.2, warmth), 1.65, night);
+        sunLight.color.copy(noonSun).lerp(daySun, warmth).lerp(nightSun, night);
+        scene
+          .fog!.color.copy(noonFog)
+          .lerp(dayFog, warmth)
+          .lerp(nightFog, night);
+        (scene.background as THREE.Color).copy(scene.fog!.color);
+        fill.intensity = mix(0.75, 0.3, night);
+        fill.color.copy(noonFill).lerp(dayFill, warmth).lerp(nightFill, night);
         renderer.toneMappingExposure = mix(1.15, 1.05, night);
-        const daylight = celestial.update(night, mobile);
-        sunLight.position.copy(daylight.position);
+        // Posters never bake in a celestial position from a different hour.
+        // Reveal only the live sky bodies; incident lighting is already final.
+        const celestialReveal = posterLayout ? 0 : ease(0, 0.6, heroMotionTime);
+        const revealState = celestialReveal.toFixed(3);
+        if (root.dataset.celestialReveal !== revealState)
+          root.dataset.celestialReveal = revealState;
+        const daylight = celestial.update(
+          time,
+          mobile,
+          camera,
+          celestialReveal,
+        );
+        // Directional sunlight has no distance attenuation. Extend the same
+        // body-to-island ray so the shadow camera encloses the entire model.
+        sunLight.position
+          .copy(daylight.position)
+          .sub(sunLight.target.position)
+          .normalize()
+          .multiplyScalar(26)
+          .add(sunLight.target.position);
         sunLight.intensity *= daylight.strength;
-        clouds.update(nowSeconds);
+        clouds.update(heroMotionTime);
         heroWater?.update(nowSeconds);
         if (cathedral) {
           lightTarget.copy(cathedral.position);
@@ -384,16 +454,18 @@ export async function mountJourney(
         if (
           cathedral &&
           (lastShadow < 0 ||
-            transitionTime < 2 ||
+            clock?.transitioning() ||
+            Math.abs(Math.sin(time.orbit - shadowOrbit)) > 0.008 ||
             Math.abs(cathedral.rotation.y - shadowRotation) > 0.004 ||
             nowSeconds - lastShadow > 0.25)
         ) {
           renderer.shadowMap.needsUpdate = true;
           lastShadow = nowSeconds;
           shadowRotation = cathedral.rotation.y;
+          shadowOrbit = time.orbit;
         }
         bloom.strength = mix(0.2, 0.32, night);
-        composer.render();
+        if (heroPrepared) composer.render();
       }
       $("#sky-scene").style.opacity = String(1 - ease(0.63, 0.68, p));
       $("#sky-scene").style.transform = "none";
@@ -436,7 +508,8 @@ export async function mountJourney(
         (1 - settle) * mouse.y * 0.002,
       );
       uniforms.blend.value = sceneBlend;
-      if (p > 0.245) worldRenderer.render(worldScene, worldCamera);
+      if (p > 0.245 && worldReady)
+        worldRenderer.render(worldScene, worldCamera);
       const labelIn = ease(0.57, 0.67, p) * (1 - ease(0.76, 0.88, p));
       $("#world-title").style.opacity = String(labelIn);
       $("#world-title").style.transform =
@@ -465,8 +538,8 @@ export async function mountJourney(
       const dt = Math.min(0.05, (time - (lastTime || time)) / 1000);
       lastTime = time;
       nowSeconds += dt;
-      transitionTime = Math.min(2, transitionTime + dt);
-      night = mix(nightFrom, nightTo, ease(0, 2, transitionTime));
+      if (!posterLayout && root.dataset.arrival === "complete")
+        heroMotionTime += dt;
       mouse.x = mix(mouse.x, pointer.x, 1 - Math.exp(-dt * 7));
       mouse.y = mix(mouse.y, pointer.y, 1 - Math.exp(-dt * 7));
       const target = root.dataset.scene === "hall" ? 1 : 0;
@@ -525,6 +598,8 @@ export async function mountJourney(
           e.pointerType !== "mouse" ||
           !finePointer.matches ||
           mobile ||
+          posterLayout ||
+          root.dataset.arrival !== "complete" ||
           document.querySelector("dialog[open]")
         ) {
           resetPointer();
@@ -565,26 +640,69 @@ export async function mountJourney(
       $<HTMLCanvasElement>("#sky-canvas"),
       $<HTMLCanvasElement>("#world-canvas"),
     ])
-      canvas.addEventListener("webglcontextlost", () => teardown(), { signal });
+      canvas.addEventListener(
+        "webglcontextlost",
+        () => {
+          report({ stage: "fallback" });
+          teardown();
+        },
+        { signal },
+      );
     root.dataset.heroModel = "loading";
-    void loadHeroModel(signal, renderer.capabilities.getMaxAnisotropy())
-      .then(({ group: model, lights, water }) => {
-        if (disposed || signal.aborted) {
-          disposeHeroObject(model);
-          return;
-        }
-        cathedral = model;
-        heroLights = lights;
-        heroWater = water;
-        root.dataset.waterMeshes = String(water.count);
-        root.dataset.lightSources = String(lights.count);
-        scene.add(model);
-        root.dataset.heroModel = "ready";
-        resize();
-      })
+    void loadHeroModel(
+      signal,
+      renderer.capabilities.getMaxAnisotropy(),
+      download,
+    )
+      .then(
+        async ({
+          group: model,
+          lights,
+          water,
+          materialResources,
+          materialStats,
+        }) => {
+          if (disposed || signal.aborted) {
+            materialResources?.dispose();
+            disposeHeroObject(model);
+            return;
+          }
+          cathedral = model;
+          heroLights = lights;
+          heroWater = water;
+          if (materialResources) effects.push(materialResources);
+          root.dataset.pbr = materialResources ? "ready" : "fallback";
+          root.dataset.pbrMaterials = String(materialStats.pbrMaterials);
+          root.dataset.waterMeshes = String(water.count);
+          root.dataset.lightSources = String(lights.count);
+          scene.add(model);
+          resize();
+          await warmScene(
+            renderer,
+            scene,
+            camera,
+            composer.readBuffer,
+            { occlusion, bloom, antialias, output },
+            signal,
+            materialResources?.textures,
+          );
+          if (disposed || signal.aborted) return;
+          // Warm every postprocessing pass before handing the poster to the canvas.
+          heroPrepared = true;
+          if (progress < 0.68) render(progress);
+          else composer.render();
+          await new Promise<void>((resolve) =>
+            requestAnimationFrame(() => resolve()),
+          );
+          if (disposed || signal.aborted) return;
+          root.dataset.heroModel = "ready";
+          report({ stage: "ready" });
+        },
+      )
       .catch((error: unknown) => {
         if (signal.aborted) return;
         root.dataset.heroModel = "fallback";
+        report({ stage: "fallback" });
         console.warn(
           "Cathedral preview unavailable; keeping the poster.",
           error,

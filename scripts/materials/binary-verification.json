@@ -1,0 +1,35 @@
+[
+  {
+    "scene": "volcano",
+    "bytes": 7633948,
+    "sha256": "addb94694fdabe38ae9232c55c7a53a22cfa6b03c82d91cb6f5b537841b56332",
+    "decodedMeshoptViews": 11,
+    "decodedBytes": 24185196,
+    "triangles": 549732,
+    "originalBinPrefixUnchanged": true
+  },
+  {
+    "scene": "cathedral-water",
+    "bytes": 123464,
+    "sha256": "f08e0c5fd7d790d82ab0eebc9b21ddbf0b8ff492293d61732e1fc8bbdbfc65e6",
+    "decodedMeshoptViews": 4,
+    "decodedBytes": 295032,
+    "triangles": 7764,
+    "localBoundsAfterDecode": [
+      [
+        -8.800000190734863,
+        -0.3995694616167649,
+        -4.800610519479264
+      ],
+      [
+        9.600000381469727,
+        4.888458291563283,
+        4.800610519479264
+      ]
+    ],
+    "maxBoundsError": 0.00061032874440059,
+    "mainCathedralUnchanged": true,
+    "rawBytes": 592132,
+    "geometrySimplification": false
+  }
+]

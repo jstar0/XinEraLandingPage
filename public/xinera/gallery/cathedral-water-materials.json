@@ -1,0 +1,14 @@
+{
+  "tiles": [
+    {
+      "tile": 0,
+      "texture": "minecraft:block/water_still",
+      "kind": "water"
+    },
+    {
+      "tile": 1,
+      "texture": "minecraft:block/water_flow",
+      "kind": "water"
+    }
+  ]
+}

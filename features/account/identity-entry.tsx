@@ -17,8 +17,8 @@ export function IdentityEntry() {
           </span>
           <h2>正版身份</h2>
           <p>
-            使用拥有 Minecraft Java 版的 Microsoft 账号。皮肤 PNG 下载后，可以在
-            Minecraft 官方启动器的「皮肤」中添加。
+            使用拥有 Minecraft Java 版的 Microsoft 账号。正版角色外观可在 Minecraft
+            账号中管理。
           </p>
           <a
             className="step primary"

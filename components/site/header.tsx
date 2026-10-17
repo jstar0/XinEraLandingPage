@@ -1,7 +1,8 @@
 "use client";
 import { useRef } from "react";
 import { asset } from "@/lib/site";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle, WorldTimeControl } from "./theme-toggle";
+import { BrandMark } from "./brand";
 
 export function Header({ hero = false }: { hero?: boolean }) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -32,12 +33,7 @@ export function Header({ hero = false }: { hero?: boolean }) {
         id={hero ? "hero-nav" : undefined}
       >
         <a className="brand" href="/" aria-label="心纪元首页">
-          <img
-            src={asset("logo-pixel-96-mono.png")}
-            width="46"
-            height="46"
-            alt=""
-          />
+          <BrandMark />
         </a>
         <nav aria-label="主导航">
           <a href="/gallery" className="nav-destination">
@@ -57,7 +53,7 @@ export function Header({ hero = false }: { hero?: boolean }) {
           <a href="/account" className="nav-account">
             玩家中心 <span aria-hidden="true">↗</span>
           </a>
-          <ThemeToggle />
+          {hero ? <WorldTimeControl /> : <ThemeToggle />}
         </nav>
       </header>
       <dialog
@@ -70,19 +66,20 @@ export function Header({ hero = false }: { hero?: boolean }) {
         }}
       >
         <div className="menu-top">
-          <img
-            src={asset("logo-pixel-96-mono.png")}
-            alt="心纪元"
-            width="46"
-            height="46"
-          />
+          <a className="brand" href="/" aria-label="心纪元首页">
+            <BrandMark />
+          </a>
           <button onClick={() => void close()}>
             关闭 <span aria-hidden="true">×</span>
           </button>
         </div>
         <div className="menu-body">
           <div className="menu-picture">
-            <img src={asset("courtyard.jpg")} alt="西奥格勒的教堂庭院" />
+            <img
+              loading="lazy"
+              src={asset("courtyard.webp")}
+              alt="西奥格勒的教堂庭院"
+            />
           </div>
           <div className="menu-links">
             <h2 id="menu-heading">探索心纪元</h2>

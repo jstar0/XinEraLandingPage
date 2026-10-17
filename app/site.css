@@ -76,6 +76,7 @@ button {
   inset: 0;
   background: radial-gradient(ellipse at 95% 30%, #ffdc9b15, transparent 50%);
   pointer-events: none;
+  opacity: calc(var(--world-warmth, 1) * (1 - var(--world-night, 0)));
 }
 .site-nav {
   position: absolute;
@@ -402,9 +403,9 @@ a:hover .image-mask img {
   padding: 110px 12% 120px;
   overflow: hidden;
 }
-.join-symbol img {
+.join-symbol .brand-mark {
   width: 260px;
-  image-rendering: pixelated;
+  height: auto;
   margin: auto;
   filter: drop-shadow(0 22px 20px #7a839721);
 }
@@ -613,9 +614,9 @@ dialog[open] {
   font-size: 16px;
   height: 100px;
 }
-.article-nav img {
+.article-nav .brand-mark {
   width: 42px;
-  image-rendering: pixelated;
+  height: 42px;
 }
 .article-cover {
   position: relative;
@@ -826,7 +827,7 @@ dialog[open] {
     padding: 70px 7%;
     gap: 42px;
   }
-  .join-symbol img {
+  .join-symbol .brand-mark {
     width: 140px;
     margin-left: 0;
   }
@@ -906,8 +907,9 @@ dialog[open] {
     padding: 20px 7%;
     font-size: 13px;
   }
-  .article-nav img {
+  .article-nav .brand-mark {
     width: 32px;
+    height: 32px;
   }
   .article-nav > a:last-child {
     display: none;
@@ -1126,6 +1128,10 @@ button:disabled {
   transform: translateY(10px);
 }
 .scroll-hint[inert] {
+  pointer-events: none;
+}
+#journey[data-arrival="pending"] .scroll-hint {
+  visibility: hidden;
   pointer-events: none;
 }
 @keyframes exploreDown {
@@ -1397,14 +1403,17 @@ h1 {
   height: 100%;
   object-fit: cover;
 }
-.is-enhanced .hero-fallback,
-.is-enhanced .world-fallback {
+.is-enhanced[data-hero-model="ready"] .hero-fallback,
+.is-enhanced[data-world-ready="true"] .world-fallback {
   visibility: hidden;
 }
 #sky-canvas,
 #world-canvas {
   position: absolute;
   inset: 0;
+}
+#journey:not([data-world-ready="true"]) #world-canvas {
+  visibility: hidden;
 }
 .tab-track.hall {
   width: 72px !important;
@@ -1634,10 +1643,11 @@ h1 {
   background: #edd0b8;
 }
 .hero-fallback > img {
-  width: 100%;
+  left: 50%;
+  width: auto;
+  max-width: none;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  transform: translateX(-50%);
 }
 
 /* Keep the same authored island visible while its WebGL assets load. */
@@ -1645,4 +1655,34 @@ h1 {
   .hero-fallback {
   visibility: visible;
   z-index: 1;
+}
+
+/* Sky contrast follows the world clock independently of the page's theme. */
+#journey :is(#hero-nav, #hero-type, .scroll-hint),
+#journey #hero-nav .brand-mark,
+#journey #hero-type .brand-wordmark {
+  color: var(--world-ink, var(--ink));
+}
+#journey #hero-type .brand-wordmark {
+  transition: none;
+}
+#journey .scroll-hint {
+  --ink: var(--world-ink);
+}
+#journey .hero-fallback-night {
+  display: block;
+  opacity: var(--world-night, 0);
+}
+html[data-theme="dark"] #journey {
+  --world-night: 1;
+}
+#journey .arrival {
+  --arrival-mist: var(--world-mist, 239, 213, 184);
+  --arrival-ink: var(--world-ink, var(--ink));
+}
+#journey .arrival-cloud-body {
+  filter: brightness(calc(1 - var(--world-night, 0) * 0.53))
+    saturate(calc(1 - var(--world-night, 0) * 0.55))
+    sepia(calc(var(--world-night, 0) * 0.3))
+    hue-rotate(calc(var(--world-night, 0) * 163deg));
 }

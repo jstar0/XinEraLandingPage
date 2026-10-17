@@ -1,0 +1,42 @@
+{
+  "mode": "applied",
+  "scene": "volcano",
+  "leafTiles": [
+    {
+      "tile": 3,
+      "texture": "minecraft:block/spruce_leaves",
+      "restoredTransparentPixels": 140,
+      "changedAlphaPixels": 140
+    },
+    {
+      "tile": 12,
+      "texture": "minecraft:block/acacia_leaves",
+      "restoredTransparentPixels": 168,
+      "changedAlphaPixels": 168
+    },
+    {
+      "tile": 13,
+      "texture": "minecraft:block/dark_oak_leaves",
+      "restoredTransparentPixels": 115,
+      "changedAlphaPixels": 115
+    }
+  ],
+  "beforeBytes": 7624872,
+  "beforeSha256": "a67d483656d2f5ac79369f89b093ea7e52e7b14b21b4672709101c74b2dafcdd",
+  "afterBytes": 7633948,
+  "afterSha256": "addb94694fdabe38ae9232c55c7a53a22cfa6b03c82d91cb6f5b537841b56332",
+  "atlasSize": [
+    160,
+    60
+  ],
+  "rgbPixelsUnchanged": true,
+  "nonLeafPixelsUnchanged": true,
+  "geometryUvAndEmissionUnchanged": true,
+  "preservedBinPrefixBytes": 7619008,
+  "preservedBinPrefixSha256": "ef2fda6c84f3e17444b9480606b2aac3efe8b59144e00098025c275dd97889be",
+  "appendedPngBytes": 8848,
+  "appendedPngSha256": "df9d0477affda7594ed5ce7f66eeb75bc2e5de5abe0e80b33048f8f9d7c5f3be",
+  "terrainAlphaMode": "MASK",
+  "terrainAlphaCutoff": 0.45,
+  "limitations": "Existing source surface canopy shell is retained; this patch does not invent complete trees or missing canopy undersides."
+}

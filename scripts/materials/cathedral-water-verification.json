@@ -1,0 +1,65 @@
+{
+  "source": "saved original cathedral source-volume.npz (read-only)",
+  "sourceVolumeSha256": "0a891affb2aa56d85c0086b95e50fdbdb8e20f8c3c15cf1e70341f75db811fae",
+  "sourceFileSha256": "24888c511dc874ed91a74fafda3c34e2d897d4f0e34a7efc6d1ea27e9428f658",
+  "templateExporterSha256": "953304ea452b3cf2ccde20f18a8fa96e6834297081fac810e7b98b1065540598",
+  "sourceWaterBlocks": 1429,
+  "sourceStateLevels": {
+    "0": 628,
+    "5": 1,
+    "4": 2,
+    "3": 3,
+    "2": 4,
+    "1": 5,
+    "8": 784,
+    "9": 1,
+    "11": 1
+  },
+  "sourceWorldBoundsInclusive": {
+    "min": [
+      120,
+      60,
+      -864
+    ],
+    "max": [
+      303,
+      112,
+      -769
+    ]
+  },
+  "coordinateTransform": "[(worldX-208)*0.1, (worldY-64)*0.1, (worldZ+816)*0.1]",
+  "localBounds": [
+    [
+      -8.800000190734863,
+      -0.4000000059604645,
+      -4.800000190734863
+    ],
+    [
+      9.600000381469727,
+      4.888888835906982,
+      4.800000190734863
+    ]
+  ],
+  "quads": {
+    "bottom": 64,
+    "side": 3288,
+    "top": 530
+  },
+  "triangles": 7764,
+  "culledFaces": {
+    "againstOpaqueCube": 1240,
+    "internalWater": 3452
+  },
+  "stackedWaterPairsWithoutGap": 815,
+  "sourceUnchanged": true,
+  "cathedralMainGlbUnchanged": true,
+  "cathedralMainGlbSha256": "8c677cccb33fb668cf3d03ced35d4ae26d10cdcbda9df36cd17487dcd0a580c3",
+  "bytes": 592132,
+  "sha256": "60078351deec224e89d562bd990706d0502936d2ecda3536c74b37ed7cf42992",
+  "meshName": "water",
+  "atlasSize": [
+    40,
+    20
+  ],
+  "limitations": "Vanilla first texture frames and the same level-height approximation as the homepage; this is the saved world snapshot, not live fluid simulation."
+}

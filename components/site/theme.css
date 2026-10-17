@@ -51,8 +51,196 @@ html[data-theme="dark"] .theme-orbit {
   opacity: 0.8;
 }
 
-html[data-theme="dark"] :is(.brand img, .menu-top img, .article-nav img) {
-  filter: brightness(0) invert(0.94);
+.world-time {
+  position: relative;
+  flex-shrink: 0;
+  --time-ink: var(--world-ink, var(--ink));
+  --time-surface: color-mix(
+    in srgb,
+    #f7f0e3,
+    #132339 calc(var(--world-night, 0) * 100%)
+  );
+  --time-line: color-mix(in srgb, var(--time-ink) 16%, transparent);
+  --time-accent: color-mix(
+    in srgb,
+    #b7502c,
+    #f4b08a calc(var(--world-night, 0) * 100%)
+  );
+}
+
+.site-nav .world-time-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--time-ink);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.world-time-emblem {
+  display: grid;
+  width: 26px;
+  height: 26px;
+}
+.world-time-emblem > span {
+  grid-area: 1 / 1;
+}
+.world-time-emblem svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.world-time-day {
+  opacity: calc(1 - var(--world-night, 0));
+}
+.world-time-night {
+  opacity: var(--world-night, 0);
+}
+.world-time-trigger [data-world-time-label] {
+  min-width: 2em;
+}
+.world-time-chevron {
+  width: 5px;
+  height: 5px;
+  margin: -3px 2px 0 2px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.world-time-trigger[aria-expanded="true"] .world-time-chevron {
+  transform: translateY(3px) rotate(225deg);
+}
+
+.world-time-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(224px, calc(100vw - 44px));
+  padding: 12px 16px 6px;
+  color: var(--time-ink);
+  background: color-mix(in srgb, var(--time-surface) 94%, transparent);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    inset 0 0 0 1px var(--time-line),
+    0 12px 30px #06102024;
+  clip-path: polygon(
+    4px 0,
+    calc(100% - 4px) 0,
+    calc(100% - 4px) 4px,
+    100% 4px,
+    100% calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) 100%,
+    4px 100%,
+    4px calc(100% - 4px),
+    0 calc(100% - 4px),
+    0 4px,
+    4px 4px
+  );
+  animation: time-panel-arrive 0.18s ease-out both;
+  transform-origin: top right;
+}
+.world-time-modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.site-nav .world-time-modes button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 72px;
+  padding: 4px 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: color-mix(in srgb, var(--time-ink) 72%, transparent);
+  transition: color 0.15s;
+}
+.world-time-modes svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.65;
+  transition: opacity 0.15s;
+}
+.site-nav .world-time-modes button[aria-pressed="true"] {
+  color: var(--time-ink);
+}
+.world-time-modes button[aria-pressed="true"] svg {
+  opacity: 1;
+}
+.world-time-modes button::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  height: 2px;
+  width: 16px;
+  background: var(--time-accent);
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+}
+.world-time-modes button[aria-pressed="true"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.world-time-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--time-line);
+  margin-top: 7px;
+}
+.world-time-rate {
+  font-size: 11px;
+  color: color-mix(in srgb, var(--time-ink) 70%, transparent);
+}
+.site-nav .world-time-pause {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 2px 0 12px;
+  font-size: 12px;
+  color: var(--time-ink);
+}
+.world-time-pause svg {
+  width: 12px;
+  height: 12px;
+}
+.site-nav .world-time-pause:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.world-time button:focus-visible {
+  outline: 2px solid var(--time-accent);
+  outline-offset: 2px;
+}
+@keyframes time-panel-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-time-panel {
+    animation: none;
+  }
+  .world-time-chevron {
+    transition: none;
+  }
 }
 
 html[data-theme="dark"] .nav-account {
@@ -150,7 +338,7 @@ html[data-theme="dark"] .player-backdrop {
   background:
     linear-gradient(90deg, #111e30ee, #111e3080 50%, #111e30d9),
     linear-gradient(0deg, var(--paper), transparent 42%),
-    url("/xinera/courtyard.jpg") center 46% / cover;
+    url("/xinera/courtyard.webp") center 46% / cover;
 }
 
 html[data-theme="dark"]
@@ -209,6 +397,17 @@ html[data-theme="dark"] .world-explorer {
   .site-nav .nav-account {
     padding-left: 13px !important;
   }
+  .site-nav .world-time-trigger {
+    gap: 4px;
+    font-size: 12px;
+  }
+  .world-time-emblem {
+    width: 24px;
+    height: 24px;
+  }
+  .world-time-chevron {
+    display: none;
+  }
 }
 
 @media (max-width: 360px) {
@@ -228,21 +427,6 @@ html[data-theme="dark"] .world-explorer {
 
 .reduced-motion .theme-orbit {
   transition: none;
-}
-
-/* The pixel wordmark is monochrome artwork; photos and skin textures stay intact. */
-.hero-title {
-  filter: brightness(1) invert(0);
-  transition: filter 2s ease;
-}
-html[data-theme="dark"] .hero-title {
-  filter: brightness(0) invert(0.92);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-title {
-    transition: none;
-  }
 }
 
 .hero-fallback-night {

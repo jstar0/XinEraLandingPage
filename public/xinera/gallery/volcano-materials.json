@@ -1,0 +1,114 @@
+{
+  "tiles": [
+    {
+      "tile": 0,
+      "texture": "minecraft:block/sand",
+      "kind": "other"
+    },
+    {
+      "tile": 1,
+      "texture": "minecraft:block/grass_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 2,
+      "texture": "minecraft:block/grass_block_side",
+      "kind": "other"
+    },
+    {
+      "tile": 3,
+      "texture": "minecraft:block/spruce_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 4,
+      "texture": "minecraft:block/spruce_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 5,
+      "texture": "minecraft:block/dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 6,
+      "texture": "minecraft:block/stone",
+      "kind": "stone"
+    },
+    {
+      "tile": 7,
+      "texture": "minecraft:block/cobblestone",
+      "kind": "stone"
+    },
+    {
+      "tile": 8,
+      "texture": "minecraft:block/snow",
+      "kind": "other"
+    },
+    {
+      "tile": 9,
+      "texture": "minecraft:block/gravel",
+      "kind": "stone"
+    },
+    {
+      "tile": 10,
+      "texture": "minecraft:block/white_tulip",
+      "kind": "leaves"
+    },
+    {
+      "tile": 11,
+      "texture": "minecraft:block/lava_still",
+      "kind": "light"
+    },
+    {
+      "tile": 12,
+      "texture": "minecraft:block/acacia_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 13,
+      "texture": "minecraft:block/dark_oak_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 14,
+      "texture": "minecraft:block/spruce_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 15,
+      "texture": "minecraft:block/water_still",
+      "kind": "water"
+    },
+    {
+      "tile": 16,
+      "texture": "minecraft:block/oak_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 17,
+      "texture": "minecraft:block/diorite",
+      "kind": "stone"
+    },
+    {
+      "tile": 18,
+      "texture": "minecraft:block/andesite",
+      "kind": "stone"
+    },
+    {
+      "tile": 19,
+      "texture": "minecraft:block/poppy",
+      "kind": "leaves"
+    },
+    {
+      "tile": 20,
+      "texture": "minecraft:block/granite",
+      "kind": "stone"
+    },
+    {
+      "tile": 21,
+      "texture": "minecraft:block/coal_ore",
+      "kind": "stone"
+    }
+  ]
+}

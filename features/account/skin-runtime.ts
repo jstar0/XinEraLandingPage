@@ -52,8 +52,13 @@ export async function mountSkin(
   src: string,
   slim: boolean,
   signal: AbortSignal,
-  failed: () => void,
+  state: {
+    preparing: () => void;
+    ready: () => void;
+    failed: () => void;
+  },
 ) {
+  if (signal.aborted) return;
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
@@ -157,7 +162,7 @@ export async function mountSkin(
   }
   function contextLost(event: Event) {
     event.preventDefault();
-    failed();
+    state.failed();
     dispose();
   }
   function dispose() {
@@ -197,6 +202,7 @@ export async function mountSkin(
       dispose();
       return;
     }
+    state.preparing();
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.magFilter = THREE.NearestFilter;
     texture.minFilter = THREE.NearestFilter;
@@ -244,7 +250,11 @@ export async function mountSkin(
     part(w, 12, 4, -(4 + w / 2), 18, [40, 16], [40, 32], -0.045);
     part(w, 12, 4, 4 + w / 2, 18, [32, 48], [48, 48], 0.045);
     scene.add(avatar);
-    canvas.dataset.ready = "true";
+    await renderer.compileAsync(scene, camera);
+    if (signal.aborted || disposed) {
+      dispose();
+      return;
+    }
     function render() {
       if (disposed) return;
       controls.update();
@@ -252,6 +262,9 @@ export async function mountSkin(
       frame = requestAnimationFrame(render);
     }
     render();
+    if (disposed || signal.aborted) return;
+    canvas.dataset.ready = "true";
+    state.ready();
   } catch (error) {
     dispose();
     throw error;

@@ -3,6 +3,7 @@ import { Records } from "@/features/journal/records";
 import { StepLink } from "@/components/site/step-link";
 import { Footer } from "@/components/site/footer";
 import { Reveal } from "@/components/site/reveal";
+import { BrandMark } from "@/components/site/brand";
 export const metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
@@ -12,14 +13,8 @@ export default function Home() {
         <Reveal>
           <Records />
           <section className="join" id="join">
-            <div className="join-symbol">
-              <img
-                src="/xinera/logo-pixel-96.png"
-                width="260"
-                height="260"
-                alt="心纪元 Logo"
-                loading="lazy"
-              />
+            <div className="join-symbol" aria-hidden="true">
+              <BrandMark />
             </div>
             <div className="join-copy">
               <span className="section-number">03 — 准备出发</span>

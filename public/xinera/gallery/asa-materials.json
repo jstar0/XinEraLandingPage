@@ -1,0 +1,1124 @@
+{
+  "tiles": [
+    {
+      "tile": 0,
+      "texture": "minecraft:block/stone",
+      "kind": "stone"
+    },
+    {
+      "tile": 1,
+      "texture": "minecraft:block/andesite",
+      "kind": "stone"
+    },
+    {
+      "tile": 2,
+      "texture": "minecraft:block/diorite",
+      "kind": "stone"
+    },
+    {
+      "tile": 3,
+      "texture": "minecraft:block/coal_ore",
+      "kind": "stone"
+    },
+    {
+      "tile": 4,
+      "texture": "minecraft:block/dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 5,
+      "texture": "minecraft:block/granite",
+      "kind": "stone"
+    },
+    {
+      "tile": 6,
+      "texture": "minecraft:block/iron_ore",
+      "kind": "stone"
+    },
+    {
+      "tile": 7,
+      "texture": "minecraft:block/water_still",
+      "kind": "water"
+    },
+    {
+      "tile": 8,
+      "texture": "minecraft:block/gravel",
+      "kind": "stone"
+    },
+    {
+      "tile": 9,
+      "texture": "block/dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 10,
+      "texture": "block/grass_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 11,
+      "texture": "block/grass_block_side",
+      "kind": "other"
+    },
+    {
+      "tile": 12,
+      "texture": "block/grass_block_side_overlay",
+      "kind": "other"
+    },
+    {
+      "tile": 13,
+      "texture": "minecraft:block/spruce_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 14,
+      "texture": "minecraft:block/spruce_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 15,
+      "texture": "minecraft:block/spruce_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 16,
+      "texture": "minecraft:block/red_tulip",
+      "kind": "leaves"
+    },
+    {
+      "tile": 17,
+      "texture": "minecraft:block/deepslate_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 18,
+      "texture": "minecraft:block/deepslate",
+      "kind": "stone"
+    },
+    {
+      "tile": 19,
+      "texture": "minecraft:block/sunflower_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 20,
+      "texture": "minecraft:block/white_tulip",
+      "kind": "leaves"
+    },
+    {
+      "tile": 21,
+      "texture": "block/sunflower_top",
+      "kind": "leaves"
+    },
+    {
+      "tile": 22,
+      "texture": "block/sunflower_back",
+      "kind": "leaves"
+    },
+    {
+      "tile": 23,
+      "texture": "block/sunflower_front",
+      "kind": "leaves"
+    },
+    {
+      "tile": 24,
+      "texture": "minecraft:block/cornflower",
+      "kind": "leaves"
+    },
+    {
+      "tile": 25,
+      "texture": "minecraft:block/sweet_berry_bush_stage3",
+      "kind": "leaves"
+    },
+    {
+      "tile": 26,
+      "texture": "minecraft:block/lily_of_the_valley",
+      "kind": "leaves"
+    },
+    {
+      "tile": 27,
+      "texture": "minecraft:block/red_mushroom",
+      "kind": "other"
+    },
+    {
+      "tile": 28,
+      "texture": "minecraft:block/rose_bush_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 29,
+      "texture": "minecraft:block/blue_orchid",
+      "kind": "leaves"
+    },
+    {
+      "tile": 30,
+      "texture": "minecraft:block/rose_bush_top",
+      "kind": "leaves"
+    },
+    {
+      "tile": 31,
+      "texture": "minecraft:block/poppy",
+      "kind": "leaves"
+    },
+    {
+      "tile": 32,
+      "texture": "minecraft:block/azure_bluet",
+      "kind": "leaves"
+    },
+    {
+      "tile": 33,
+      "texture": "minecraft:block/stone_bricks",
+      "kind": "stone"
+    },
+    {
+      "tile": 34,
+      "texture": "minecraft:block/dark_oak_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 35,
+      "texture": "minecraft:block/lantern",
+      "kind": "light"
+    },
+    {
+      "tile": 36,
+      "texture": "minecraft:block/stripped_dark_oak_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 37,
+      "texture": "minecraft:block/stripped_dark_oak_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 38,
+      "texture": "minecraft:block/spruce_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 39,
+      "texture": "minecraft:block/cobblestone",
+      "kind": "stone"
+    },
+    {
+      "tile": 40,
+      "texture": "minecraft:block/rooted_dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 41,
+      "texture": "minecraft:block/raw_iron_block",
+      "kind": "stone"
+    },
+    {
+      "tile": 42,
+      "texture": "minecraft:block/mossy_cobblestone",
+      "kind": "stone"
+    },
+    {
+      "tile": 43,
+      "texture": "minecraft:block/stripped_spruce_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 44,
+      "texture": "minecraft:block/cracked_stone_bricks",
+      "kind": "stone"
+    },
+    {
+      "tile": 45,
+      "texture": "minecraft:block/tuff",
+      "kind": "stone"
+    },
+    {
+      "tile": 46,
+      "texture": "minecraft:block/white_wool",
+      "kind": "other"
+    },
+    {
+      "tile": 47,
+      "texture": "minecraft:block/dandelion",
+      "kind": "leaves"
+    },
+    {
+      "tile": 48,
+      "texture": "minecraft:block/beehive_end",
+      "kind": "wood"
+    },
+    {
+      "tile": 49,
+      "texture": "minecraft:block/beehive_front",
+      "kind": "wood"
+    },
+    {
+      "tile": 50,
+      "texture": "minecraft:block/beehive_side",
+      "kind": "wood"
+    },
+    {
+      "tile": 51,
+      "texture": "minecraft:block/stripped_spruce_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 52,
+      "texture": "minecraft:block/oak_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 53,
+      "texture": "block/ladder",
+      "kind": "wood"
+    },
+    {
+      "tile": 54,
+      "texture": "minecraft:block/brown_mushroom",
+      "kind": "other"
+    },
+    {
+      "tile": 55,
+      "texture": "minecraft:block/mossy_stone_bricks",
+      "kind": "stone"
+    },
+    {
+      "tile": 56,
+      "texture": "minecraft:block/iron_chain",
+      "kind": "metal"
+    },
+    {
+      "tile": 57,
+      "texture": "minecraft:block/iron_bars",
+      "kind": "metal"
+    },
+    {
+      "tile": 58,
+      "texture": "minecraft:block/cobweb",
+      "kind": "other"
+    },
+    {
+      "tile": 59,
+      "texture": "minecraft:block/hanging_roots",
+      "kind": "other"
+    },
+    {
+      "tile": 60,
+      "texture": "block/flower_pot",
+      "kind": "stone"
+    },
+    {
+      "tile": 61,
+      "texture": "minecraft:block/allium",
+      "kind": "leaves"
+    },
+    {
+      "tile": 62,
+      "texture": "minecraft:block/farmland",
+      "kind": "other"
+    },
+    {
+      "tile": 63,
+      "texture": "minecraft:block/wheat_stage7",
+      "kind": "leaves"
+    },
+    {
+      "tile": 64,
+      "texture": "minecraft:block/oxeye_daisy",
+      "kind": "leaves"
+    },
+    {
+      "tile": 65,
+      "texture": "minecraft:block/oak_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 66,
+      "texture": "minecraft:block/oak_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 67,
+      "texture": "minecraft:block/green_stained_glass_pane_top",
+      "kind": "glass"
+    },
+    {
+      "tile": 68,
+      "texture": "minecraft:block/green_stained_glass",
+      "kind": "glass"
+    },
+    {
+      "tile": 69,
+      "texture": "minecraft:block/oak_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 70,
+      "texture": "minecraft:block/seagrass",
+      "kind": "leaves"
+    },
+    {
+      "tile": 71,
+      "texture": "block/lily_pad",
+      "kind": "leaves"
+    },
+    {
+      "tile": 72,
+      "texture": "minecraft:block/amethyst_cluster",
+      "kind": "other"
+    },
+    {
+      "tile": 73,
+      "texture": "minecraft:block/azalea_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 74,
+      "texture": "minecraft:block/flowering_azalea_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 75,
+      "texture": "minecraft:block/dead_tube_coral_block",
+      "kind": "other"
+    },
+    {
+      "tile": 76,
+      "texture": "minecraft:block/spruce_trapdoor",
+      "kind": "wood"
+    },
+    {
+      "tile": 77,
+      "texture": "minecraft:block/glass",
+      "kind": "glass"
+    },
+    {
+      "tile": 78,
+      "texture": "block/sea_pickle",
+      "kind": "other"
+    },
+    {
+      "tile": 79,
+      "texture": "minecraft:block/light_blue_stained_glass",
+      "kind": "glass"
+    },
+    {
+      "tile": 80,
+      "texture": "minecraft:block/crimson_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 81,
+      "texture": "block/cobblestone",
+      "kind": "stone"
+    },
+    {
+      "tile": 82,
+      "texture": "block/lever",
+      "kind": "wood"
+    },
+    {
+      "tile": 83,
+      "texture": "block/brewing_stand",
+      "kind": "other"
+    },
+    {
+      "tile": 84,
+      "texture": "block/brewing_stand_base",
+      "kind": "other"
+    },
+    {
+      "tile": 85,
+      "texture": "block/tripwire_hook",
+      "kind": "metal"
+    },
+    {
+      "tile": 86,
+      "texture": "block/oak_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 87,
+      "texture": "minecraft:block/barrel_bottom",
+      "kind": "wood"
+    },
+    {
+      "tile": 88,
+      "texture": "minecraft:block/barrel_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 89,
+      "texture": "minecraft:block/barrel_side",
+      "kind": "wood"
+    },
+    {
+      "tile": 90,
+      "texture": "minecraft:block/lightning_rod",
+      "kind": "metal"
+    },
+    {
+      "tile": 91,
+      "texture": "minecraft:block/blue_wool",
+      "kind": "other"
+    },
+    {
+      "tile": 92,
+      "texture": "minecraft:block/cobbled_deepslate",
+      "kind": "stone"
+    },
+    {
+      "tile": 93,
+      "texture": "minecraft:block/orange_tulip",
+      "kind": "leaves"
+    },
+    {
+      "tile": 94,
+      "texture": "minecraft:block/birch_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 95,
+      "texture": "minecraft:block/candle_lit",
+      "kind": "light"
+    },
+    {
+      "tile": 96,
+      "texture": "minecraft:block/grass_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 97,
+      "texture": "minecraft:block/grass_block_snow",
+      "kind": "other"
+    },
+    {
+      "tile": 98,
+      "texture": "block/snow",
+      "kind": "other"
+    },
+    {
+      "tile": 99,
+      "texture": "block/dirt_path_top",
+      "kind": "other"
+    },
+    {
+      "tile": 100,
+      "texture": "block/dirt_path_side",
+      "kind": "other"
+    },
+    {
+      "tile": 101,
+      "texture": "block/anvil",
+      "kind": "metal"
+    },
+    {
+      "tile": 102,
+      "texture": "minecraft:block/anvil_top",
+      "kind": "metal"
+    },
+    {
+      "tile": 103,
+      "texture": "block/lectern_base",
+      "kind": "wood"
+    },
+    {
+      "tile": 104,
+      "texture": "block/lectern_front",
+      "kind": "wood"
+    },
+    {
+      "tile": 105,
+      "texture": "block/lectern_sides",
+      "kind": "wood"
+    },
+    {
+      "tile": 106,
+      "texture": "block/lectern_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 107,
+      "texture": "minecraft:block/farmland_moist",
+      "kind": "other"
+    },
+    {
+      "tile": 108,
+      "texture": "minecraft:block/piston_side",
+      "kind": "other"
+    },
+    {
+      "tile": 109,
+      "texture": "minecraft:block/piston_top_sticky",
+      "kind": "other"
+    },
+    {
+      "tile": 110,
+      "texture": "minecraft:block/piston_bottom",
+      "kind": "other"
+    },
+    {
+      "tile": 111,
+      "texture": "minecraft:block/hay_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 112,
+      "texture": "minecraft:block/hay_block_side",
+      "kind": "other"
+    },
+    {
+      "tile": 113,
+      "texture": "minecraft:block/spruce_door_bottom",
+      "kind": "wood"
+    },
+    {
+      "tile": 114,
+      "texture": "block/scaffolding_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 115,
+      "texture": "block/scaffolding_side",
+      "kind": "wood"
+    },
+    {
+      "tile": 116,
+      "texture": "block/scaffolding_bottom",
+      "kind": "wood"
+    },
+    {
+      "tile": 117,
+      "texture": "minecraft:block/spruce_door_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 118,
+      "texture": "minecraft:block/oak_trapdoor",
+      "kind": "wood"
+    },
+    {
+      "tile": 119,
+      "texture": "minecraft:block/quartz_block_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 120,
+      "texture": "minecraft:block/quartz_block_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 121,
+      "texture": "minecraft:block/dark_oak_door_bottom",
+      "kind": "wood"
+    },
+    {
+      "tile": 122,
+      "texture": "minecraft:block/dark_oak_door_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 123,
+      "texture": "minecraft:block/soul_lantern",
+      "kind": "light"
+    },
+    {
+      "tile": 124,
+      "texture": "minecraft:block/glass_pane_top",
+      "kind": "glass"
+    },
+    {
+      "tile": 125,
+      "texture": "minecraft:block/netherrack",
+      "kind": "stone"
+    },
+    {
+      "tile": 126,
+      "texture": "minecraft:block/bookshelf",
+      "kind": "wood"
+    },
+    {
+      "tile": 127,
+      "texture": "minecraft:block/red_wool",
+      "kind": "other"
+    },
+    {
+      "tile": 128,
+      "texture": "minecraft:block/potted_azalea_bush_top",
+      "kind": "other"
+    },
+    {
+      "tile": 129,
+      "texture": "minecraft:block/potted_azalea_bush_side",
+      "kind": "other"
+    },
+    {
+      "tile": 130,
+      "texture": "minecraft:block/potted_azalea_bush_plant",
+      "kind": "leaves"
+    },
+    {
+      "tile": 131,
+      "texture": "minecraft:block/exposed_lightning_rod",
+      "kind": "metal"
+    },
+    {
+      "tile": 132,
+      "texture": "minecraft:block/potted_flowering_azalea_bush_top",
+      "kind": "other"
+    },
+    {
+      "tile": 133,
+      "texture": "minecraft:block/potted_flowering_azalea_bush_side",
+      "kind": "other"
+    },
+    {
+      "tile": 134,
+      "texture": "minecraft:block/potted_flowering_azalea_bush_plant",
+      "kind": "leaves"
+    },
+    {
+      "tile": 135,
+      "texture": "block/bamboo_stalk",
+      "kind": "wood"
+    },
+    {
+      "tile": 136,
+      "texture": "block/bamboo_singleleaf",
+      "kind": "leaves"
+    },
+    {
+      "tile": 137,
+      "texture": "minecraft:block/lilac_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 138,
+      "texture": "minecraft:block/lilac_top",
+      "kind": "leaves"
+    },
+    {
+      "tile": 139,
+      "texture": "minecraft:block/smoker_bottom",
+      "kind": "stone"
+    },
+    {
+      "tile": 140,
+      "texture": "minecraft:block/smoker_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 141,
+      "texture": "minecraft:block/smoker_front",
+      "kind": "stone"
+    },
+    {
+      "tile": 142,
+      "texture": "minecraft:block/smoker_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 143,
+      "texture": "minecraft:block/chiseled_quartz_block_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 144,
+      "texture": "minecraft:block/chiseled_quartz_block",
+      "kind": "stone"
+    },
+    {
+      "tile": 145,
+      "texture": "minecraft:block/glowstone",
+      "kind": "light"
+    },
+    {
+      "tile": 146,
+      "texture": "minecraft:block/redstone_lamp_on",
+      "kind": "light"
+    },
+    {
+      "tile": 147,
+      "texture": "minecraft:block/redstone_lamp",
+      "kind": "stone"
+    },
+    {
+      "tile": 148,
+      "texture": "block/dark_oak_planks",
+      "kind": "wood"
+    },
+    {
+      "tile": 149,
+      "texture": "minecraft:block/crimson_nylium",
+      "kind": "other"
+    },
+    {
+      "tile": 150,
+      "texture": "minecraft:block/crimson_nylium_side",
+      "kind": "other"
+    },
+    {
+      "tile": 151,
+      "texture": "minecraft:block/cartography_table_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 152,
+      "texture": "minecraft:block/cartography_table_side3",
+      "kind": "wood"
+    },
+    {
+      "tile": 153,
+      "texture": "minecraft:block/cartography_table_side1",
+      "kind": "wood"
+    },
+    {
+      "tile": 154,
+      "texture": "minecraft:block/cartography_table_side2",
+      "kind": "wood"
+    },
+    {
+      "tile": 155,
+      "texture": "minecraft:block/white_candle_lit",
+      "kind": "light"
+    },
+    {
+      "tile": 156,
+      "texture": "minecraft:block/dark_oak_trapdoor",
+      "kind": "wood"
+    },
+    {
+      "tile": 157,
+      "texture": "minecraft:block/smooth_stone",
+      "kind": "stone"
+    },
+    {
+      "tile": 158,
+      "texture": "minecraft:block/smooth_stone_slab_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 159,
+      "texture": "minecraft:block/iron_door_bottom",
+      "kind": "metal"
+    },
+    {
+      "tile": 160,
+      "texture": "minecraft:block/cauldron_side",
+      "kind": "metal"
+    },
+    {
+      "tile": 161,
+      "texture": "minecraft:block/cauldron_top",
+      "kind": "metal"
+    },
+    {
+      "tile": 162,
+      "texture": "minecraft:block/cauldron_inner",
+      "kind": "metal"
+    },
+    {
+      "tile": 163,
+      "texture": "minecraft:block/cauldron_bottom",
+      "kind": "metal"
+    },
+    {
+      "tile": 164,
+      "texture": "minecraft:block/water_still",
+      "kind": "water"
+    },
+    {
+      "tile": 165,
+      "texture": "minecraft:block/iron_door_top",
+      "kind": "metal"
+    },
+    {
+      "tile": 166,
+      "texture": "block/campfire_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 167,
+      "texture": "minecraft:block/campfire_log_lit",
+      "kind": "light"
+    },
+    {
+      "tile": 168,
+      "texture": "minecraft:block/campfire_fire",
+      "kind": "light"
+    },
+    {
+      "tile": 169,
+      "texture": "minecraft:block/rail",
+      "kind": "metal"
+    },
+    {
+      "tile": 170,
+      "texture": "minecraft:block/quartz_pillar_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 171,
+      "texture": "minecraft:block/quartz_pillar",
+      "kind": "stone"
+    },
+    {
+      "tile": 172,
+      "texture": "minecraft:block/crafting_table_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 173,
+      "texture": "minecraft:block/crafting_table_front",
+      "kind": "wood"
+    },
+    {
+      "tile": 174,
+      "texture": "minecraft:block/crafting_table_side",
+      "kind": "wood"
+    },
+    {
+      "tile": 175,
+      "texture": "minecraft:block/torch",
+      "kind": "light"
+    },
+    {
+      "tile": 176,
+      "texture": "block/redstone_dust_line0",
+      "kind": "stone"
+    },
+    {
+      "tile": 177,
+      "texture": "block/redstone_dust_overlay",
+      "kind": "stone"
+    },
+    {
+      "tile": 178,
+      "texture": "block/redstone_dust_line1",
+      "kind": "stone"
+    },
+    {
+      "tile": 179,
+      "texture": "block/redstone_dust_dot",
+      "kind": "stone"
+    },
+    {
+      "tile": 180,
+      "texture": "minecraft:block/yellow_wool",
+      "kind": "other"
+    },
+    {
+      "tile": 181,
+      "texture": "block/stonecutter_bottom",
+      "kind": "stone"
+    },
+    {
+      "tile": 182,
+      "texture": "block/stonecutter_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 183,
+      "texture": "block/stonecutter_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 184,
+      "texture": "block/stonecutter_saw",
+      "kind": "metal"
+    },
+    {
+      "tile": 185,
+      "texture": "block/dark_oak_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 186,
+      "texture": "block/grindstone_pivot",
+      "kind": "stone"
+    },
+    {
+      "tile": 187,
+      "texture": "block/grindstone_round",
+      "kind": "stone"
+    },
+    {
+      "tile": 188,
+      "texture": "block/grindstone_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 189,
+      "texture": "minecraft:block/deepslate_tiles",
+      "kind": "stone"
+    },
+    {
+      "tile": 190,
+      "texture": "minecraft:block/polished_deepslate",
+      "kind": "stone"
+    },
+    {
+      "tile": 191,
+      "texture": "minecraft:block/blast_furnace_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 192,
+      "texture": "minecraft:block/blast_furnace_front",
+      "kind": "stone"
+    },
+    {
+      "tile": 193,
+      "texture": "minecraft:block/blast_furnace_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 194,
+      "texture": "minecraft:block/coal_block",
+      "kind": "stone"
+    },
+    {
+      "tile": 195,
+      "texture": "block/glow_lichen",
+      "kind": "light"
+    },
+    {
+      "tile": 196,
+      "texture": "block/enchanting_table_bottom",
+      "kind": "other"
+    },
+    {
+      "tile": 197,
+      "texture": "block/enchanting_table_top",
+      "kind": "other"
+    },
+    {
+      "tile": 198,
+      "texture": "block/enchanting_table_side",
+      "kind": "other"
+    },
+    {
+      "tile": 199,
+      "texture": "minecraft:block/loom_bottom",
+      "kind": "wood"
+    },
+    {
+      "tile": 200,
+      "texture": "minecraft:block/loom_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 201,
+      "texture": "minecraft:block/loom_front",
+      "kind": "wood"
+    },
+    {
+      "tile": 202,
+      "texture": "minecraft:block/loom_side",
+      "kind": "wood"
+    },
+    {
+      "tile": 203,
+      "texture": "minecraft:block/quartz_block_bottom",
+      "kind": "stone"
+    },
+    {
+      "tile": 204,
+      "texture": "minecraft:block/deepslate_bricks",
+      "kind": "stone"
+    },
+    {
+      "tile": 205,
+      "texture": "block/bamboo_small_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 206,
+      "texture": "block/bamboo_large_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 207,
+      "texture": "minecraft:block/furnace_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 208,
+      "texture": "minecraft:block/dropper_front",
+      "kind": "other"
+    },
+    {
+      "tile": 209,
+      "texture": "minecraft:block/furnace_side",
+      "kind": "stone"
+    },
+    {
+      "tile": 210,
+      "texture": "minecraft:block/redstone_torch",
+      "kind": "light"
+    },
+    {
+      "tile": 211,
+      "texture": "minecraft:block/command_block_side",
+      "kind": "other"
+    },
+    {
+      "tile": 212,
+      "texture": "minecraft:block/command_block_front",
+      "kind": "other"
+    },
+    {
+      "tile": 213,
+      "texture": "minecraft:block/command_block_back",
+      "kind": "other"
+    },
+    {
+      "tile": 214,
+      "texture": "minecraft:block/brown_wool",
+      "kind": "other"
+    },
+    {
+      "tile": 215,
+      "texture": "minecraft:block/birch_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 216,
+      "texture": "minecraft:block/carrots_stage3",
+      "kind": "leaves"
+    },
+    {
+      "tile": 217,
+      "texture": "minecraft:block/potatoes_stage3",
+      "kind": "leaves"
+    },
+    {
+      "tile": 218,
+      "texture": "minecraft:block/birch_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 219,
+      "texture": "minecraft:block/birch_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 220,
+      "texture": "minecraft:block/pink_tulip",
+      "kind": "leaves"
+    },
+    {
+      "tile": 221,
+      "texture": "minecraft:block/emerald_ore",
+      "kind": "stone"
+    },
+    {
+      "tile": 222,
+      "texture": "minecraft:block/peony_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 223,
+      "texture": "minecraft:block/peony_top",
+      "kind": "leaves"
+    }
+  ]
+}

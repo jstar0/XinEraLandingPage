@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/xinera/courtyard.jpg", alt: "心纪元西奥格勒教堂庭院" }],
   },
-  icons: { icon: "/xinera/logo-pixel-96.png" },
+  icons: { icon: { url: "/xinera/brand-mark.svg", type: "image/svg+xml" } },
 };
 export const viewport: Viewport = { themeColor: "#f4dfc9" };
 export default function RootLayout({

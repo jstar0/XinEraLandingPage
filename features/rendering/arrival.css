@@ -1,0 +1,334 @@
+.arrival {
+  --arrival-cloud-top: #fff5df;
+  --arrival-cloud-front: #ecdbc1;
+  --arrival-cloud-side: #ceb799;
+  --arrival-mist: 239, 213, 184;
+  --arrival-ink: #5c625b;
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 auto;
+  height: 100svh;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  contain: layout paint;
+}
+
+.arrival-mist {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 53% 77%,
+      rgba(var(--arrival-mist), 0.92),
+      rgba(var(--arrival-mist), 0.35) 30%,
+      transparent 64%
+    ),
+    linear-gradient(
+      transparent 30%,
+      rgba(var(--arrival-mist), 0.18) 48%,
+      rgba(var(--arrival-mist), 0.8)
+    );
+}
+.arrival-cloudfield {
+  position: absolute;
+  inset: 0;
+}
+.arrival-cloud {
+  position: absolute;
+  transform-origin: 50% 70%;
+}
+.arrival-cloud-body {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.arrival-cloud-far-west {
+  left: -10%;
+  top: 35%;
+  width: 61%;
+  filter: brightness(1.05);
+}
+.arrival-cloud-far-east {
+  left: 59%;
+  top: 30%;
+  width: 60%;
+  filter: brightness(1.06);
+}
+.arrival-cloud-middle-west {
+  left: -19%;
+  top: 44%;
+  width: 77%;
+}
+.arrival-cloud-middle-east {
+  left: 57%;
+  top: 41%;
+  width: 75%;
+}
+.arrival-cloud-near-west {
+  left: -30%;
+  top: 62%;
+  width: 110%;
+}
+.arrival-cloud-near-east {
+  left: 48%;
+  top: 61%;
+  width: 105%;
+}
+.arrival-center {
+  position: absolute;
+  left: 52%;
+  top: 72%;
+  width: clamp(138px, 12vw, 184px);
+  transform: translate(-50%, -50%);
+  color: var(--arrival-ink);
+  text-align: center;
+  filter: drop-shadow(0 10px 12px #79654e18);
+}
+
+.arrival-island {
+  width: 100%;
+  transform-origin: 50% 76%;
+}
+
+.arrival-island > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.arrival-island-shadow {
+  fill: #8e755d;
+  opacity: 0.12;
+}
+.arrival-block {
+  --block-top: #aaa697;
+  --block-left: #85877e;
+  --block-right: #6e766e;
+}
+.arrival-block-earth {
+  --block-top: #ac9171;
+  --block-left: #9a7e62;
+  --block-right: #7d6b56;
+}
+.arrival-block-grass {
+  --block-top: #96ad78;
+  --block-left: #a28c6c;
+  --block-right: #7e755b;
+}
+.arrival-block-wood {
+  --block-top: #b99d74;
+  --block-left: #927753;
+  --block-right: #765f46;
+}
+.arrival-block-leaf {
+  --block-top: #b1bd88;
+  --block-left: #8aa16d;
+  --block-right: #697f56;
+}
+.arrival-block-top {
+  fill: var(--block-top);
+}
+.arrival-block-left {
+  fill: var(--block-left);
+}
+.arrival-block-right {
+  fill: var(--block-right);
+}
+.arrival-block-grass-edge {
+  fill: #819661;
+}
+
+.arrival-caption {
+  min-height: 50px;
+  margin-top: 5px;
+}
+
+.arrival-caption > p {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+.arrival-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.arrival-progress-track {
+  width: 62px;
+  height: 4px;
+  background: color-mix(in srgb, var(--arrival-ink) 13%, transparent);
+  overflow: hidden;
+}
+
+.arrival-progress-track > i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  transform-origin: left center;
+  transform: scaleX(var(--arrival-progress, 0));
+  transition: transform 0.14s linear;
+}
+
+.arrival-progress-value {
+  min-width: 28px;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.arrival-status-mark {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 13px;
+}
+
+.arrival-status-mark > i {
+  width: 3px;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+.arrival-status-mark > i:nth-child(2) {
+  opacity: 0.7;
+}
+.arrival-status-mark > i:nth-child(3) {
+  opacity: 0.95;
+}
+
+:root[data-theme="dark"] .arrival {
+  --arrival-cloud-top: #8294af;
+  --arrival-cloud-front: #5e718e;
+  --arrival-cloud-side: #415976;
+  --arrival-mist: 35, 53, 77;
+  --arrival-ink: #e2e5d5;
+}
+
+:root[data-theme="dark"] .arrival-island {
+  filter: saturate(0.65) brightness(0.9);
+}
+
+@media (max-width: 700px) {
+  .arrival-mist {
+    background: linear-gradient(
+      transparent 28%,
+      rgba(var(--arrival-mist), 0.45) 50%,
+      rgba(var(--arrival-mist), 0.92)
+    );
+  }
+  .arrival-cloud-far-west {
+    left: -42%;
+    top: 43%;
+    width: 124%;
+  }
+  .arrival-cloud-far-east {
+    left: 52%;
+    top: 40%;
+    width: 125%;
+  }
+  .arrival-cloud-middle-west {
+    left: -68%;
+    top: 54%;
+    width: 154%;
+  }
+  .arrival-cloud-middle-east {
+    left: 44%;
+    top: 52%;
+    width: 150%;
+  }
+  .arrival-cloud-near-west {
+    left: -94%;
+    top: 71%;
+    width: 200%;
+  }
+  .arrival-cloud-near-east {
+    left: 12%;
+    top: 70%;
+    width: 200%;
+  }
+  .arrival-center {
+    left: 52%;
+    top: 66%;
+    width: 142px;
+  }
+  .arrival-caption > p {
+    font-size: 11px;
+  }
+}
+:root[data-theme="dark"] .arrival-cloud-body {
+  filter: brightness(0.47) saturate(0.45) sepia(0.3) hue-rotate(163deg);
+}
+.arrival[data-scope="scene"] {
+  inset: 0;
+  height: auto;
+  z-index: 2;
+  container-type: inline-size;
+}
+.arrival[data-scope="scene"] .arrival-mist {
+  background: rgba(var(--arrival-mist), 0.72);
+}
+.arrival[data-scope="scene"] .arrival-center {
+  left: 50%;
+  top: 48%;
+  width: clamp(112px, 25cqw, 160px);
+}
+.arrival[data-variant="blocks"] {
+  /* Blur the preview behind the loader, not the foreground blocks or caption. */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--paper) 12%, transparent);
+  /* Keep the center opaque; feather the preview boundary into the page. */
+  mask-image: radial-gradient(ellipse 50% 50% at center, #000 50%, transparent);
+}
+.arrival[data-variant="blocks"] .arrival-center {
+  top: 50%;
+  color: var(--ink);
+  filter: none;
+}
+.arrival[data-scope="scene"] .arrival-cloud-far-west {
+  top: 16%;
+  left: -24%;
+  width: 90%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-far-east {
+  top: 12%;
+  left: 55%;
+  width: 90%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-middle-west {
+  top: 32%;
+  left: -35%;
+  width: 115%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-middle-east {
+  top: 30%;
+  left: 48%;
+  width: 110%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-near-west {
+  top: 59%;
+  left: -55%;
+  width: 160%;
+}
+.arrival[data-scope="scene"] .arrival-cloud-near-east {
+  top: 56%;
+  left: 35%;
+  width: 155%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrival-progress-track > i {
+    transition: none;
+  }
+}

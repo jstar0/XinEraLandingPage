@@ -208,15 +208,8 @@ export function PlayerCenter() {
                     </label>
                   ))}
                 </fieldset>
-                <a
-                  className="step primary"
-                  href={skin.src}
-                  download={`${skin.name}.png`}
-                >
-                  下载皮肤 PNG <span>↓</span>
-                </a>
                 <button
-                  className="player-text-button"
+                  className="step primary"
                   onClick={() => changeTab("identities")}
                 >
                   管理游戏身份 <span>↗</span>

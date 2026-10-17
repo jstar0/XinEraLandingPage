@@ -1,0 +1,51 @@
+{
+  "wordmark_source": "app/fonts/ChillBitmap_16px.ttf",
+  "wordmark_source_sha256": "9c699de0d24e482700fa0a08ce3abe58ef2ceaf6173323c77b767c72cd538512",
+  "logo_source_sha256": "03b2bae77220ba145432729ea1cb4610a06635bbfbbc480c3ea6c8692a535706",
+  "woff2_bytes": 3200,
+  "woff2_sha256": "2c7d2d4ae211716dbf018b9472a091be79743c0a876477c552e61da7bc852968",
+  "units_per_em": 1024,
+  "ascent": 896,
+  "descent": -128,
+  "native_pixel_grid": 16,
+  "glyph_metrics": {
+    "心": {
+      "advance": 1024,
+      "contours": 11,
+      "bounds": [
+        0,
+        -64,
+        960,
+        832
+      ]
+    },
+    "纪": {
+      "advance": 1024,
+      "contours": 10,
+      "bounds": [
+        0,
+        -64,
+        960,
+        896
+      ]
+    },
+    "元": {
+      "advance": 1024,
+      "contours": 8,
+      "bounds": [
+        0,
+        -128,
+        960,
+        832
+      ]
+    }
+  },
+  "source_glyphs_and_metrics_unchanged": true,
+  "copyright_and_author_names_preserved": true,
+  "full_ofl_embedded": true,
+  "license_source_commit": "f9e3b2f988a2c4107f866aa43c3d61a2b27254d5",
+  "license_sha256": "ba6405382e05e030c04955d2fb3d7c437b792c1fa3a6eda060fe3a9c6f9f9597",
+  "logo_rectangles": 227,
+  "favicon_bytes": 3423,
+  "logo_alpha_mismatch_pixels": 0
+}

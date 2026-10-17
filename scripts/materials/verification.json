@@ -1,0 +1,198 @@
+{
+  "clientSha256": "b1b3158572666445eff01e82fad8c7de2e4953db6d354f311730d77a8359d0b0",
+  "scenes": [
+    {
+      "method": "pure template replay from archived states, then exact RGBA and gutter comparison",
+      "exporterSha256": "953304ea452b3cf2ccde20f18a8fa96e6834297081fac810e7b98b1065540598",
+      "verifiedTiles": 130,
+      "verifiedPixelsIncludingGutters": 52000,
+      "scene": "cathedral",
+      "modelBytes": 15816288,
+      "modelSha256": "8c677cccb33fb668cf3d03ced35d4ae26d10cdcbda9df36cd17487dcd0a580c3",
+      "atlasSize": [
+        320,
+        180
+      ],
+      "mappingBytes": 13340,
+      "mappingSha256": "986b5e9b7a7440b589eb519bf89ac77d0b79d0232b422197d6bef4afa7dea70e",
+      "kinds": {
+        "stone": 37,
+        "other": 26,
+        "leaves": 15,
+        "wood": 19,
+        "light": 7,
+        "glass": 19,
+        "metal": 7
+      },
+      "waterTiles": []
+    },
+    {
+      "method": "exact RGBA and gutter match against the archived exporter's texture function",
+      "exporterSha256": "cc87a4878eaeae48b82fcc9a12b2b48893f11107dc277dc5efeb930d2ede864a",
+      "verifiedTiles": 22,
+      "verifiedPixelsIncludingGutters": 8800,
+      "scene": "volcano",
+      "modelBytes": 7633948,
+      "modelSha256": "addb94694fdabe38ae9232c55c7a53a22cfa6b03c82d91cb6f5b537841b56332",
+      "atlasSize": [
+        160,
+        60
+      ],
+      "mappingBytes": 2199,
+      "mappingSha256": "944a35bd008a20befbf8bad5b488eb9f9d81b99e08d002379ec32cc0e3c89968",
+      "kinds": {
+        "other": 5,
+        "leaves": 5,
+        "wood": 3,
+        "stone": 7,
+        "light": 1,
+        "water": 1
+      },
+      "waterTiles": [
+        15
+      ]
+    },
+    {
+      "method": "recorded atlas insertion order, then exact RGBA and gutter comparison",
+      "exporterSha256": null,
+      "verifiedTiles": 206,
+      "verifiedPixelsIncludingGutters": 82400,
+      "scene": "claire",
+      "modelBytes": 7656868,
+      "modelSha256": "3fd959f95add252def10c96da0d82102f9bb07a1d99c59299837d2ac83420032",
+      "atlasSize": [
+        320,
+        260
+      ],
+      "mappingBytes": 20642,
+      "mappingSha256": "3a3a8841d75cb8b56aa1652cdc1314e7eb6c2fe69182cff4c54d51badb2b793a",
+      "kinds": {
+        "stone": 40,
+        "other": 59,
+        "wood": 34,
+        "leaves": 36,
+        "water": 2,
+        "light": 11,
+        "metal": 21,
+        "glass": 3
+      },
+      "waterTiles": [
+        15,
+        54
+      ]
+    },
+    {
+      "method": "recorded atlas insertion order, then exact RGBA and gutter comparison",
+      "exporterSha256": null,
+      "verifiedTiles": 149,
+      "verifiedPixelsIncludingGutters": 59600,
+      "scene": "west",
+      "modelBytes": 18879224,
+      "modelSha256": "39101e0f47b2d8647027ecb72155b26950f34d97ac39f27f5d6d295ac78fbfaa",
+      "atlasSize": [
+        320,
+        200
+      ],
+      "mappingBytes": 14918,
+      "mappingSha256": "958c48f198569ee79ebddb33afc715e921e2e9a60bee335eea428de0a43c7e0b",
+      "kinds": {
+        "stone": 39,
+        "water": 2,
+        "other": 38,
+        "leaves": 21,
+        "light": 8,
+        "wood": 21,
+        "metal": 15,
+        "glass": 5
+      },
+      "waterTiles": [
+        1,
+        98
+      ]
+    },
+    {
+      "method": "recorded atlas insertion order, then exact RGBA and gutter comparison",
+      "exporterSha256": null,
+      "verifiedTiles": 224,
+      "verifiedPixelsIncludingGutters": 89600,
+      "scene": "asa",
+      "modelBytes": 19049760,
+      "modelSha256": "6e255648e6e47633d6597b6a21d5f5e6a149c2a9d7bed28bd52e6565153ae681",
+      "atlasSize": [
+        320,
+        280
+      ],
+      "mappingBytes": 22908,
+      "mappingSha256": "113de743230136e1eae66dd950a13a41a3e19f9596f4f4e730d12c77c14af72d",
+      "kinds": {
+        "stone": 54,
+        "other": 45,
+        "water": 2,
+        "wood": 54,
+        "leaves": 38,
+        "light": 11,
+        "metal": 15,
+        "glass": 5
+      },
+      "waterTiles": [
+        7,
+        164
+      ]
+    },
+    {
+      "method": "recorded atlas insertion order, then exact RGBA and gutter comparison",
+      "exporterSha256": null,
+      "verifiedTiles": 123,
+      "verifiedPixelsIncludingGutters": 49200,
+      "scene": "royal",
+      "modelBytes": 5648224,
+      "modelSha256": "fb34c81457707b0b1b87061b30ef00c8c3c2fcacb46bfcc0302958f7dd5bc297",
+      "atlasSize": [
+        320,
+        160
+      ],
+      "mappingBytes": 12311,
+      "mappingSha256": "5bd633e035dde7930ca8d73044b8799d769d0e859926da831d559f4c1fefb6c3",
+      "kinds": {
+        "stone": 33,
+        "other": 41,
+        "water": 2,
+        "wood": 24,
+        "leaves": 10,
+        "light": 4,
+        "metal": 6,
+        "glass": 3
+      },
+      "waterTiles": [
+        14,
+        44
+      ]
+    },
+    {
+      "method": "recorded atlas insertion order, then exact RGBA and gutter comparison",
+      "exporterSha256": null,
+      "verifiedTiles": 41,
+      "verifiedPixelsIncludingGutters": 16400,
+      "scene": "north",
+      "modelBytes": 14796264,
+      "modelSha256": "2aaefbb411a0e659e18ad6594d95acdd2638d0507886b170b3e479fffcdf54e1",
+      "atlasSize": [
+        320,
+        60
+      ],
+      "mappingBytes": 4061,
+      "mappingSha256": "e3005c41e8fc40e342bdfcf1eb9b5b4490a264b086e167f7e5bfe6c711c1f26e",
+      "kinds": {
+        "stone": 12,
+        "other": 10,
+        "water": 1,
+        "wood": 4,
+        "leaves": 13,
+        "glass": 1
+      },
+      "waterTiles": [
+        8
+      ]
+    }
+  ]
+}

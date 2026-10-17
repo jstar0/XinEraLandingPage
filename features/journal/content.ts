@@ -13,7 +13,7 @@ export const entries = [
     title: "离开故乡以后",
     place: "西奥格勒 · 教堂庭院",
     summary: "从奥摩西亚的战火中出逃，在陌生的城镇里寻找容身之处。",
-    image: "/xinera/courtyard.jpg",
+    image: "/xinera/courtyard.webp",
     sections: [
       {
         heading: "故事从一次逃难开始。",
@@ -43,7 +43,7 @@ export const entries = [
     title: "骑士，因何而战",
     place: "西奥格勒 · 彩窗大厅",
     summary: "在西奥格勒的教堂里，来自异乡的你将说出骑士的誓言。",
-    image: "/xinera/hall.jpg",
+    image: "/xinera/hall.webp",
     sections: [
       {
         heading: "从外乡人到联邦骑士。",

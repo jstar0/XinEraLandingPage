@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { Arrival, type ArrivalStage } from "@/features/rendering/arrival";
 
 export function SkinPreview({
   src,
@@ -11,39 +12,66 @@ export function SkinPreview({
   slim: boolean;
 }) {
   const canvas = useRef<HTMLCanvasElement>(null);
-  const [failed, setFailed] = useState(false);
+  const [stage, setStage] = useState<ArrivalStage>("loading");
+  const [revealed, setRevealed] = useState(false);
   useEffect(() => {
     const abort = new AbortController();
     let cleanup: (() => void) | undefined;
+    const report = (next: ArrivalStage) => {
+      if (abort.signal.aborted) return;
+      if (next === "ready" || next === "fallback") clearTimeout(watchdog);
+      setStage(next);
+    };
+    const watchdog = window.setTimeout(() => {
+      setStage("fallback");
+      abort.abort();
+      cleanup?.();
+    }, 30_000);
     import("./skin-runtime")
       .then(async ({ mountSkin }) => {
         if (abort.signal.aborted || !canvas.current) return;
-        cleanup = await mountSkin(canvas.current, src, slim, abort.signal, () =>
-          setFailed(true),
-        );
+        cleanup = await mountSkin(canvas.current, src, slim, abort.signal, {
+          preparing: () => report("preparing"),
+          ready: () => report("ready"),
+          failed: () => report("fallback"),
+        });
       })
       .catch(() => {
-        if (!abort.signal.aborted) setFailed(true);
+        report("fallback");
       });
     return () => {
+      clearTimeout(watchdog);
       abort.abort();
       cleanup?.();
     };
   }, [src, slim]);
   return (
-    <div className="player-canvas-wrap">
+    <div
+      className="player-canvas-wrap"
+      data-stage={stage}
+      data-revealed={revealed}
+      aria-busy={!revealed}
+    >
       <canvas
         ref={canvas}
-        tabIndex={0}
+        tabIndex={revealed && stage === "ready" ? 0 : -1}
+        aria-hidden={!revealed || stage !== "ready"}
         aria-label={`${name}的三维皮肤预览。拖动或方向键旋转，滚轮或加减键缩放，Home键复位。`}
       />
-      {failed ? (
+      <Arrival
+        stage={stage}
+        scope="scene"
+        variant="blocks"
+        label="正在准备外观"
+        onRevealComplete={() => setRevealed(true)}
+      />
+      {stage === "fallback" && revealed ? (
         <p className="player-preview-error">
-          三维预览暂时不可用，仍可选择和下载皮肤。
+          三维预览暂时不可用，仍可在下方选择外观。
         </p>
-      ) : (
+      ) : stage === "ready" && revealed ? (
         <span className="player-drag-hint">拖动旋转 · 滚轮缩放</span>
-      )}
+      ) : null}
     </div>
   );
 }

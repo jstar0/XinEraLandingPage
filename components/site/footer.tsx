@@ -7,6 +7,13 @@ export function Footer() {
         <a href={site.filing.href} rel="noreferrer" target="_blank">
           {site.filing.label}
         </a>
+        <a
+          href="https://github.com/Poudingue/Vanilla-Normals-Renewed"
+          rel="noreferrer"
+          target="_blank"
+        >
+          材质 · Vanilla Normals Renewed / Poudingue
+        </a>
       </div>
       <nav aria-label="页脚导航">
         <a href="/gallery">巡游</a>

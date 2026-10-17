@@ -1,0 +1,209 @@
+{
+  "tiles": [
+    {
+      "tile": 0,
+      "texture": "minecraft:block/stone",
+      "kind": "stone"
+    },
+    {
+      "tile": 1,
+      "texture": "minecraft:block/dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 2,
+      "texture": "minecraft:block/andesite",
+      "kind": "stone"
+    },
+    {
+      "tile": 3,
+      "texture": "minecraft:block/iron_ore",
+      "kind": "stone"
+    },
+    {
+      "tile": 4,
+      "texture": "minecraft:block/coal_ore",
+      "kind": "stone"
+    },
+    {
+      "tile": 5,
+      "texture": "minecraft:block/granite",
+      "kind": "stone"
+    },
+    {
+      "tile": 6,
+      "texture": "minecraft:block/gravel",
+      "kind": "stone"
+    },
+    {
+      "tile": 7,
+      "texture": "minecraft:block/diorite",
+      "kind": "stone"
+    },
+    {
+      "tile": 8,
+      "texture": "minecraft:block/water_still",
+      "kind": "water"
+    },
+    {
+      "tile": 9,
+      "texture": "minecraft:block/grass_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 10,
+      "texture": "minecraft:block/grass_block_snow",
+      "kind": "other"
+    },
+    {
+      "tile": 11,
+      "texture": "block/dirt",
+      "kind": "other"
+    },
+    {
+      "tile": 12,
+      "texture": "block/grass_block_top",
+      "kind": "other"
+    },
+    {
+      "tile": 13,
+      "texture": "block/grass_block_side",
+      "kind": "other"
+    },
+    {
+      "tile": 14,
+      "texture": "block/grass_block_side_overlay",
+      "kind": "other"
+    },
+    {
+      "tile": 15,
+      "texture": "minecraft:block/snow",
+      "kind": "other"
+    },
+    {
+      "tile": 16,
+      "texture": "block/snow",
+      "kind": "other"
+    },
+    {
+      "tile": 17,
+      "texture": "minecraft:block/spruce_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 18,
+      "texture": "minecraft:block/spruce_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 19,
+      "texture": "minecraft:block/spruce_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 20,
+      "texture": "minecraft:block/acacia_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 21,
+      "texture": "minecraft:block/dark_oak_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 22,
+      "texture": "minecraft:block/cobblestone",
+      "kind": "stone"
+    },
+    {
+      "tile": 23,
+      "texture": "minecraft:block/sand",
+      "kind": "other"
+    },
+    {
+      "tile": 24,
+      "texture": "minecraft:block/ice",
+      "kind": "glass"
+    },
+    {
+      "tile": 25,
+      "texture": "minecraft:block/oak_leaves",
+      "kind": "leaves"
+    },
+    {
+      "tile": 26,
+      "texture": "minecraft:block/clay",
+      "kind": "stone"
+    },
+    {
+      "tile": 27,
+      "texture": "minecraft:block/sandstone_bottom",
+      "kind": "stone"
+    },
+    {
+      "tile": 28,
+      "texture": "minecraft:block/sandstone_top",
+      "kind": "stone"
+    },
+    {
+      "tile": 29,
+      "texture": "minecraft:block/sandstone",
+      "kind": "stone"
+    },
+    {
+      "tile": 30,
+      "texture": "minecraft:block/lilac_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 31,
+      "texture": "minecraft:block/sunflower_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 32,
+      "texture": "minecraft:block/lilac_top",
+      "kind": "leaves"
+    },
+    {
+      "tile": 33,
+      "texture": "block/sunflower_top",
+      "kind": "leaves"
+    },
+    {
+      "tile": 34,
+      "texture": "block/sunflower_back",
+      "kind": "leaves"
+    },
+    {
+      "tile": 35,
+      "texture": "block/sunflower_front",
+      "kind": "leaves"
+    },
+    {
+      "tile": 36,
+      "texture": "minecraft:block/oak_log_top",
+      "kind": "wood"
+    },
+    {
+      "tile": 37,
+      "texture": "minecraft:block/oak_log",
+      "kind": "wood"
+    },
+    {
+      "tile": 38,
+      "texture": "minecraft:block/dandelion",
+      "kind": "leaves"
+    },
+    {
+      "tile": 39,
+      "texture": "minecraft:block/rose_bush_bottom",
+      "kind": "leaves"
+    },
+    {
+      "tile": 40,
+      "texture": "minecraft:block/rose_bush_top",
+      "kind": "leaves"
+    }
+  ]
+}

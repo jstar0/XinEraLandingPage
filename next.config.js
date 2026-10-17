@@ -2,12 +2,21 @@
 const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
-  // The small production host builds in a separate checkout with one worker.
+  // Release builders may opt into a single worker; production receives a prebuilt package.
   ...(process.env.MCXIN_BUILD_CPUS === "1"
     ? { experimental: { cpus: 1 } }
     : {}),
   async headers() {
     return [
+      {
+        source: "/xinera/pbr/:asset([a-z0-9-]+-[a-f0-9]{12}\\.png)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
       {
         source: "/:path*",
         headers: [
